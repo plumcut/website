@@ -1,7 +1,7 @@
 ---
 title: Does AI Customer Service Really Work in Arabic in 2026?
 slug: ai-customer-service-arabic
-description: Dialect, Arabizi and code switching break most Arabic automation. What works for Gulf and Levant brands, and why templates are a separate job.
+description: AI customer service in Arabic breaks on dialect, Arabizi and code switching. What works for Gulf and Levant brands, and why templates are a separate job.
 type: direct
 date: 2026-09-06
 keywords: [Arabic AI customer service, Arabic WhatsApp chatbot, Arabizi customer support, AI Arabic dialects Gulf, MENA WhatsApp automation]
@@ -26,6 +26,8 @@ faq:
   - q: Does replying in Arabic cost more than replying in English?
     a: No. Meta's rates depend on the template category and the recipient's country calling code, not on the language of the message. What does change your costs is where your customers are, since a campaign spanning Saudi Arabia, the UAE and Lebanon crosses several rate cards. Replies inside the 24 hour customer service window are a different matter and are not template sends.
 ---
+
+AI customer service works in Arabic in 2026 only if it handles dialect, Arabizi and code switching, and keeps a separate set of approved Arabic WhatsApp templates.
 
 A customer in Jeddah asks how much delivery costs, typed in Arabic script, and gets back a polite paragraph of Modern Standard Arabic that reads like a government circular. Another writes "3andkon delivery la Beirut?" in Latin letters and gets nothing useful at all. If you sell across the Gulf and the Levant, this is the daily reality of Arabic customer service, and it is the part most automation demos quietly skip.
 
@@ -87,7 +89,7 @@ Two other things matter regionally and are easy to forget.
 
 Meta charges per message delivered on a rate that depends on the template category and the country calling code of the recipient. A single Arabic campaign that spans Saudi Arabia, the UAE and Lebanon is spanning several different rate cards, so budget by market rather than by campaign. We break the pricing model down in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 
-And the free part of the channel is language-agnostic. When a customer messages you, a 24 hour customer service window opens, and inside it you can reply without a template at all. That is where dialect handling earns its money, and where a fast, natural Arabic reply converts. Everything outside that window is a template you had to get approved in advance.
+And the cheapest part of the channel is language-agnostic. When a customer messages you, a 24 hour customer service window opens, and inside it you can reply without a template at all, with the first 1,000 service replies per business phone number each month free under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026. That is where dialect handling earns its money, and where a fast, natural Arabic reply converts. Everything outside that window is a template you had to get approved in advance.
 
 ## What to do this week
 

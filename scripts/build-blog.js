@@ -49,6 +49,44 @@ const esc = (s) =>
 // than fail the build, and report so the writer agent learns.
 const DASH_RE = /[—–]/g;
 
+// Keyword alignment: an answer engine picks the page whose slug, title and
+// first sentence all say the phrase the reader asked. The keyword is the
+// title up to its first ":", "?" or ",". Warn only; wording stays a judgment.
+const STOPWORDS = new Set(
+  ('a an and are as at be by can do does for from how in inside into is it its my of on or ' +
+    'really actually that the this to vs what when where which who why will with you your')
+    .split(' ')
+);
+const keyTerms = (text) =>
+  String(text)
+    .toLowerCase()
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .split(/[^a-z0-9']+/)
+    .map((w) => w.replace(/'s?$/, ''))
+    .filter((w) => w && !STOPWORDS.has(w) && !/^\d+$/.test(w))
+    // crude stem so automate/automation and store/stores still match
+    .map((w) => (w.length > 3 ? w.replace(/s$/, '') : w))
+    .map((w) => (w.length >= 5 ? w.slice(0, 5) : w));
+const firstSentence = (body) => {
+  const para = body
+    .split(/\r?\n\s*\r?\n/)
+    .map((p) => p.trim())
+    .find((p) => p && !/^(#|>|!\[|\||-|\*|<|```)/.test(p));
+  return para ? para.replace(/\s+/g, ' ').split(/(?<=[.!?])\s+(?=[A-Z"])/)[0] : '';
+};
+function keywordWarnings(f, title, slug, body) {
+  const out = [];
+  const keyword = String(title).split(/[:?,]/)[0];
+  const opening = new Set(keyTerms(firstSentence(body)));
+  const missing = keyTerms(keyword).filter((w) => !opening.has(w));
+  if (missing.length)
+    out.push(`${f}: first sentence does not use the title keyword "${keyword.trim()}" (missing: ${missing.join(', ')})`);
+  const titleTerms = new Set(keyTerms(title));
+  const shared = new Set(keyTerms(slug.replace(/-/g, ' ')).filter((w) => titleTerms.has(w)));
+  if (shared.size < 2) out.push(`${f}: title and slug share ${shared.size} meaningful word(s), want 2 or more`);
+  return out;
+}
+
 const fmtDate = (iso) =>
   new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', {
     day: 'numeric',
@@ -1521,6 +1559,7 @@ function main() {
     if (p.description.length > 165)
       warnings.push(`${p.file}: description is ${p.description.length} chars, over 165`);
     if (!p.hero) warnings.push(`${p.file}: no hero image`);
+    warnings.push(...keywordWarnings(p.file, p.title, p.slug, p.body));
   }
 
   const outputs = new Map();

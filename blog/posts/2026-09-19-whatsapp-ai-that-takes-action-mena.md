@@ -1,7 +1,7 @@
 ---
-title: Which WhatsApp AI Actually Does the Work? 13 Tools Compared for MENA
+title: "WhatsApp AI That Takes Action: 13 Tools Compared for MENA"
 slug: whatsapp-ai-that-takes-action-mena
-description: Thirteen WhatsApp AI tools compared on one axis: can the agent change something in your store, CRM or courier account, and who has to build it.
+description: "WhatsApp AI that takes action: 13 tools compared on one axis, whether the agent can change something in your store, CRM or courier account, and who builds it."
 type: comparison
 date: 2026-09-19
 keywords: [WhatsApp AI agent comparison, AI agent that takes actions, WhatsApp automation MENA, best WhatsApp AI Saudi UAE, respond.io vs SleekFlow, Meta Business Agent alternative]
@@ -20,7 +20,7 @@ faq:
   - q: Which WhatsApp platforms document their AI agent calling an external API?
     a: Checked on 19 September 2026 against each vendor's own published pages, these do. respond.io documents a Make HTTP Requests action with a limit of ten per agent. SleekFlow documents custom API integrations enabled per agent under Configuration then Actions. Infobip documents external systems as agent tools and chatbots that call external APIs. Yellow.ai documents workflows that connect backend systems by API. Meta documents custom connectors to your external APIs for Meta Business Agent. Vendor documentation shows a capability exists, not that it will work on your stack without building.
   - q: Does Meta's own business agent replace these tools?
-    a: It replaces the answering layer for many businesses. Meta said in June 2026 that more than a million businesses were already using a Business Agent on WhatsApp and Messenger, free to activate, with paid options signalled later. It does not replace the work of building connectors to your systems, deciding what the agent may change, or keeping it working. Eligibility is also limited by country and by vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and one phone number cannot run two competing messaging products at once.
+    a: It replaces the answering layer for many businesses. Meta said in June 2026 that more than a million businesses were already using a Business Agent on WhatsApp and Messenger, free to activate, with replies billed since 1 August 2026 at 2 US dollars per million tokens, about 4 to 5 cents per message. It does not replace the work of building connectors to your systems, deciding what the agent may change, or keeping it working. Eligibility is also limited by country and by vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and one phone number cannot run two competing messaging products at once.
   - q: Which tools show the strongest signals for Arabic speaking markets?
     a: Unifonic is headquartered in Saudi Arabia and publishes a regional AI and data residency position, including partnerships with HUMAIN and Groq. Yellow.ai documents right to left Arabic support in its v3 chat widget and an established Middle East presence. Wati and SleekFlow published Arabic versions of their own websites when we checked on 11 September 2026. None of that demonstrates that an agent reads Gulf dialect or Arabizi correctly in a real customer message, which only a test with your own inbox will show.
   - q: Is a managed service better than a self serve platform for this?
@@ -28,6 +28,8 @@ faq:
   - q: Does plumcut publish this comparison?
     a: Yes. plumcut sells a managed WhatsApp service and has a commercial interest in this topic. This guide compares publicly documented capabilities using each vendor's own pages, checked on 19 September 2026, plus editorial judgment about which buyer each approach fits. It is not a hands on benchmark and it does not claim measured superiority over any named vendor.
 ---
+
+WhatsApp AI that takes action changes something in your store, CRM or courier account, and across the 13 tools compared here, the real difference is who builds that action.
 
 Every platform on this list will tell you it has an AI agent. That word now covers two very different products, and the gap between them is the whole decision.
 
@@ -45,7 +47,7 @@ plumcut sells a managed WhatsApp service and is one of the options below, so rea
 
 | Tool | What it publishes about acting in other systems | Who builds and maintains the action | Notable for MENA |
 | --- | --- | --- | --- |
-| [Meta Business Agent](https://developers.facebook.com/documentation/meta-business-agent/overview) | Custom connectors to your external APIs, for actions such as checking an order or booking an appointment | You, or your partner | Free to activate, but eligibility is limited by country and vertical |
+| [Meta Business Agent](https://developers.facebook.com/documentation/meta-business-agent/overview) | Custom connectors to your external APIs, for actions such as checking an order or booking an appointment | You, or your partner | Free to activate, replies about 4 to 5 cents each, eligibility limited by country and vertical |
 | [respond.io](https://respond.io/help/ai-agent-actions) | AI Agent Actions, including Make HTTP Requests, update contact fields and lifecycle, trigger workflows | You | Arabic interface not stated |
 | [SleekFlow](https://help.sleekflow.io/en_US/sleekflow_ai/custom-api-integrations-in-sleekflow-ai) | Custom API integrations to retrieve data, trigger actions or update records, plus Shopify, HubSpot and Salesforce | You | Publishes an Arabic version of its own site |
 | [Wati](https://support.wati.io/en/articles/12320095-how-to-use-bring-your-own-ai-byoa-to-connect-and-manage-your-own-ai-agents-in-wati) | Bring Your Own AI connects your agent as an operator using Wati's own APIs, plus an MCP server | You, and the actions run inside Wati | Publishes an Arabic version of its own site |
@@ -61,7 +63,7 @@ plumcut sells a managed WhatsApp service and is one of the options below, so rea
 
 ## Meta Business Agent: the new floor, not the ceiling
 
-Meta [announced](https://about.fb.com/news/2026/06/meta-business-agent/) in June 2026 that it was expanding Business Agent to businesses of all sizes globally, that more than a million businesses were already using one on WhatsApp and Messenger, and that it was free to activate, with paid subscription options signalled for later. The developer documentation describes knowledge sources plus custom connectors to external APIs so the agent can take actions on the business's behalf.
+Meta [announced](https://about.fb.com/news/2026/06/meta-business-agent/) in June 2026 that it was expanding Business Agent to businesses of all sizes globally, that more than a million businesses were already using one on WhatsApp and Messenger, and that it was free to activate. Replies are billed [since 1 August 2026](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages) at 2 US dollars per million tokens, which [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing) puts at about 4 to 5 cents per message. The developer documentation describes knowledge sources plus custom connectors to external APIs so the agent can take actions on the business's behalf.
 
 Take it seriously, because it resets what "answers customers" is worth. Then read the [eligibility rules](https://developers.facebook.com/documentation/meta-business-agent/get-started): the number must be on the Cloud API, the business must be in an authorised country and an eligible vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and one number cannot run two competing messaging products at the same time. That last rule is the one to plan around, because it makes this an either or decision for your main number.
 

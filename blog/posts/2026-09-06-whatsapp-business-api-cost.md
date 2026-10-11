@@ -1,11 +1,11 @@
 ---
-title: What the WhatsApp Business API Really Costs in 2026
+title: WhatsApp Business API Pricing 2026 for Lebanon and GCC
 slug: whatsapp-business-api-cost
-description: Separate Meta message charges from provider fees, software and implementation. Understand the free windows and compare the total cost of WhatsApp automation.
+description: "WhatsApp Business API pricing 2026 for Lebanon, Saudi Arabia, the UAE and the GCC: Meta's per message rates by country, plus provider and setup costs."
 type: general
 date: 2026-09-06
-updated: 2026-09-11
-keywords: [WhatsApp Business API cost, WhatsApp API pricing, WhatsApp per message pricing, WhatsApp Business API price]
+updated: 2026-10-11
+keywords: [WhatsApp Business API pricing 2026, WhatsApp Business API cost, WhatsApp API pricing Lebanon, WhatsApp API pricing Saudi Arabia, WhatsApp API pricing UAE, WhatsApp per message pricing]
 hero: /blog/heroes/coin-counting-tray.jpg
 heroAlt: Coins sorted into a counting tray
 heroCredit: portableantiquities
@@ -19,14 +19,16 @@ faq:
   - q: Is the WhatsApp Business API free?
     a: Separate Meta messaging charges from the rest of the setup. Some messages have no Meta charge under the free messaging rules, but a provider, software platform or implementation partner may still charge for its service. Free messaging is not the same as free operation.
   - q: What is the 24 hour customer service window?
-    a: A customer message opens or resets a 24 hour service window. Service replies inside it have no Meta messaging charge. Utility templates sent during an open window are also free under Meta's current rules. Other categories and provider charges need to be assessed separately.
+    a: A customer message opens or resets a 24 hour customer service window, and inside it a business can reply without a template. Since 1 October 2026 Meta charges for those service replies again, after a free tier of 1,000 service messages per business phone number each month, and utility templates sent inside an open window are charged too. Provider charges need to be assessed separately.
   - q: Are volume discounts a free tier?
     a: No. Utility and authentication volume tiers can reduce eligible message rates. A discounted message can still have a charge. Calculate the applicable tiers and market rates instead of counting discounted traffic as free.
   - q: Does Lebanon have its own WhatsApp message rate?
-    a: No. Meta's rate card prices Lebanon under the "Rest of Middle East" grouping, together with Jordan, Kuwait, Bahrain, Oman, Iraq and Yemen. Saudi Arabia, the United Arab Emirates, Egypt and Qatar are each priced as standalone markets. Because Meta charges by the recipient's country calling code rather than your business location, a Lebanese brand selling into Saudi Arabia is billed at the Saudi rate.
+    a: No. As of 1 October 2026, Meta's rate card prices Lebanon under the "Rest of Middle East" region, together with Bahrain, Jordan and Yemen, at 0.0392 US dollars per marketing message and 0.0091 per utility or authentication message. Saudi Arabia, the United Arab Emirates, Kuwait, Qatar, Oman, Egypt and Iraq are each priced as standalone markets. Because Meta charges by the recipient's country calling code rather than your business location, a Lebanese brand selling into Saudi Arabia is billed at the Saudi rate.
   - q: What should I ask a vendor to include in a quote?
     a: Ask for Meta charges, provider fees, software or AI allowances, one-time setup, maintenance, support, and overage terms. Give vendors the same workload and required integrations so you can compare equivalent scopes.
 ---
+
+WhatsApp Business API pricing in 2026 for Lebanon and the GCC is per delivered message: marketing costs 0.0392 dollars in Lebanon and 0.0576 in Saudi Arabia and the UAE, as of 1 October 2026.
 
 A WhatsApp quote can combine messaging charges, a software subscription and implementation work. Comparing only the price of a message leaves out much of what your team will pay or maintain.
 
@@ -36,49 +38,58 @@ A WhatsApp quote can combine messaging charges, a software subscription and impl
 
 Meta's [current pricing page](https://whatsappbusiness.com/products/platform-pricing/) describes delivered-message charges by category and recipient market. Its pricing structure replaced conversation billing in July 2025. Use the current rate card when preparing a budget; a historical rate in a blog is not a quote.
 
-Service messages inside the 24 hour customer service window have no Meta charge. Utility templates inside an open window are also free under the current rules. A qualifying entry from an ad or Facebook Page button can open a separate 72 hour free window, subject to eligibility conditions. Utility and authentication volume tiers offer discounts rather than making all those messages free.
+Service messages, the replies you send inside the 24 hour customer service window, are charged again since 1 October 2026, after a free tier of 1,000 per business phone number each month. Utility templates sent inside an open window, free since July 2025, are charged again from the same date. A customer who messages you from a click to WhatsApp ad on the WhatsApp Android or iOS app opens a free entry point window from your first reply inside the customer service window, which per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing) can stay open for up to 7 days. Inside it, marketing, utility, authentication and service messages are not charged, though Meta Business Agent messages still are. Utility and authentication volume tiers offer discounts rather than making all those messages free.
 
-The official pricing page and linked documentation are the source for these rules, checked on 7 September 2026.
+The official [pricing documentation](https://developers.facebook.com/docs/whatsapp/pricing) is the source for these rules, checked on 11 October 2026.
 
-## Which market your customers are billed under
+## WhatsApp Business API rates by country in MENA
 
 This is the part most cost guides skip, and it decides your bill. Meta charges by
 the recipient's country calling code, not by where your business is registered. A
 Beirut brand selling into Riyadh pays the Saudi rate, not a Lebanese one.
 
-More importantly, not every market has its own rate. Meta's rate card lists some
-countries individually and folds the rest into regional buckets. In the Middle
-East the split runs like this, per Meta's
-[pricing documentation](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing),
-checked on 11 September 2026:
+More importantly, not every market has its own rate. Meta's rate card names 39
+countries individually and folds the rest into 8 regional buckets. Lebanon has
+no rate of its own: it is priced under Meta's **"Rest of Middle East"** region,
+which since 1 October 2026 covers four markets, Bahrain, Jordan, Lebanon and
+Yemen. Kuwait, Oman and Iraq left that region on the same date and now carry
+their own rates.
 
-| Market | How Meta prices it |
-| --- | --- |
-| Saudi Arabia | Standalone market with its own rate |
-| United Arab Emirates | Standalone market with its own rate |
-| Egypt | Standalone market with its own rate |
-| Qatar | Standalone market with its own rate |
-| Israel | Standalone market with its own rate |
-| Turkey | Standalone market with its own rate |
-| Lebanon | Priced under "Rest of Middle East" |
-| Jordan | Priced under "Rest of Middle East" |
-| Kuwait | Priced under "Rest of Middle East" |
-| Bahrain | Priced under "Rest of Middle East" |
-| Oman | Priced under "Rest of Middle East" |
-| Iraq | Priced under "Rest of Middle East" |
-| Yemen | Priced under "Rest of Middle East" |
+These are Meta's list rates in US dollars per delivered message, from the
+[official rate card](https://developers.facebook.com/docs/whatsapp/pricing),
+as of 1 October 2026, checked on 11 October 2026:
+
+| Market | How Meta prices it | Marketing | Utility | Authentication | Service, after 1,000 free a month |
+| --- | --- | --- | --- | --- | --- |
+| Lebanon | Rest of Middle East | 0.0392 | 0.0091 | 0.0091 | 0.0091 |
+| Bahrain | Rest of Middle East | 0.0392 | 0.0091 | 0.0091 | 0.0091 |
+| Jordan | Rest of Middle East | 0.0392 | 0.0091 | 0.0091 | 0.0091 |
+| Saudi Arabia | Own rate | 0.0576 | 0.0107 | 0.0107 | 0.0107 |
+| United Arab Emirates | Own rate | 0.0576 | 0.0157 | 0.0157 | 0.0157 |
+| Kuwait | Own rate since 1 October 2026 | 0.0792 | 0.0440 | 0.0440 | 0.0440 |
+| Qatar | Own rate | 0.0341 | 0.0120 | 0.0120 | 0.0120 |
+| Oman | Own rate since 1 October 2026 | 0.0341 | 0.0247 | 0.0247 | 0.0247 |
+| Egypt | Own rate | 0.0644 | 0.0036 | 0.0036 | 0.0036 |
+| Iraq | Own rate since 1 October 2026 | 0.0341 | 0.0079 | 0.0079 | 0.0079 |
+
+Utility and authentication figures are list rates before volume tier discounts.
+Service messages are free for the first 1,000 each month per business phone
+number, then charged at the rate shown. Saudi Arabia, the UAE, Kuwait, Oman,
+Egypt and Iraq also have a separate authentication-international rate, not shown
+here. The same rate card raised marketing rates in Saudi Arabia, the UAE and
+Rest of Middle East on 1 October 2026, so a budget built on older figures is
+already low.
 
 Two practical consequences. First, if you sell across the Gulf and the Levant,
 your blended cost per message depends on your customer mix, so a single headline
 rate tells you very little. Model it per market against your actual order
 distribution. Second, a "Rest of Middle East" bucket moves as a unit: a change to
-that regional rate changes Lebanon, Jordan and Kuwait together, and it will not
+that regional rate changes Lebanon, Jordan and Bahrain together, and it will not
 appear in a vendor blog post about Saudi pricing.
 
-We are not reproducing per-message figures here. Meta revises the rate card on a
-schedule, local-currency billing has been rolling out through 2026, and a number
-copied into an article ages badly. Pull the current rate card for the specific
-markets in the table above, on the day you build the budget.
+Meta revises the rate card on a published schedule, so treat this table as a
+dated snapshot. Before you sign a budget, open the current rate card for your
+own markets and check that the figures still match.
 
 
 ## What a provider or platform charges

@@ -1,6 +1,6 @@
 ---
-title: Is Your Customer Data Safe With an AI Chatbot? 10 Questions to Ask
-description: Where your WhatsApp chats are stored, who can train on them, and what Saudi, UAE and Lebanese law expects. Ten questions to put to any vendor.
+title: Is Customer Data Safe With an AI Chatbot? 10 Questions
+description: Is customer data safe with an AI chatbot? Where your WhatsApp chats are stored, who can train on them, what Gulf and Lebanese law expects, and 10 questions to ask.
 date: 2026-10-03
 slug: ai-chatbot-customer-data-safety
 type: general
@@ -25,6 +25,8 @@ faq:
   - q: Who owns the conversations a chatbot has with my customers?
     a: Check the contract, because it varies. Some platforms keep conversation history and analytics inside their product, so leaving means losing it. Ask whether you can export every conversation and contact in a usable format, what happens to your data on the day you cancel, and whether the vendor can use your conversations for anything beyond serving your own customers. plumcut's position is that the conversations, and what they show about your customers, belong to the brand and are not locked into a platform or handed to anyone else.
 ---
+
+Customer data can be safe with an AI chatbot, but on WhatsApp it passes through three parties, Meta, the chatbot vendor and the AI model provider, and the vendor's policies differ most.
 
 Your customers send you their address, their phone number, sometimes a photo of a receipt, and they send it on WhatsApp because it feels private. Put an AI in front of that inbox and a reasonable question follows: where does all of that go now, and who else can see it?
 

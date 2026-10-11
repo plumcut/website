@@ -1,7 +1,7 @@
 ---
 title: How to Automate WhatsApp for Your Business in 2026
 slug: how-to-automate-whatsapp-for-your-business
-description: A practical walkthrough of WhatsApp automation for commerce brands, from the free Business app to the Cloud API, and how to pick the right level.
+description: How to automate WhatsApp for your business in 2026, from the free Business app to the Cloud API, and how to pick the right level for your team.
 type: general
 date: 2026-09-05
 updated: 2026-09-07
@@ -16,7 +16,7 @@ heroLicenseUrl: https://creativecommons.org/publicdomain/zero/1.0/
 related: [whatsapp-business-api-cost, best-whatsapp-automation-tools]
 faq:
   - q: Can I automate WhatsApp for free?
-    a: Partly. The free WhatsApp Business app offers greetings, away messages and saved replies for a person to use. More integrated automation can use the Cloud API. Meta charges for eligible delivered template messages, with specified free messaging conditions; your software or provider may charge separately.
+    a: Partly. The free WhatsApp Business app offers greetings, away messages and saved replies for a person to use. More integrated automation can use the Cloud API. Meta charges for delivered template messages and, since 1 October 2026, for service replies beyond 1,000 free per business phone number each month; your software or provider may charge separately.
   - q: Will automating WhatsApp get my number banned?
     a: Official tools do not guarantee that an account will never be restricted. Your messaging must still follow Meta's policies, including consent and applicable content rules. Check the current WhatsApp Business Messaging Policy before launching outbound campaigns and monitor account quality after launch.
   - q: Does WhatsApp automation work in Arabic?
@@ -24,6 +24,8 @@ faq:
   - q: How long does it take to set up?
     a: The free Business app takes an afternoon. A working Cloud API setup with a real catalogue, order lookups and a tested handover to a human is closer to two to four weeks, most of which is writing down what your team already knows. See how we run that in our build process.
 ---
+
+To automate WhatsApp for your business, pick one of three levels: the free Business app's greetings and saved replies, an API platform with store connections, or a managed service.
 
 Most brands do not have a WhatsApp problem. They have a first reply problem. The messages arrive, someone answers them eventually, and by then the customer has bought elsewhere. Automation is how you close that gap, and there are exactly three levels of it worth knowing.
 
@@ -63,7 +65,7 @@ A conversation record and useful reporting can exist in either a platform or a c
 
 ## What it actually costs
 
-Meta moved from conversation pricing to per-message pricing on 1 July 2025. Rates and free messaging conditions depend on category and market. Service replies inside an open 24 hour customer service window are free of Meta messaging charges. Provider or software fees are separate. The planning ranges below are illustrative, not vendor commitments:
+Meta moved from conversation pricing to per-message pricing on 1 July 2025. Rates and free messaging conditions depend on category and market. Since 1 October 2026, service replies inside an open 24 hour customer service window are free for the first 1,000 per business phone number each month and then charged at the market's service rate, per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing). Provider or software fees are separate. The planning ranges below are illustrative, not vendor commitments:
 
 | Level | Setup effort | Meta cost | Tooling cost |
 | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
 ---
-title: AI Chatbot vs Hiring a Customer Service Employee: Which Is Cheaper?
-description: One hire covers 48 of the 168 hours in a week. The real cost of a support hire in Lebanon, Saudi Arabia and the UAE, set against an AI on WhatsApp.
+title: AI Chatbot vs Hiring Customer Service in Lebanon and GCC
+description: "AI chatbot vs hiring customer service in Lebanon, Saudi Arabia and the UAE: one hire covers 48 of the 168 hours in a week. The real cost against an AI on WhatsApp."
 date: 2026-10-03
 slug: ai-chatbot-vs-hiring-customer-service
 type: general
@@ -26,6 +26,8 @@ faq:
   - q: How much does plumcut cost compared with hiring?
     a: plumcut charges a one time setup fee and then a fixed monthly fee set by what the solution does, stepping up in wide traffic bands to a ceiling, with Meta messaging and AI usage billed at cost with no margin. There is no gratuity, social insurance, leave cover or recruitment cost, and it answers at every hour of the week. The exact figure depends on the solution and is quoted on a short call, so compare it against the fully loaded cost of the hires it would replace, not against one salary.
 ---
+
+An AI chatbot is cheaper than hiring customer service staff in Lebanon and GCC markets such as Saudi Arabia and the UAE when questions repeat, since one hire covers 48 of 168 weekly hours.
 
 Messages are piling up, replies are going out late, and the obvious fix is to hire someone. Before you post the job ad, run the numbers properly, because the cost of a customer service hire is not the salary on the offer letter, and one hire does not cover the hours your customers are actually messaging.
 

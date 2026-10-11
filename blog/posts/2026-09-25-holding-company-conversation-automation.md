@@ -1,6 +1,6 @@
 ---
-title: How Holding Companies Can Automate Customer Conversations Across Their Brands
-description: Let each brand buy its own chatbot, license one platform, or run one managed system? A buying guide for groups with several retail brands and a wholesale arm.
+title: How Holding Companies Automate Customer Conversations
+description: "How holding companies automate customer conversations across brands: a chatbot per brand, one licensed platform, or one managed system. A buying guide for groups."
 date: 2026-09-25
 slug: holding-company-conversation-automation
 type: general
@@ -26,6 +26,8 @@ faq:
   - q: Can the same system handle retail customers and wholesale buyers?
     a: Yes, if it is built with separate rules for each. A wholesale buyer ordering stock over WhatsApp needs their own price list, credit terms, minimum quantities and account history, and should never see retail promotions. A retail customer needs the opposite. The language skills, the order connection and the reporting can be shared. The rules, the catalogue and who handles the handover must not be.
 ---
+
+Holding companies automate customer conversations best by centralising one engine and one set of data, keeping every brand distinct at the front, and rolling out one brand at a time.
 
 A group with several brands rarely decides how its brands talk to customers. It happens brand by brand. One brand hires an agency that sets up a basic chatbot, another answers WhatsApp from a manager's phone, a third bought a platform nobody fully configured. Each one pays for its own tools and its own integrations, and the group cannot see what any of them is hearing from customers.
 

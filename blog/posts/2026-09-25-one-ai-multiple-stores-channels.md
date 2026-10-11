@@ -1,6 +1,6 @@
 ---
-title: How to Run One AI Across Several Stores on WhatsApp, Instagram and Messenger
-description: One engine, many front doors. How a business with several shops or brands runs the same AI on every WhatsApp number, Instagram account and Facebook Page.
+title: One AI for Multiple Stores and Brands on WhatsApp
+description: "One AI for multiple stores and brands: one engine, many front doors. How a business with several shops or brands runs the same AI on every WhatsApp number."
 date: 2026-09-25
 slug: one-ai-multiple-stores-channels
 type: general
@@ -26,6 +26,8 @@ faq:
   - q: Should every store share the same WhatsApp number?
     a: Usually not. A shared number makes every store look like one brand, mixes their promotions and their customer history, and lets one store's complaints or blocks affect the rating of a number the others depend on. Separate numbers per store or brand, connected to one shared engine, keep each identity clean while the logic, the integrations and the reporting stay in one place. One number for several branches of the same brand is a reasonable exception.
 ---
+
+One AI can run multiple stores and brands on WhatsApp: one engine holds the language skills, shared rules and connections, while each store keeps its own number, name, catalogue and prices.
 
 A business with one shop has one inbox. A business with five shops usually has five WhatsApp numbers, four Instagram accounts, three Facebook Pages, and a different person or a different basic bot answering each of them. Customers get different answers to the same question depending on which door they knocked on, stock questions land at the wrong branch, and nobody can see the whole picture.
 

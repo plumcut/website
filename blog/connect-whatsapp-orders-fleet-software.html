@@ -8,10 +8,10 @@ Head links
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="title" content="How to Connect WhatsApp Orders to Your Fleet Management Software | plumcut" />
+<meta name="title" content="How to Connect WhatsApp Orders to Fleet Software | plumcut" />
 <meta
   name="description"
-  content="What it takes for an order placed in a WhatsApp conversation to appear in a fleet dashboard by itself, and how logistics vendors can offer it."
+  content="How to connect WhatsApp orders to fleet management software so an order placed in a chat appears in the dispatch dashboard by itself, and how vendors can offer it."
 />
 <meta
   name="keywords"
@@ -43,10 +43,10 @@ Head links
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://plumcut.com/blog/connect-whatsapp-orders-fleet-software" />
-<meta property="og:title" content="How to Connect WhatsApp Orders to Your Fleet Management Software | plumcut" />
+<meta property="og:title" content="How to Connect WhatsApp Orders to Fleet Software | plumcut" />
 <meta
   property="og:description"
-  content="What it takes for an order placed in a WhatsApp conversation to appear in a fleet dashboard by itself, and how logistics vendors can offer it."
+  content="How to connect WhatsApp orders to fleet management software so an order placed in a chat appears in the dispatch dashboard by itself, and how vendors can offer it."
 />
 <meta
   property="og:image"
@@ -66,10 +66,10 @@ Head links
 <meta name="twitter:site" content="@plumcut" />
 <meta name="twitter:creator" content="@plumcut" />
 <meta name="twitter:url" content="https://plumcut.com/blog/connect-whatsapp-orders-fleet-software" />
-<meta name="twitter:title" content="How to Connect WhatsApp Orders to Your Fleet Management Software | plumcut" />
+<meta name="twitter:title" content="How to Connect WhatsApp Orders to Fleet Software | plumcut" />
 <meta
   name="twitter:description"
-  content="What it takes for an order placed in a WhatsApp conversation to appear in a fleet dashboard by itself, and how logistics vendors can offer it."
+  content="How to connect WhatsApp orders to fleet management software so an order placed in a chat appears in the dispatch dashboard by itself, and how vendors can offer it."
 />
 <meta
   name="twitter:image"
@@ -82,11 +82,11 @@ Head links
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "How to Connect WhatsApp Orders to Your Fleet Management Software",
-  "description": "What it takes for an order placed in a WhatsApp conversation to appear in a fleet dashboard by itself, and how logistics vendors can offer it.",
+  "headline": "How to Connect WhatsApp Orders to Fleet Software",
+  "description": "How to connect WhatsApp orders to fleet management software so an order placed in a chat appears in the dispatch dashboard by itself, and how vendors can offer it.",
   "image": "https://plumcut.com/blog/heroes/sealed-box.jpg",
   "datePublished": "2026-09-09",
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-10-11",
   "inLanguage": "en",
   "author": {
     "@type": "Person",
@@ -235,7 +235,7 @@ Head links
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "How to Connect WhatsApp Orders to Your Fleet Management Software",
+      "name": "How to Connect WhatsApp Orders to Fleet Software",
       "item": "https://plumcut.com/blog/connect-whatsapp-orders-fleet-software"
     }
   ]
@@ -291,7 +291,7 @@ Head links
       "name": "How are order notifications billed on WhatsApp?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "\u003cp>A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are not charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.\u003c/p>"
+        "text": "\u003cp>A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are free for the first 1,000 per business phone number each month, then charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.\u003c/p>"
       }
     }
   ]
@@ -319,7 +319,7 @@ Head links
 <link rel="stylesheet" href="/assets/fonts.css" />
 <link rel="preload" href="/assets/main.css?v=484b4e546b" as="style" data-main-styles onload="this.onload=null;this.rel='stylesheet'" />
 <link rel="preload" href="/blog/heroes/sealed-box.jpg" as="image" fetchpriority="high" />
-<title>How to Connect WhatsApp Orders to Your Fleet Management Software | plumcut</title>
+<title>How to Connect WhatsApp Orders to Fleet Software | plumcut</title>
     
     <noscript><link rel="stylesheet" href="/assets/main.css?v=484b4e546b"><style>
       .site-loader { display: none !important; }
@@ -1223,7 +1223,7 @@ Head links
         .blog-cta { border-radius: 20px; }
       }
     </style>
-<meta name="plumcut-content-version" content="e5f8f1ab9ffe273df9e1ac78a8811be2a17a1eed2516bb6d09e6254e3c99d1ad">
+<meta name="plumcut-content-version" content="05863b2d443304fd3a5523348119b031a9637eb76b7a26ce84cefd7696d2edcb">
 </head>
   <body class="bg-white dark:bg-background-5 is-loading">
     <script>
@@ -1289,7 +1289,7 @@ Header
                 <a class="section-title-text" href="/blog/">Field notes</a>
               </p>
               <h1 style="color: #481D52;" class="text-heading-4">
-                How to Connect WhatsApp Orders to Your Fleet Management Software
+                How to Connect WhatsApp Orders to Fleet Software
               </h1>
               <div class="blog-meta">
                 <span class="blog-tag">plum in practice</span>
@@ -1321,6 +1321,7 @@ Header
 </nav>
 
             <div class="blog-body">
+<p>To connect WhatsApp orders to fleet software, you need four pieces: a WhatsApp Business API number, order extraction from the chat, validation, and a call to the platform's create job API.</p>
 <p>You sell or run software that dispatches drivers. It routes, it assigns, it captures proof of delivery, and it does all of that well. Then an order arrives on WhatsApp and a human opens the dashboard and types it in. The gap is not in your software. It is between the conversation where the order happens and the system where the order lives, and it is the same gap in almost every fleet and delivery platform we have looked at.</p>
 <blockquote class="blog-quote"><p>Closing it takes four pieces: a WhatsApp Business API number, a layer that reads the thread and extracts the order fields, a validation step that refuses to create anything it cannot dispatch, and an authenticated call to your platform's create job endpoint carrying your own reference so nothing gets created twice. The platform's existing status webhooks then push updates back into the same conversation. Nothing here is exotic. Established delivery platforms already document the endpoints and webhooks this needs, because it is the same route their store and ERP integrations use. The hard part is not the API call. It is the validation rules and the handover path for the orders that should not be automatic.</p></blockquote>
 <h2 id="the-shape-of-the-integration" class="blog-h2">The shape of the integration</h2>
@@ -1381,7 +1382,7 @@ Header
   </details>
   <details class="blog-faq-item">
     <summary><h3 class="blog-faq-q">How are order notifications billed on WhatsApp?</h3></summary>
-    <div class="blog-faq-answer"><p>A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are not charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.</p></div>
+    <div class="blog-faq-answer"><p>A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are free for the first 1,000 per business phone number each month, then charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.</p></div>
   </details>
 </section>
 
@@ -1431,8 +1432,8 @@ Header
       </div>
       <div class="blog-card-body">
         <span class="blog-card-tag">Comparison</span>
-        <h3 class="blog-card-title">Manual Order Entry vs Automated Order Capture in Delivery Software</h3>
-        <p class="blog-card-desc">Four ways an order gets from a customer message into your delivery or fleet dashboard, compared on error rate, speed, cost and where each one breaks.</p>
+        <h3 class="blog-card-title">Manual Order Entry vs Automated Order Capture</h3>
+        <p class="blog-card-desc">Manual order entry vs automated order capture: four ways an order gets from a customer message into your delivery dashboard, compared on errors, speed and cost.</p>
         <span class="blog-card-date">9 September 2026</span>
       </div>
     </a>
@@ -1442,8 +1443,8 @@ Header
       </div>
       <div class="blog-card-body">
         <span class="blog-card-tag">Automation guide</span>
-        <h3 class="blog-card-title">Automating Delivery Updates and the Courier Loop</h3>
-        <p class="blog-card-desc">The operations side of order tracking: courier data quality, failed attempts, cash on delivery reattempts, and why a sent message is not a delivered one.</p>
+        <h3 class="blog-card-title">Automate Delivery Updates for Online Store Orders</h3>
+        <p class="blog-card-desc">Automate delivery updates for online store orders: courier data quality, failed attempts, cash on delivery reattempts, and why a sent message is not a delivered one.</p>
         <span class="blog-card-date">8 September 2026</span>
       </div>
     </a>
@@ -1454,7 +1455,7 @@ Header
       <div class="blog-card-body">
         <span class="blog-card-tag">Automation guide</span>
         <h3 class="blog-card-title">Can AI Answer Where Is My Order on WhatsApp in 2026?</h3>
-        <p class="blog-card-desc">The most common message in commerce is a tracking question. What it takes to answer it automatically on WhatsApp, what it costs, and where it breaks.</p>
+        <p class="blog-card-desc">Where is my order on WhatsApp: what it takes to answer the most common question in commerce automatically, what it costs, and where it breaks.</p>
         <span class="blog-card-date">6 September 2026</span>
       </div>
     </a>

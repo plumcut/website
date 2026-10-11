@@ -1,7 +1,7 @@
 ---
 title: How to Automate Customer Service Without Losing the Customer
 slug: automate-customer-service-without-losing-customers
-description: Automated support fails at the handover, not the answer. How to design escalation, meet Meta's policy requirement, and keep the relationship you already have.
+description: "How to automate customer service without losing customers: design the handover first, meet Meta's escalation requirement, and keep the relationship you have."
 type: general
 date: 2026-09-08
 related: [ai-customer-service-arabic, where-is-my-order-whatsapp, how-to-automate-whatsapp-for-your-business]
@@ -21,7 +21,7 @@ faq:
   - q: What should never be handled by automated customer service?
     a: Refunds, exchanges and goodwill decisions, complaints where your business is at fault, price negotiation, wholesale and partnership enquiries, and anything legal, medical or safety related. The test is not difficulty but whether the correct response depends on who this specific customer is and what you are willing to do for them.
   - q: Does automating support cost money per message?
-    a: Not for replies to customers. Under per message pricing, in force for all businesses since 1 July 2025, Meta does not charge for service messages, which are the replies you send inside the 24 hour customer service window that a customer's message opens. What costs money is messaging a customer first outside that window, which requires an approved template.
+    a: Only a little for replies to customers. Service messages are the replies you send inside the 24 hour customer service window that a customer's message opens, and since 1 October 2026 Meta charges for them only after the first 1,000 per business phone number each month. What costs money is messaging a customer first outside that window, which requires an approved template.
   - q: How do I stop an AI giving customers wrong information?
     a: Ground it and let it refuse. Only automate answers that are deterministic, either from a written policy or from live store data, and write explicit refusal sentences for everything else. A fluent, confident, wrong answer about stock or price costs more than no answer, because it produces an order you cannot fill and a customer who stops trusting anything you say.
   - q: What happens if customers block or report my business?
@@ -30,9 +30,11 @@ faq:
     a: Usually yes, and that is fine. What damages the relationship is not being automated, it is being trapped, being told something untrue, or having to repeat yourself to the human who takes over. A system that answers instantly, says clearly what it cannot do, and hands over with the full context intact reads as competence rather than as a wall.
 ---
 
+To automate customer service without losing customers, design the handover first: automate only questions with one right answer, and keep the route to a person visible at all times.
+
 The fear is specific and it is reasonable. Your customers message you because you answer, personally, and often after hours. You are about to put something between you and them. Every automated support experience you have personally suffered through has been worse than talking to a person, and you are about to inflict one on the people who pay you.
 
-> Automated customer service loses customers at the handover, not at the answer. Customers tolerate a fast machine answer to a factual question; they do not tolerate being trapped with one when their question has feeling in it. So design the exit first and the answers second. Three rules carry most of the outcome. Automate only the questions that have exactly one correct answer, and refuse the rest openly rather than guessing. Make the route to a person visible in the conversation at all times, which is also Meta's written requirement: businesses may use automation when responding inside the 24 hour customer service window, but must provide prompt, clear and direct escalation paths. And make the handover carry context, so the customer never repeats themselves to the human. Speed is the part customers actually notice, and a reply sent inside the 24 hour window a customer opened is free under Meta's per message pricing, so answering fast is both the better experience and the cheaper one.
+> Automated customer service loses customers at the handover, not at the answer. Customers tolerate a fast machine answer to a factual question; they do not tolerate being trapped with one when their question has feeling in it. So design the exit first and the answers second. Three rules carry most of the outcome. Automate only the questions that have exactly one correct answer, and refuse the rest openly rather than guessing. Make the route to a person visible in the conversation at all times, which is also Meta's written requirement: businesses may use automation when responding inside the 24 hour customer service window, but must provide prompt, clear and direct escalation paths. And make the handover carry context, so the customer never repeats themselves to the human. Speed is the part customers actually notice, and a reply sent inside the 24 hour window a customer opened is free for the first 1,000 per number each month under Meta's pricing, so answering fast is both the better experience and the cheaper one.
 
 ## Meta requires an escape hatch, so build it first
 
@@ -71,9 +73,9 @@ The second one is the most expensive and the least discussed. A vague reply anno
 
 The dividing line is not difficulty. It is whether the correct response depends on who this particular customer is and what you are prepared to do for them. That is a commercial judgment about a relationship, and handing it to a machine is what actually costs you the relationship, not automation in general.
 
-## Speed is the part they notice, and it is free
+## Speed is the part they notice, and it costs little
 
-Under per message pricing, which has applied to all businesses since 1 July 2025, Meta does not charge for service messages, which are the replies you send inside the customer service window that a customer's own message opens. Utility messages sent in response to a user are also not charged.
+Under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, service messages, the replies you send inside the customer service window that a customer's own message opens, are free for the first 1,000 per business phone number each month and then charged at the market's service rate. Utility templates are charged from the first send, even in response to a user.
 
 This produces a genuinely convenient alignment. The experience customers rate highest, an answer that arrives while they are still in the app, is the one that costs you nothing. The experience they rate worst, a reply the next morning that has to be sent as a paid template because the window has closed, is the one you pay for.
 

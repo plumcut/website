@@ -21,6 +21,23 @@ overlap, added value, and relevant plumcut destination. Use customer questions
 and Search Console data when available, otherwise current web research. Do not
 invent search volume or claim access to analytics you did not inspect.
 
+**One keyword per post.** Pick the phrase people actually ask and use it in
+the slug, the title (which is also the H1), the meta description and the first
+words of sentence one. A page gets read when all four say the same thing: in
+an October 2026 test, ChatGPT opened "Can You Send Abandoned Cart Messages on
+WhatsApp?" for that exact question, and read 58 pages for "WhatsApp Business
+API cost 2026" without opening ours, because the pages it chose led with the
+keyword and a country.
+
+**Prefer a Lebanon, GCC or MENA angle over a generic global keyword.** Generic
+cost and comparison questions are answered from vendor pricing pages. A country
+or region angle is where a field note can be the page that gets read.
+
+**Check what ChatGPT reads first.** Before drafting, ask the question in
+ChatGPT with search on and note the pages it opens and cites (Aside does this by
+hand in the browser, no API key needed). Write to the shape that gets read, or
+change the angle if only vendor pages show up.
+
 Aim over time for roughly 60% practical guides, 25% comparisons and buying
 decisions, and 15% direct product/implementation articles. These are planning
 guidelines, not quotas that justify weak or duplicate posts. Propose a refresh
@@ -72,9 +89,11 @@ nothing concrete in it to lift. These rules exist because an audit in September
   status, certification and performance numbers are only reportable if that page
   says so. Otherwise write "not stated" and move on.
 - **Every changeable number carries a source next to it, or does not appear.**
-  If a rate card moves on a schedule, explain the structure and the grouping and
-  tell the reader to pull the current figure. Structure ages well; a copied
-  number does not.
+  A rate card that moves on a schedule may be reproduced only as a dated
+  snapshot: the official source link, the date the rates took effect, the date
+  you checked, and the grouping explained (which region a country is priced
+  under). Tell the reader to confirm the current figure before budgeting, and
+  flag the post for refresh when the source announces its next change.
 - **Image credits are not citations.** Flickr, Unsplash, rawpixel and Creative
   Commons links satisfy licensing, not sourcing. A post whose only outbound links
   are image credits has no authority signal at all. Count primary sources
@@ -85,8 +104,10 @@ nothing concrete in it to lift. These rules exist because an audit in September
   dialect or Arabizi behaviour, a courier or cash-on-delivery reality. This is
   the only ground where we are the natural source rather than the tenth voice.
   Do not manufacture one where the topic does not support it.
-- **Front-load the answer.** The question in the title is answered in the first
-  screen, in prose that stands on its own when quoted away from the page.
+- **Front-load the answer.** The first sentence, about 30 words at most, starts
+  with the post's keyword and answers the question directly, in prose that
+  stands on its own when quoted away from the page. The hook, the scene or
+  story line, opens paragraph 2.
 - **Bind every entity to a hard fact.** Naming a tool, a country or a courier
   carries nothing on its own. Put a number, a date, a cost, a frequency or a
   place in the same sentence. "Saudi Arabia uses a national short address" is a
@@ -117,7 +138,12 @@ the internal Notion row and nowhere else.
 
 No human approves a post before it goes live, so the review pass is the only
 gate there is. Run it as a separate pass, reading the finished post as a stranger
-rather than as its author. Check the title's question is answered; verify every
+rather than as its author. Check the title's question is answered in the first
+sentence; check one keyword runs through slug, title, H1, meta description and
+the first words of sentence one, with the hook in paragraph 2 and no
+unexplained keyword warning from the build; check a regional angle was
+preferred where the topic allows; check the LinkedIn draft for Charbel opens
+with the same keyword; verify every
 changeable claim against a primary source; check competitor assertions; compare
 the body, FAQ and existing posts for contradictions; check internal links,
 related slugs and the plumcut mention; and check that nothing traceable to a

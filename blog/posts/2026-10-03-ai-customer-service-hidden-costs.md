@@ -1,6 +1,6 @@
 ---
-title: What AI Customer Service Really Costs Per Month in 2026
-description: The headline plan is rarely the bill. Seats, per resolution charges, contact overages and Meta's message fees, checked on 12 vendor pages.
+title: "AI Customer Service Cost in 2026: The Hidden Fees"
+description: AI customer service costs 10 to 280 dollars a month on the plan, then adds per resolution fees, seats, overages and Meta message charges. 12 vendors checked.
 date: 2026-10-03
 slug: ai-customer-service-hidden-costs
 type: comparison
@@ -20,12 +20,14 @@ faq:
   - q: What are the hidden costs of an AI chatbot?
     a: Six lines that the headline price usually leaves out. Per seat charges for the people who still answer. A per resolution or per AI conversation charge for the automation itself. Overage fees when tickets or monthly active contacts pass the plan limit. Meta's WhatsApp template message fees, plus any per message fee a provider adds, such as Twilio's 0.005 US dollars. Add-ons like integrations or extra numbers. And the staff time needed to build, test and maintain the automation, which no invoice shows.
   - q: Are WhatsApp replies to customers free?
-    a: Mostly yes. Since 1 July 2025 Meta charges per template message, and its pricing documentation says all non-template messages are free, which covers ordinary replies inside the customer service window. Utility templates sent inside an open customer service window are also free. Marketing, authentication and utility templates sent outside that window are charged, and the rate depends on the recipient's country calling code.
+    a: Up to a limit. Since 1 October 2026 Meta charges for ordinary replies inside the customer service window after the first 1,000 per business phone number each month. Marketing, utility and authentication templates are charged from the first send, inside or outside that window, and the rate depends on the recipient's country calling code.
   - q: Does Meta charge the same WhatsApp rate in Lebanon, Saudi Arabia and the UAE?
     a: No. Meta's rate card prices by the recipient's country calling code. Its pricing documentation lists Saudi Arabia (966) and the United Arab Emirates (971) as their own markets, while Lebanon (961) falls into a grouping called Rest of Middle East. A brand selling across all three should budget per market rather than use one blended rate.
   - q: Is a fixed monthly fee better than per resolution pricing?
     a: It depends on your volume. Per resolution pricing is cheaper when traffic is low or very uneven, because a quiet month costs little. A fixed fee is cheaper and easier to plan when you are growing, because a busy month does not raise the bill. plumcut charges a one time setup fee and a fixed monthly fee in wide traffic bands with a ceiling, and passes Meta messaging and AI model usage through at cost with no margin.
 ---
+
+AI customer service costs about 10 to 280 US dollars a month on the advertised plan, based on 12 vendor pages checked on 3 October 2026. The real bill adds 0.90 to 2.00 dollars per automated resolution, plus seats, contact overages and Meta's WhatsApp fees.
 
 You found a tool that says 29 dollars a month. Then the first invoice arrived and it said something else. That gap is not a scam, it is how the category prices: the plan is the entry ticket, and the automation, the people, the contacts and the WhatsApp messages are each metered on their own line.
 
@@ -75,7 +77,7 @@ Three patterns stand out once the lines sit side by side.
 
 ## Meta's fees, and why your market matters
 
-Meta moved WhatsApp to [per message pricing](https://developers.facebook.com/docs/whatsapp/pricing) on 1 July 2025. Its documentation says all non-template messages are free, and utility templates sent inside an open customer service window are free too. What you pay for are template messages: marketing, utility outside the window, and authentication.
+Meta moved WhatsApp to [per message pricing](https://developers.facebook.com/docs/whatsapp/pricing) on 1 July 2025. Since 1 October 2026 its documentation says service replies inside the customer service window are free only for the first 1,000 per business phone number each month, and utility templates are charged even inside an open window. What you pay for are template messages, marketing, utility and authentication, plus service replies past the free tier.
 
 The rate depends on the recipient's country calling code, and the region is split in a way that matters for anyone selling across it. Saudi Arabia (966) and the United Arab Emirates (971) are listed as their own markets. Lebanon (961) sits in a grouping called Rest of Middle East. A brand messaging customers in Beirut, Riyadh and Dubai is paying three different rate lines, and a vendor quote that uses one blended number is guessing. We broke the categories down in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 

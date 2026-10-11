@@ -1,6 +1,6 @@
 ---
 title: WhatsApp Ordering for Supermarkets When You Already Have an App
-description: If most of your customers already order in your app, does WhatsApp ordering add anything? Where the app wins, where WhatsApp wins, and how the two run side by side.
+description: "WhatsApp ordering for supermarkets that already have an app: where the app wins, where WhatsApp wins, and how the two run side by side."
 date: 2026-10-06
 slug: whatsapp-ordering-supermarkets
 type: direct
@@ -24,6 +24,8 @@ faq:
   - q: Does a customer need an account to order groceries on WhatsApp?
     a: No. On WhatsApp the customer's phone number identifies them, so there is no sign up, no password and no app download. The business can match that number to an existing loyalty or app account if one exists, and saved addresses and order history can follow the customer across both channels.
 ---
+
+WhatsApp ordering for supermarkets still pays when you already have an app, as a parallel channel for shoppers who will never install it, for ad traffic and for quick reorders.
 
 If most of your customers already order through your app, a WhatsApp ordering channel can look like a solution to a problem you do not have. It is a fair objection, and it is half right. The app is the better tool for some shoppers and some baskets. The question is not whether WhatsApp beats your app. It is whether there are customers and orders your app is not reaching at all.
 
@@ -80,7 +82,7 @@ We covered the integration side for delivery businesses in [how to connect Whats
 
 Not everything belongs in a chat. Full catalogue browsing is better in the app. Loyalty scheme mechanics, account settings and long order histories are app jobs. And anything that needs a human decision, such as a refund on a damaged delivery, should be handed to a person quickly rather than handled by automation. We wrote about where that line sits for retail in [can AI actually handle retail customer service](/blog/ai-customer-service-retail).
 
-The other limit is cost. Replies inside a conversation the customer started are free on the WhatsApp Business Platform, but promotional messages you send first are charged per delivered message under Meta's [pricing rules](https://developers.facebook.com/docs/whatsapp/pricing/). A WhatsApp grocery channel works best when customers come to you, which is exactly why it pairs well with ads that open a WhatsApp chat. We go through that, and how to sell more inside each order, in [how to upsell groceries on WhatsApp](/blog/upsell-groceries-whatsapp).
+The other limit is cost. Replies inside a conversation the customer started are free for the first 1,000 per business phone number each month on the WhatsApp Business Platform, but promotional messages you send first are charged per delivered message under Meta's [pricing rules](https://developers.facebook.com/docs/whatsapp/pricing/). A WhatsApp grocery channel works best when customers come to you, which is exactly why it pairs well with ads that open a WhatsApp chat. We go through that, and how to sell more inside each order, in [how to upsell groceries on WhatsApp](/blog/upsell-groceries-whatsapp).
 
 ## Where plumcut fits
 

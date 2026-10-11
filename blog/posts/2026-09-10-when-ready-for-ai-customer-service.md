@@ -1,6 +1,6 @@
 ---
 title: When Is Your Business Ready for AI Customer Service?
-description: Most advice tells you how to automate, never whether you should yet. The three signals that say you are ready, and the honest case for waiting.
+description: When is your business ready for AI customer service? The three signals that say you are ready, and the honest case for waiting a little longer.
 date: 2026-09-10
 slug: when-ready-for-ai-customer-service
 type: general
@@ -18,12 +18,14 @@ faq:
   - q: How many messages a day do you need before automating is worth it?
     a: There is no universal number, because the cost is in the questions rather than the messages. A store answering forty messages a day that are all variations of three questions has more to gain than one answering a hundred messages that are all different. Count your repeated questions before you count your messages.
   - q: Does it cost more to reply to customers on WhatsApp once you automate?
-    a: Not for replies. Meta made service conversations free on 1 November 2024, and non-template messages sent inside an open customer service window are not charged. Since 1 July 2025 the platform charges per delivered template message, which covers messages you start, not answers you send back inside the window.
+    a: Only a little for replies. Meta made service conversations free on 1 November 2024, but since 1 October 2026 it charges for non-template service replies inside an open customer service window after the first 1,000 per business phone number each month. Template messages are charged per delivered message.
   - q: Is my business too small for AI customer service?
     a: If you are pre-launch, selling to friends, or taking orders by phone, then yes, and the honest advice is to wait. Automation removes repetition. Before you have repetition, it removes nothing and adds a system to maintain.
   - q: What should I do instead if I am not ready yet?
     a: Write down every question a customer asks you for two weeks. That list is the only real input an automation needs, it costs nothing to build, and it stays useful whether you automate in three months or never.
 ---
+
+Your business is ready for AI customer service when the same questions arrive often enough that answering them is a job, and late enough that slow answers are costing you sales.
 
 Every founder asking whether to automate their customer conversations gets sold to instead of answered. The vendor says yes. The article says yes, here are eleven tools. Nobody says the thing that is true for a lot of businesses, which is that you are not there yet and buying now would cost you time you do not have.
 
@@ -47,7 +49,7 @@ Two out of three is usually enough to start. One is not.
 
 This is the misunderstanding that delays the decision most often, so it is worth being precise, because the pricing changed and a lot of the advice online has not caught up.
 
-On the WhatsApp Business Platform, [Meta made service conversations free for all businesses on 1 November 2024](https://developers.facebook.com/docs/whatsapp/pricing/), and non-template messages sent inside an open customer service window are not charged. Since 1 July 2025, pricing is per delivered message and charges apply when a template message is delivered.
+On the WhatsApp Business Platform, Meta made service conversations free for all businesses on 1 November 2024, and since 1 October 2026 [it charges for them again](https://developers.facebook.com/docs/whatsapp/pricing) after the first 1,000 per business phone number each month. Pricing is per delivered message, and template messages are charged when delivered.
 
 The practical shape of that: **answering a customer who messaged you is not what costs money. Starting a conversation is.**
 

@@ -1,6 +1,6 @@
 ---
-title: What Happens When Your Store Gets More Messages Than Your Team Can Read
-description: Four things fail in a fixed order as retail message volume climbs, and revenue is only the third. How to scale a busy shop without growing the team to match.
+title: Too Many Customer Messages? What Retail Stores Can Do
+description: Too many customer messages in your retail store? Four things fail in a fixed order. How to scale a busy shop without growing the team to match.
 date: 2026-09-13
 slug: too-many-customer-messages-retail
 type: general
@@ -25,6 +25,8 @@ faq:
   - q: Do I need the WhatsApp Business API to handle high message volume?
     a: The free WhatsApp Business app has no way to connect your store data, no reliable multi person access and no automation beyond simple canned replies, so it stops working as a system somewhere in the low hundreds of messages a day. The WhatsApp Business Platform is what allows order lookups, stock checks and automated answers grounded in real data. Replying to customers who messaged you first is not what costs money on that platform, because service messages sent inside the 24 hour customer service window are not charged.
 ---
+
+Too many customer messages break a retail store in a fixed order: reply speed first, then answer consistency, then evening coverage, then your own read of what customers want.
 
 There is a point every growing retail shop passes without noticing. Not the day you get busy. The day the messages stop being a queue you clear and start being a queue you triage. You still answer, and you still feel productive, but you are now choosing which customers to answer and the choice is made by whoever shouted most recently.
 
@@ -83,7 +85,7 @@ The sequence matters more than the tool. We covered the general version in [what
 
 **Automate the deterministic questions only.** The ones with exactly one correct answer. Everything else gets an honest refusal and a fast route to a person. That route is not optional: Meta's WhatsApp Business Messaging Policy permits automation inside the 24 hour customer service window and requires prompt, clear and direct escalation paths alongside it. The full design is in [automating customer service without losing the customer](/blog/automate-customer-service-without-losing-customers).
 
-**Then let the volume arrive.** Replies to customers who messaged you first are not what costs money on the WhatsApp Business Platform, because service messages sent inside the 24 hour window a customer opened are not charged. The ceiling on answering people who wrote to you is not a pricing ceiling.
+**Then let the volume arrive.** Replies to customers who messaged you first are not what costs money on the WhatsApp Business Platform, because service messages sent inside the 24 hour window a customer opened are free for the first 1,000 per business phone number each month and then charged at the market's service rate, under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026. The ceiling on answering people who wrote to you is not a pricing ceiling.
 
 **Keep your people for the judgment.** The refund, the complaint, the wholesale enquiry, the regular who deserves a human. You are not removing your team, you are removing the lookup work that was stopping them doing this.
 

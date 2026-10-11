@@ -54,9 +54,24 @@ For the chosen subject, write down for yourself:
 - The question, in the words a person would type it. Search for what people
   actually ask around the subject; do not just answer the phrasing you were
   handed.
+- **The one keyword.** One search phrase per post, the way people ask it. If
+  the subject has two (upsell and cross-sell), pick the stronger for the title
+  and keep the other in the body.
 - Who the reader is.
 - What this adds that the existing posts do not.
 - Which plumcut page it should send the reader to.
+
+**Prefer a Lebanon, GCC or MENA angle.** Generic cost and comparison questions
+("AI customer service cost", "chatbot vs hiring") are answered from vendor
+pricing pages, Intercom, Zendesk, Manychat, and a field note will not displace
+them. A country or region angle ("WhatsApp API pricing for Lebanon") is where
+we can be the page that gets read.
+
+**Check what ChatGPT reads before you write.** Ask the question in ChatGPT with
+search on and note which pages it opens and which it cites. Aside does this by
+hand in the browser; no API key is needed. If the pages it reads all lead with
+the keyword and a country, write to that shape. If they are all vendor pricing
+pages, change the angle or pick another question.
 
 If an existing post already answers the question, say so and either narrow the
 new post to a different question or propose refreshing the old one.
@@ -77,12 +92,20 @@ The public post carries the answered question and nothing else.
 
 Use the length the question needs. Do not pad a complete answer.
 
-1. **Opening**, 2 to 4 sentences naming the reader's real problem.
-2. **A direct answer**, optionally a blockquote, answering the question on its own.
-3. **Body** in `##` sections. Tables where they help, verified specifics,
+1. **Keyword alignment.** Slug, title (which is also the H1), meta description
+   and the first words of sentence one all use the same keyword. Title under
+   60 characters where possible, leading with the keyword. The build warns when
+   the first sentence misses the title keyword or the title and slug share
+   fewer than 2 meaningful words.
+2. **First sentence**, about 30 words at most: the keyword first, then the
+   direct answer, then stop. It must make sense quoted on its own. A second
+   sentence can carry the detail.
+3. **The hook**, the scene or story line, opens paragraph 2, never the post.
+4. **A direct answer**, optionally a blockquote, answering the question on its own.
+5. **Body** in `##` sections. Tables where they help, verified specifics,
    practical examples. Label every hypothetical as hypothetical.
-4. **A closing section** telling the reader what to do this week.
-5. **FAQ questions** only where they add a real answer.
+6. **A closing section** telling the reader what to do this week.
+7. **FAQ questions** only where they add a real answer.
 
 Verify every factual claim against a primary source as you go. Vendor prices
 come from the vendor's own page, with the date checked in the body.
@@ -110,7 +133,11 @@ Read the post again as a stranger who wants to catch you out.
   Cannot verify it, qualify it or cut it.
 - **Every competitor assertion** fair and current. Disclose that plumcut
   publishes comparisons featuring itself, and say where an alternative fits better.
-- **The title's question actually answered.**
+- **The title's question actually answered**, in the first sentence.
+- **One keyword, everywhere it counts:** slug, title, H1, meta description and
+  the first words of sentence one. Sentence one is about 30 words, answers
+  directly, and the hook sits in paragraph 2. No keyword warning left in the build
+  output unless you can say why.
 - **No contradiction** with the FAQ or any existing post.
 - **Every internal link resolves.**
 - **House rules:** no em or en dashes, no Arabic script, plumcut and plum always
@@ -176,6 +203,21 @@ Page body:
 If Notion is unreachable, say so plainly and list the row's properties so it can
 be added by hand.
 
+## Step 9. Draft the LinkedIn version
+
+Every new post gets a short LinkedIn version, drafted for Charbel to approve.
+Never post it yourself.
+
+- Open with the same keyword as the post, in the same first-sentence shape: the
+  keyword, then the answer.
+- Keep it short: the answer, the one fact worth lifting (a number, a country,
+  a rule), and the link to `https://plumcut.com/blog/<slug>`.
+- Same house rules as the post: no dashes, plumcut lowercase, WhatsApp only,
+  nothing a meeting could be traced to.
+
+Put the draft in the Notion row under `## LinkedIn draft (for Charbel)` and
+include it in the Finish report.
+
 ## Never
 
 - Publish anything that failed Step 4.
@@ -187,5 +229,5 @@ be added by hand.
 ## Finish
 
 Report: each post's title and live URL, the verification result, the backlinks
-added, anything qualified or cut in review, and confirmation that the Notion rows
-exist.
+added, anything qualified or cut in review, confirmation that the Notion rows
+exist, and the LinkedIn draft for Charbel.

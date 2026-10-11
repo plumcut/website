@@ -1,7 +1,7 @@
 ---
 title: WhatsApp AI for Shopify Stores in Lebanon and the Gulf
 slug: whatsapp-ai-shopify-lebanon-gulf
-description: Why MENA Shopify stores sell in WhatsApp instead of the checkout, what breaks when you automate it, and what a working setup looks like.
+description: "WhatsApp AI for Shopify stores in Lebanon and the Gulf: why MENA shoppers buy in chat instead of the checkout, what breaks when you automate it, and what works."
 type: direct
 date: 2026-09-06
 keywords: [WhatsApp AI Shopify, WhatsApp automation Lebanon, WhatsApp chatbot Gulf, Shopify WhatsApp integration MENA, Arabic WhatsApp chatbot]
@@ -27,9 +27,11 @@ faq:
     a: Two to four weeks in practice. The connection is quick. What takes the time is auditing the catalogue, writing down the policies your team knows but has never documented, getting templates approved, and testing what happens when the AI does not know something.
 ---
 
+WhatsApp AI for Shopify stores in Lebanon and the Gulf connects your catalogue, stock and orders to the chat, so it can answer, sell and track orders in Arabic, English or Arabizi.
+
 A Shopify store in Beirut, Dubai or Riyadh usually has a checkout that works perfectly and a WhatsApp number doing most of the actual selling. That is not a failure of the store. It is how the region buys, and the stores that win are the ones that stop fighting it.
 
-> WhatsApp AI for a MENA Shopify store means connecting a language model to your Shopify catalogue, inventory and orders, so it can answer product questions, check real stock, recommend and sell, and return order status in Arabic, English or Arabizi, inside the 24 hour window where replies are free. It matters more here than in Europe or the US because Gulf and Levantine shoppers routinely start and finish a purchase in chat rather than at the checkout, and because cash on delivery keeps a human in the loop. The work is mostly not technical: it is cleaning the catalogue, writing down undocumented policies, and building a clean handover to a person. Expect two to four weeks.
+> WhatsApp AI for a MENA Shopify store means connecting a language model to your Shopify catalogue, inventory and orders, so it can answer product questions, check real stock, recommend and sell, and return order status in Arabic, English or Arabizi, inside the 24 hour window where the first 1,000 replies per number each month are free. It matters more here than in Europe or the US because Gulf and Levantine shoppers routinely start and finish a purchase in chat rather than at the checkout, and because cash on delivery keeps a human in the loop. The work is mostly not technical: it is cleaning the catalogue, writing down undocumented policies, and building a clean handover to a person. Expect two to four weeks.
 
 ## Why the checkout is not where the sale happens
 

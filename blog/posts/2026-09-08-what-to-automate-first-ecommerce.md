@@ -1,7 +1,7 @@
 ---
 title: What to Automate First in an Ecommerce Business
 slug: what-to-automate-first-ecommerce
-description: Automation pays back in a specific order. The sequence that works for a MENA or Gulf online store, what to leave manual, and how to tell which is which.
+description: "What to automate first in an ecommerce business: the sequence that pays back for a MENA or Gulf online store, what to leave manual, and how to tell which is which."
 type: general
 date: 2026-09-08
 related: [how-to-automate-whatsapp-for-your-business, whatsapp-ai-shopify-lebanon-gulf, best-whatsapp-automation-tools]
@@ -17,7 +17,7 @@ heroLicenseUrl: https://creativecommons.org/licenses/by/2.0/
 notionUrl: https://app.notion.com/p/3d58d6e734f481968e4fc5b889b8f51d
 faq:
   - q: What should a small online store automate first?
-    a: The repeated questions that have exactly one correct answer: opening hours, delivery zones and times, sizing guidance, returns policy and payment methods. They need no integration, no approved template and no per message fee, because a reply sent inside the 24 hour customer service window a customer opens is not charged. Writing those answers down properly is also the specification for every later stage.
+    a: The repeated questions that have exactly one correct answer: opening hours, delivery zones and times, sizing guidance, returns policy and payment methods. They need no integration, no approved template and little in message fees, because replies sent inside the 24 hour customer service window a customer opens are free for the first 1,000 per business phone number each month. Writing those answers down properly is also the specification for every later stage.
   - q: Do I need the WhatsApp Business API to start automating?
     a: Not for the first stage. Fixed answers to inbound questions can start on the free WhatsApp Business app with its built in away messages and quick replies. You need the WhatsApp Business Platform once you want replies that read live data from your store, or once you want to message a customer first outside the 24 hour window, which requires an approved template.
   - q: How do I know if a task is worth automating?
@@ -29,6 +29,8 @@ faq:
   - q: Should I automate marketing messages early?
     a: No. Marketing templates require opt in, cost the marketing rate, and generate blocks faster than any other category when they are sent to people who did not expect them. Blocks lower your quality rating, and a lowered quality rating reduces the number of people you are permitted to message at all. Earn the reactive stages first.
 ---
+
+The first thing to automate in an ecommerce business is the frequent question with one correct answer, followed by order status and stock lookups, then the notifications you send first.
 
 Everybody selling automation tells you to automate. Almost nobody tells you what to automate first, which is the only part that decides whether you get anything back. Start in the wrong place and you spend two months wiring up a workflow that fires eleven times a month, while the question you answer forty times a day is still being typed out by hand.
 
@@ -59,11 +61,11 @@ Each stage is a prerequisite for the next in practice, not just in theory. There
 
 ## Stage 1: the answers you already have, written down
 
-This is the stage everyone skips because it feels too small. It is the stage with the best return, because it requires no integration, no template approval and no per message fee.
+This is the stage everyone skips because it feels too small. It is the stage with the best return, because it requires no integration, no template approval and, for most stores, little or no message fee.
 
 Your opening hours. Which areas you deliver to and how long it takes. Whether the fabric runs small. What happens if it does not fit. Whether you take cards, transfers or cash on delivery. Each of these has exactly one correct answer, that answer changes rarely, and somebody on your team types it several times a day.
 
-Under Meta's per message pricing, which has applied to all businesses since 1 July 2025, a customer messaging you opens a 24 hour customer service window, and service messages sent inside that window are not charged. So the entire first stage of automating your store costs nothing in message fees. You are converting your own written policy into instant replies.
+Under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, a customer messaging you opens a 24 hour customer service window, and service messages sent inside it are free for the first 1,000 per business phone number each month and then charged at the market's service rate. So the first stage of automating your store costs little or nothing in message fees. You are converting your own written policy into instant replies.
 
 The work here is not technical. It is writing the answers down properly, in the words you actually want a customer to read, and deciding what happens when the question is close to but not quite one of them.
 

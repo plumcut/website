@@ -1,6 +1,6 @@
 ---
-title: How to Upsell Groceries on WhatsApp, From the Ad to the Basket
-description: Run a Meta ad that opens a WhatsApp chat, turn a recipe or shopping list into a basket, and add only the items that belong in it. A practical guide for grocers.
+title: How to Upsell Groceries on WhatsApp
+description: "How to upsell groceries on WhatsApp: run a Meta ad that opens a chat, turn a recipe or shopping list into a basket, and add only the items that belong in it."
 date: 2026-10-06
 slug: upsell-groceries-whatsapp
 type: general
@@ -20,10 +20,12 @@ faq:
   - q: What are Click to WhatsApp ads?
     a: Click to WhatsApp ads are a Meta ad format that opens a WhatsApp chat with the business when the person taps the ad, instead of sending them to a website or an app store. They are created in Meta Ads Manager by choosing messaging apps and WhatsApp as the destination. For a grocer, the ad can promote an offer or a recipe and land the shopper directly in a conversation that can take the order.
   - q: Are messages from a Click to WhatsApp ad free?
-    a: Under Meta's WhatsApp Business Platform pricing, if a customer messages you through a Click to WhatsApp ad and you reply within 24 hours, a free entry point window opens for 72 hours, during which any type of message, including templates, can be sent at no charge. Outside that window, replies inside the 24 hour customer service window are free, while marketing templates you send first are charged per delivered message.
+    a: Under Meta's WhatsApp Business Platform pricing, if a customer messages you through a Click to WhatsApp ad on the WhatsApp Android or iOS app and you reply within the 24 hour customer service window, your first reply opens a free entry point window that can stay open for up to 7 days, during which marketing, utility, authentication and service messages, templates included, are not charged. Meta Business Agent messages are still charged inside it. Outside that window, replies inside the 24 hour customer service window are free for the first 1,000 per business phone number each month and then charged, while marketing templates you send first are charged per delivered message.
   - q: Can a WhatsApp chat show product photos and prices?
     a: Yes. The WhatsApp Business Platform supports a product catalog connected to the business account, single product messages with an image, price and description, and multi-product messages that show up to 30 products in sections. Customers can add items to a cart inside WhatsApp and send one order.
 ---
+
+To upsell groceries on WhatsApp, open the chat from a Meta ad, turn the shopper's recipe or list into a basket, and suggest only items that complete it, one at a time.
 
 Grocery runs on thin margins and frequent repeat visits, so basket size is the number that matters. Most supermarket upselling happens on a shelf end or in an app banner, aimed at nobody in particular. A conversation is different, because the customer has just told you what they are trying to do. This guide covers both halves: getting shoppers into a WhatsApp conversation straight from an ad, and growing the basket once they are there.
 
@@ -37,7 +39,7 @@ Three things make this especially suited to grocery:
 
 - **No account.** The shopper's phone number identifies them. There is nothing to install or register before the first order.
 - **The ad can start the conversation.** The ad's message template in Ads Manager can set a pre-filled first message, which the shopper can edit before sending, as described in [Braze's documentation of the format](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/ads_that_click_to_whatsapp/). A tap on a "Weekend barbecue box" ad lands the shopper in a chat that already knows what they came for.
-- **The first three days are free to message.** Under Meta's [WhatsApp pricing rules](https://developers.facebook.com/docs/whatsapp/pricing/), checked on 6 October 2026, when a customer messages you through a Click to WhatsApp ad and you reply within 24 hours, a free entry point window opens for 72 hours. During it, any type of message, templates included, is sent at no charge. For a grocer that covers the order, the confirmation, the delivery update and a follow up about the next shop.
+- **The first days are free to message.** Under Meta's [WhatsApp pricing rules](https://developers.facebook.com/docs/whatsapp/pricing), checked on 11 October 2026, when a customer messages you through a Click to WhatsApp ad on the WhatsApp Android or iOS app and you reply within the customer service window, your first reply opens a free entry point window that can stay open for up to 7 days. During it, marketing, utility, authentication and service messages, templates included, are not charged, though Meta Business Agent messages still are. For a grocer that covers the order, the confirmation, the delivery update and a follow up about the next shop.
 
 That last point matters for the economics. Outside that window, promotional messages you send first are marketing templates, charged per delivered message. We broke down the full structure in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 

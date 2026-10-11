@@ -1,7 +1,7 @@
 ---
-title: Automating Delivery Updates and the Courier Loop
+title: Automate Delivery Updates for Online Store Orders
 slug: automate-logistics-delivery-updates
-description: "The operations side of order tracking: courier data quality, failed attempts, cash on delivery reattempts, and why a sent message is not a delivered one."
+description: "Automate delivery updates for online store orders: courier data quality, failed attempts, cash on delivery reattempts, and why a sent message is not a delivered one."
 type: general
 date: 2026-09-08
 related: [where-is-my-order-whatsapp, whatsapp-ai-shopify-lebanon-gulf, how-to-automate-whatsapp-for-your-business]
@@ -25,10 +25,12 @@ faq:
   - q: How should automation handle a failed delivery attempt?
     a: By escalating, not by messaging alone. Map the failure status to an internal alert with a named owner and a deadline measured in hours, because whether a reattempt is worth a second leg is a commercial decision, particularly on cash on delivery. Contact the customer with a concrete next option rather than an apology, and log the reason in a fixed vocabulary so the pattern behind repeated failures becomes visible.
   - q: Do delivery notifications cost money?
-    a: A notification you send first, when no customer service window is open, is a utility template and is billed at the rate for that customer's market. Replies inside the 24 hour window a customer opened are not charged, and neither are utility messages sent in response to a user. Meta revised its rate cards effective 1 July 2026 and rates are market specific, so check the current card rather than a quoted figure.
+    a: A notification you send first, when no customer service window is open, is a utility template and is billed at the rate for that customer's market. Since 1 October 2026, replies inside the 24 hour window a customer opened are free for the first 1,000 per business phone number each month, then charged, and utility templates are charged even when sent in response to a user. Meta revised its rate cards effective 1 July 2026 and rates are market specific, so check the current card rather than a quoted figure.
   - q: What changes when orders are cash on delivery?
     a: The delivery attempt is also the payment attempt, so a failed attempt is a cancelled sale plus two legs of shipping rather than a rescheduling. Confirm the order and the delivery window before dispatch instead of after, state the amount and the currency the customer will be asked for, and give them a way to change the day before the driver leaves.
 ---
+
+Automate delivery updates for online store orders around four events: confirmed, dispatched, attempted, and delivered or failed, with the most care on failed cash on delivery attempts.
 
 A parcel leaves your table and stops being yours. It becomes a row in a courier's system, updated by a driver on a phone, in a status vocabulary you did not choose. Meanwhile the customer is asking you, not the courier, where it is. You are accountable for information you do not control, which is the actual shape of the logistics problem for a store in this region.
 
@@ -36,7 +38,7 @@ A parcel leaves your table and stops being yours. It becomes a row in a courier'
 
 ## This is the other half of "where is my order"
 
-We already covered the customer facing side of this in [can AI answer where is my order on WhatsApp](/blog/where-is-my-order-whatsapp). That article is about answering the question well when a customer asks it: matching them to their order, replying inside the free window, and handling split shipments.
+We already covered the customer facing side of this in [can AI answer where is my order on WhatsApp](/blog/where-is-my-order-whatsapp). That article is about answering the question well when a customer asks it: matching them to their order, replying inside the customer service window, and handling split shipments.
 
 This one is about the supply side of that answer. Where the status comes from, why it is often wrong or late, what to do when the courier says one thing and reality says another, and how to run the loop so that fewer customers need to ask at all. If you only read one, read that one first. This is what you need once it is working and you are still losing afternoons to chasing.
 
@@ -44,7 +46,7 @@ This one is about the supply side of that answer. Where the status comes from, w
 
 | Event | Who owns the data | Who needs to know | Message rules |
 | --- | --- | --- | --- |
-| Order confirmed | Your store | Customer, fulfilment | Utility template if you send it first, free if it replies inside an open window |
+| Order confirmed | Your store | Customer, fulfilment | Utility template, charged whether or not a window is open |
 | Dispatched, with tracking reference | Your store, once the courier reference is attached | Customer | Utility template, triggered by a user action, so it must be approved in advance |
 | Out for delivery | Courier | Customer, and only if the courier data is timely enough to be useful | Utility template, and only worth sending if it is accurate |
 | Delivered or failed | Courier | Customer, fulfilment, finance if cash on delivery | The failed case is the one that needs a human path |
@@ -99,11 +101,11 @@ That fourth step is the one that changes the business rather than the day. Faile
 
 ## What this costs
 
-Under Meta's per message pricing, applying to all businesses since 1 July 2025, replies inside the 24 hour customer service window a customer opened are not charged, and utility messages sent in response to a user are also not charged. What you pay for is messaging first: a dispatch notification or a delivery confirmation sent when no window is open is a utility template, billed at the rate for that customer's market.
+Under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, replies inside the 24 hour customer service window a customer opened are free for the first 1,000 per business phone number each month and then charged at the market's service rate, and utility templates are charged from the first send, even in response to a user. A dispatch notification or a delivery confirmation is a utility template, billed at the rate for that customer's market.
 
 Rates are market specific and Meta revised its rate cards effective 1 July 2026, with utility and authentication volume tiers that unlock lower rates as you send more, so check the current rate card for your customers' countries rather than a figure in any article, including this one.
 
-The arithmetic that matters is simple. One dispatch notification per order, paid, against the inbound tracking questions it prevents, which would have been answered free but not for free in your team's time. For most stores in this region the notification wins, and it wins by more the busier you are.
+The arithmetic that matters is simple. One dispatch notification per order, paid, against the inbound tracking questions it prevents, which would have cost little in Meta fees but a lot in your team's time. For most stores in this region the notification wins, and it wins by more the busier you are.
 
 ## What to do this week
 

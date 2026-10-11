@@ -610,6 +610,8 @@ info@plumcut.com
 Source: https://plumcut.com/blog/whatsapp-ordering-supermarkets
 Published: 2026-10-06
 
+WhatsApp ordering for supermarkets still pays when you already have an app, as a parallel channel for shoppers who will never install it, for ad traffic and for quick reorders.
+
 If most of your customers already order through your app, a WhatsApp ordering channel can look like a solution to a problem you do not have. It is a fair objection, and it is half right. The app is the better tool for some shoppers and some baskets. The question is not whether WhatsApp beats your app. It is whether there are customers and orders your app is not reaching at all.
 
 > Yes, a supermarket with an app should still take orders on WhatsApp, but as a parallel channel, not a replacement. The app wins for loyal customers browsing and comparing. WhatsApp wins for everyone who will never install the app, for traffic arriving from social media ads, for quick reorders and for shoppers who already know what they want. Feed both into the same order system and measure them separately.
@@ -665,7 +667,7 @@ We covered the integration side for delivery businesses in [how to connect Whats
 
 Not everything belongs in a chat. Full catalogue browsing is better in the app. Loyalty scheme mechanics, account settings and long order histories are app jobs. And anything that needs a human decision, such as a refund on a damaged delivery, should be handed to a person quickly rather than handled by automation. We wrote about where that line sits for retail in [can AI actually handle retail customer service](/blog/ai-customer-service-retail).
 
-The other limit is cost. Replies inside a conversation the customer started are free on the WhatsApp Business Platform, but promotional messages you send first are charged per delivered message under Meta's [pricing rules](https://developers.facebook.com/docs/whatsapp/pricing/). A WhatsApp grocery channel works best when customers come to you, which is exactly why it pairs well with ads that open a WhatsApp chat. We go through that, and how to sell more inside each order, in [how to upsell groceries on WhatsApp](/blog/upsell-groceries-whatsapp).
+The other limit is cost. Replies inside a conversation the customer started are free for the first 1,000 per business phone number each month on the WhatsApp Business Platform, but promotional messages you send first are charged per delivered message under Meta's [pricing rules](https://developers.facebook.com/docs/whatsapp/pricing/). A WhatsApp grocery channel works best when customers come to you, which is exactly why it pairs well with ads that open a WhatsApp chat. We go through that, and how to sell more inside each order, in [how to upsell groceries on WhatsApp](/blog/upsell-groceries-whatsapp).
 
 ## Where plumcut fits
 
@@ -677,10 +679,12 @@ Pull two numbers. First, the share of your WhatsApp support messages in the last
 
 ---
 
-# How to Upsell Groceries on WhatsApp, From the Ad to the Basket
+# How to Upsell Groceries on WhatsApp
 
 Source: https://plumcut.com/blog/upsell-groceries-whatsapp
 Published: 2026-10-06
+
+To upsell groceries on WhatsApp, open the chat from a Meta ad, turn the shopper's recipe or list into a basket, and suggest only items that complete it, one at a time.
 
 Grocery runs on thin margins and frequent repeat visits, so basket size is the number that matters. Most supermarket upselling happens on a shelf end or in an app banner, aimed at nobody in particular. A conversation is different, because the customer has just told you what they are trying to do. This guide covers both halves: getting shoppers into a WhatsApp conversation straight from an ad, and growing the basket once they are there.
 
@@ -694,7 +698,7 @@ Three things make this especially suited to grocery:
 
 - **No account.** The shopper's phone number identifies them. There is nothing to install or register before the first order.
 - **The ad can start the conversation.** The ad's message template in Ads Manager can set a pre-filled first message, which the shopper can edit before sending, as described in [Braze's documentation of the format](https://www.braze.com/docs/user_guide/channels/whatsapp/use_cases/ads_that_click_to_whatsapp/). A tap on a "Weekend barbecue box" ad lands the shopper in a chat that already knows what they came for.
-- **The first three days are free to message.** Under Meta's [WhatsApp pricing rules](https://developers.facebook.com/docs/whatsapp/pricing/), checked on 6 October 2026, when a customer messages you through a Click to WhatsApp ad and you reply within 24 hours, a free entry point window opens for 72 hours. During it, any type of message, templates included, is sent at no charge. For a grocer that covers the order, the confirmation, the delivery update and a follow up about the next shop.
+- **The first days are free to message.** Under Meta's [WhatsApp pricing rules](https://developers.facebook.com/docs/whatsapp/pricing), checked on 11 October 2026, when a customer messages you through a Click to WhatsApp ad on the WhatsApp Android or iOS app and you reply within the customer service window, your first reply opens a free entry point window that can stay open for up to 7 days. During it, marketing, utility, authentication and service messages, templates included, are not charged, though Meta Business Agent messages still are. For a grocer that covers the order, the confirmation, the delivery update and a follow up about the next shop.
 
 That last point matters for the economics. Outside that window, promotional messages you send first are marketing templates, charged per delivered message. We broke down the full structure in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 
@@ -747,10 +751,12 @@ Pick one meal your customers already buy for, a weekend barbecue, a family pasta
 
 ---
 
-# What AI Customer Service Really Costs Per Month in 2026
+# AI Customer Service Cost in 2026: The Hidden Fees
 
 Source: https://plumcut.com/blog/ai-customer-service-hidden-costs
 Published: 2026-10-03
+
+AI customer service costs about 10 to 280 US dollars a month on the advertised plan, based on 12 vendor pages checked on 3 October 2026. The real bill adds 0.90 to 2.00 dollars per automated resolution, plus seats, contact overages and Meta's WhatsApp fees.
 
 You found a tool that says 29 dollars a month. Then the first invoice arrived and it said something else. That gap is not a scam, it is how the category prices: the plan is the entry ticket, and the automation, the people, the contacts and the WhatsApp messages are each metered on their own line.
 
@@ -800,7 +806,7 @@ Three patterns stand out once the lines sit side by side.
 
 ## Meta's fees, and why your market matters
 
-Meta moved WhatsApp to [per message pricing](https://developers.facebook.com/docs/whatsapp/pricing) on 1 July 2025. Its documentation says all non-template messages are free, and utility templates sent inside an open customer service window are free too. What you pay for are template messages: marketing, utility outside the window, and authentication.
+Meta moved WhatsApp to [per message pricing](https://developers.facebook.com/docs/whatsapp/pricing) on 1 July 2025. Since 1 October 2026 its documentation says service replies inside the customer service window are free only for the first 1,000 per business phone number each month, and utility templates are charged even inside an open window. What you pay for are template messages, marketing, utility and authentication, plus service replies past the free tier.
 
 The rate depends on the recipient's country calling code, and the region is split in a way that matters for anyone selling across it. Saudi Arabia (966) and the United Arab Emirates (971) are listed as their own markets. Lebanon (961) sits in a grouping called Rest of Middle East. A brand messaging customers in Beirut, Riyadh and Dubai is paying three different rate lines, and a vendor quote that uses one blended number is guessing. We broke the categories down in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 
@@ -841,10 +847,12 @@ Plainly, because a comparison that never says this is an advert. If your volume 
 
 ---
 
-# AI Chatbot vs Hiring a Customer Service Employee: Which Is Cheaper?
+# AI Chatbot vs Hiring Customer Service in Lebanon and GCC
 
 Source: https://plumcut.com/blog/ai-chatbot-vs-hiring-customer-service
 Published: 2026-10-03
+
+An AI chatbot is cheaper than hiring customer service staff in Lebanon and GCC markets such as Saudi Arabia and the UAE when questions repeat, since one hire covers 48 of 168 weekly hours.
 
 Messages are piling up, replies are going out late, and the obvious fix is to hire someone. Before you post the job ad, run the numbers properly, because the cost of a customer service hire is not the salary on the offer letter, and one hire does not cover the hours your customers are actually messaging.
 
@@ -919,10 +927,12 @@ There are cases where hiring is the better first move. If your messages are most
 
 ---
 
-# Is Your Customer Data Safe With an AI Chatbot? 10 Questions to Ask
+# Is Customer Data Safe With an AI Chatbot? 10 Questions
 
 Source: https://plumcut.com/blog/ai-chatbot-customer-data-safety
 Published: 2026-10-03
+
+Customer data can be safe with an AI chatbot, but on WhatsApp it passes through three parties, Meta, the chatbot vendor and the AI model provider, and the vendor's policies differ most.
 
 Your customers send you their address, their phone number, sometimes a photo of a receipt, and they send it on WhatsApp because it feels private. Put an AI in front of that inbox and a reasonable question follows: where does all of that go now, and who else can see it?
 
@@ -1001,10 +1011,12 @@ Bring the list. Ask all ten on the first call and compare the answers with whoev
 
 ---
 
-# How to Run One AI Across Several Stores on WhatsApp, Instagram and Messenger
+# One AI for Multiple Stores and Brands on WhatsApp
 
 Source: https://plumcut.com/blog/one-ai-multiple-stores-channels
 Published: 2026-09-25
+
+One AI can run multiple stores and brands on WhatsApp: one engine holds the language skills, shared rules and connections, while each store keeps its own number, name, catalogue and prices.
 
 A business with one shop has one inbox. A business with five shops usually has five WhatsApp numbers, four Instagram accounts, three Facebook Pages, and a different person or a different basic bot answering each of them. Customers get different answers to the same question depending on which door they knocked on, stock questions land at the wrong branch, and nobody can see the whole picture.
 
@@ -1112,10 +1124,12 @@ If you run a group of brands rather than a group of branches, the decisions abov
 
 ---
 
-# How Holding Companies Can Automate Customer Conversations Across Their Brands
+# How Holding Companies Automate Customer Conversations
 
 Source: https://plumcut.com/blog/holding-company-conversation-automation
 Published: 2026-09-25
+
+Holding companies automate customer conversations best by centralising one engine and one set of data, keeping every brand distinct at the front, and rolling out one brand at a time.
 
 A group with several brands rarely decides how its brands talk to customers. It happens brand by brand. One brand hires an agency that sets up a basic chatbot, another answers WhatsApp from a manager's phone, a third bought a platform nobody fully configured. Each one pays for its own tools and its own integrations, and the group cannot see what any of them is hearing from customers.
 
@@ -1219,10 +1233,12 @@ Pricing follows the same shape as for any client: a setup fee for the build, the
 
 ---
 
-# Which WhatsApp AI Actually Does the Work? 13 Tools Compared for MENA
+# WhatsApp AI That Takes Action: 13 Tools Compared for MENA
 
 Source: https://plumcut.com/blog/whatsapp-ai-that-takes-action-mena
 Published: 2026-09-19
+
+WhatsApp AI that takes action changes something in your store, CRM or courier account, and across the 13 tools compared here, the real difference is who builds that action.
 
 Every platform on this list will tell you it has an AI agent. That word now covers two very different products, and the gap between them is the whole decision.
 
@@ -1240,7 +1256,7 @@ plumcut sells a managed WhatsApp service and is one of the options below, so rea
 
 | Tool | What it publishes about acting in other systems | Who builds and maintains the action | Notable for MENA |
 | --- | --- | --- | --- |
-| [Meta Business Agent](https://developers.facebook.com/documentation/meta-business-agent/overview) | Custom connectors to your external APIs, for actions such as checking an order or booking an appointment | You, or your partner | Free to activate, but eligibility is limited by country and vertical |
+| [Meta Business Agent](https://developers.facebook.com/documentation/meta-business-agent/overview) | Custom connectors to your external APIs, for actions such as checking an order or booking an appointment | You, or your partner | Free to activate, replies about 4 to 5 cents each, eligibility limited by country and vertical |
 | [respond.io](https://respond.io/help/ai-agent-actions) | AI Agent Actions, including Make HTTP Requests, update contact fields and lifecycle, trigger workflows | You | Arabic interface not stated |
 | [SleekFlow](https://help.sleekflow.io/en_US/sleekflow_ai/custom-api-integrations-in-sleekflow-ai) | Custom API integrations to retrieve data, trigger actions or update records, plus Shopify, HubSpot and Salesforce | You | Publishes an Arabic version of its own site |
 | [Wati](https://support.wati.io/en/articles/12320095-how-to-use-bring-your-own-ai-byoa-to-connect-and-manage-your-own-ai-agents-in-wati) | Bring Your Own AI connects your agent as an operator using Wati's own APIs, plus an MCP server | You, and the actions run inside Wati | Publishes an Arabic version of its own site |
@@ -1256,7 +1272,7 @@ plumcut sells a managed WhatsApp service and is one of the options below, so rea
 
 ## Meta Business Agent: the new floor, not the ceiling
 
-Meta [announced](https://about.fb.com/news/2026/06/meta-business-agent/) in June 2026 that it was expanding Business Agent to businesses of all sizes globally, that more than a million businesses were already using one on WhatsApp and Messenger, and that it was free to activate, with paid subscription options signalled for later. The developer documentation describes knowledge sources plus custom connectors to external APIs so the agent can take actions on the business's behalf.
+Meta [announced](https://about.fb.com/news/2026/06/meta-business-agent/) in June 2026 that it was expanding Business Agent to businesses of all sizes globally, that more than a million businesses were already using one on WhatsApp and Messenger, and that it was free to activate. Replies are billed [since 1 August 2026](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages) at 2 US dollars per million tokens, which [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing) puts at about 4 to 5 cents per message. The developer documentation describes knowledge sources plus custom connectors to external APIs so the agent can take actions on the business's behalf.
 
 Take it seriously, because it resets what "answers customers" is worth. Then read the [eligibility rules](https://developers.facebook.com/documentation/meta-business-agent/get-started): the number must be on the Cloud API, the business must be in an authorised country and an eligible vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and one number cannot run two competing messaging products at the same time. That last rule is the one to plan around, because it makes this an either or decision for your main number.
 
@@ -1329,22 +1345,24 @@ The sixth question is the one that ends most demos in this region. Bring your ow
 
 ---
 
-# Automation Is Not Just Customer Service. The Value Is in the Internal Work
+# What Can AI Automate Beyond Customer Service?
 
 Source: https://plumcut.com/blog/automation-beyond-customer-service
 Published: 2026-09-19
+
+AI can automate far beyond customer service, and the value is in the internal work after the reply: creating the order in the store, writing the CRM record, booking the courier and sending the exception to the one person who can approve it.
 
 A customer in Riyadh asks to change the delivery address on an order that ships tomorrow. The agent replies in four seconds, in her own language, politely, correctly. Nothing has happened. The address in the store is unchanged, the courier still holds the old label, and the person who packs at seven in the morning has not been told. The conversation looks finished. The work has not started.
 
 > Automating customer service is the visible half, and it is quickly becoming the cheap half. Meta now ships a business agent that answers on your own WhatsApp number, and said in June 2026 that more than a million businesses were already using one across WhatsApp and Messenger. What is not a commodity is the internal half: the order created in the store, the record written to the CRM, the courier booked with an address the courier will accept, the exception routed to the one person who can approve it, and the confirmation sent back once the thing is genuinely done. A request is not resolved when the reply is sent. It is resolved when something changed in a system. In MENA that second half carries more work than the English language demos suggest, because the address is a national short code or a Makani number rather than a street line, because cash on delivery still needs confirming in some markets, and because the message that starts all of it often arrives in Arabizi.
 
-## Answering is turning into the free part
+## Answering is turning into the cheap part
 
-Meta [announced](https://about.fb.com/news/2026/06/meta-business-agent/) in June 2026 that it was expanding Meta Business Agent to businesses of all sizes globally, that more than a million businesses were already using one on WhatsApp and Messenger, and that businesses could activate it for free, with paid subscription options coming later. Its developer [documentation](https://developers.facebook.com/documentation/meta-business-agent/overview) describes an agent that answers from knowledge you provide and takes actions through custom connectors to your external APIs, such as checking an order or booking an appointment.
+Meta [announced](https://about.fb.com/news/2026/06/meta-business-agent/) in June 2026 that it was expanding Meta Business Agent to businesses of all sizes globally, that more than a million businesses were already using one on WhatsApp and Messenger, and that businesses could activate it for free. Its replies are not free: [since 1 August 2026](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages) Meta bills them at 2 US dollars per million tokens, which [its pricing page](https://developers.facebook.com/docs/whatsapp/pricing) puts at about 4 to 5 cents per message. Its developer [documentation](https://developers.facebook.com/documentation/meta-business-agent/overview) describes an agent that answers from knowledge you provide and takes actions through custom connectors to your external APIs, such as checking an order or booking an appointment.
 
 Read that as a market signal rather than a product review. When the platform itself gives away a competent answering layer, "we reply instantly" stops being a reason anyone chooses you. Your competitor will soon reply instantly too, at no cost, on the same channel.
 
-What does not arrive free is permission and plumbing: what your automation is allowed to change inside your business, and the connectors that let it. Meta's own [getting started page](https://developers.facebook.com/documentation/meta-business-agent/get-started) makes the shape of that clear. The number has to be on the Cloud API, the business has to sit in an eligible country and an eligible vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and a single number cannot run two competing messaging products at once. Those are exactly the questions of ownership and wiring that a free answering layer does not resolve for you.
+What does not arrive free is permission and plumbing: what your automation is allowed to change inside your business, and the connectors that let it. Meta's own [getting started page](https://developers.facebook.com/documentation/meta-business-agent/get-started) makes the shape of that clear. The number has to be on the Cloud API, the business has to sit in an eligible country and an eligible vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and a single number cannot run two competing messaging products at once. Those are exactly the questions of ownership and wiring that a cheap answering layer does not resolve for you.
 
 ## A request is only finished when something changes in a system
 
@@ -1425,10 +1443,12 @@ Answering is table stakes now. The work after the reply is the part still worth 
 
 ---
 
-# How to Upsell and Cross-Sell Inside a Customer Conversation
+# How to Upsell Inside a Customer Conversation
 
 Source: https://plumcut.com/blog/upsell-cross-sell-in-conversation
 Published: 2026-09-13
+
+To upsell inside a customer conversation, make one offer at one of four moments: after a stated need, after the order is confirmed, when an objection appears, or after delivery.
 
 Most retail upselling happens on a page where nobody is talking. A widget under the product image, a cart drawer, an offer wedged between order confirmation and the thank you page. It works well enough. But if a real share of your orders starts with someone messaging you to ask a question, then the place your customer actually said what they want is a conversation, and almost nothing on the market sells there.
 
@@ -1465,9 +1485,9 @@ Three limits, and two of them are other people's rules rather than our opinion.
 
 **Three consecutive offers is the documented ceiling, and a conversation should stay well under it.** Shopify's own developer guidance for [post-purchase product offers](https://shopify.dev/docs/apps/build/checkout/product-offers/ux-for-post-purchase-product-offers) is to display a maximum of three consecutive upsell offers and to tailor them to the customer's actual behaviour. That is guidance for a page, where the customer is clicking rather than talking. In a live conversation there is a person on the other side and the practical limit is one.
 
-**Reaching back out later is a different thing with different rules.** An offer inside a live conversation the customer started sits in the 24 hour customer service window, and non-template service messages there are not charged. Messaging someone after that window closes, a cart reminder or a reorder prompt, is a marketing message on the WhatsApp Business Platform. It needs opt-in and an approved marketing template, and it is charged per delivered message. We went through exactly where that line sits in [the rules on WhatsApp cart reminders](/blog/whatsapp-abandoned-cart-rules).
+**Reaching back out later is a different thing with different rules.** An offer inside a live conversation the customer started sits in the 24 hour customer service window, and non-template service messages there are free for the first 1,000 per business phone number each month and then charged at the market's service rate, under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026. Messaging someone after that window closes, a cart reminder or a reorder prompt, is a marketing message on the WhatsApp Business Platform. It needs opt-in and an approved marketing template, and it is charged per delivered message. We went through exactly where that line sits in [the rules on WhatsApp cart reminders](/blog/whatsapp-abandoned-cart-rules).
 
-The cost consequence is worth sitting with. The offer made during a live conversation is the free one and the one that converts best. The one you pay for is the one you send to someone who already left.
+The cost consequence is worth sitting with. The offer made during a live conversation is the cheap one and the one that converts best. The one you pay for is the one you send to someone who already left.
 
 ## The tools, and the surface each one sells on
 
@@ -1515,10 +1535,12 @@ This is the part plumcut treats as the job rather than the setup, since [it runs
 
 ---
 
-# What Happens When Your Store Gets More Messages Than Your Team Can Read
+# Too Many Customer Messages? What Retail Stores Can Do
 
 Source: https://plumcut.com/blog/too-many-customer-messages-retail
 Published: 2026-09-13
+
+Too many customer messages break a retail store in a fixed order: reply speed first, then answer consistency, then evening coverage, then your own read of what customers want.
 
 There is a point every growing retail shop passes without noticing. Not the day you get busy. The day the messages stop being a queue you clear and start being a queue you triage. You still answer, and you still feel productive, but you are now choosing which customers to answer and the choice is made by whoever shouted most recently.
 
@@ -1577,7 +1599,7 @@ The sequence matters more than the tool. We covered the general version in [what
 
 **Automate the deterministic questions only.** The ones with exactly one correct answer. Everything else gets an honest refusal and a fast route to a person. That route is not optional: Meta's WhatsApp Business Messaging Policy permits automation inside the 24 hour customer service window and requires prompt, clear and direct escalation paths alongside it. The full design is in [automating customer service without losing the customer](/blog/automate-customer-service-without-losing-customers).
 
-**Then let the volume arrive.** Replies to customers who messaged you first are not what costs money on the WhatsApp Business Platform, because service messages sent inside the 24 hour window a customer opened are not charged. The ceiling on answering people who wrote to you is not a pricing ceiling.
+**Then let the volume arrive.** Replies to customers who messaged you first are not what costs money on the WhatsApp Business Platform, because service messages sent inside the 24 hour window a customer opened are free for the first 1,000 per business phone number each month and then charged at the market's service rate, under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026. The ceiling on answering people who wrote to you is not a pricing ceiling.
 
 **Keep your people for the judgment.** The refund, the complaint, the wholesale enquiry, the regular who deserves a human. You are not removing your team, you are removing the lookup work that was stopping them doing this.
 
@@ -1600,10 +1622,12 @@ Whether or not you use us for it, do not let the queue get solved and the signal
 
 ---
 
-# Can AI Actually Handle Retail Customer Service in 2026?
+# Can AI Handle Retail Customer Service in 2026?
 
 Source: https://plumcut.com/blog/ai-customer-service-retail
 Published: 2026-09-13
+
+AI can handle retail customer service in 2026 for every question with one correct answer, such as stock, price, delivery, payment and order status, which is most of a store's volume.
 
 Your store gets the same eleven questions every day. Is this in stock, do you deliver to my area, how much is shipping, can I pay on delivery, where is my order. You answer them at nine in the morning and again at eleven at night, and somewhere in there a customer who was ready to buy got bored and left. So the question is not really whether a machine can answer those eleven questions. It is whether it can answer them without costing you the relationship, and what you will be billed for when it does.
 
@@ -1710,6 +1734,8 @@ And if you are not sure you have enough repetition to justify any of this, the h
 Source: https://plumcut.com/blog/when-ready-for-ai-customer-service
 Published: 2026-09-10
 
+Your business is ready for AI customer service when the same questions arrive often enough that answering them is a job, and late enough that slow answers are costing you sales.
+
 Every founder asking whether to automate their customer conversations gets sold to instead of answered. The vendor says yes. The article says yes, here are eleven tools. Nobody says the thing that is true for a lot of businesses, which is that you are not there yet and buying now would cost you time you do not have.
 
 > You are ready when the same questions arrive often enough that answering them is a job, and late enough that answering them is costing you sales. Not when you have a certain number of messages, and not when you can afford it. The trigger is repetition you can predict, plus messages you are visibly failing to answer in time.
@@ -1732,7 +1758,7 @@ Two out of three is usually enough to start. One is not.
 
 This is the misunderstanding that delays the decision most often, so it is worth being precise, because the pricing changed and a lot of the advice online has not caught up.
 
-On the WhatsApp Business Platform, [Meta made service conversations free for all businesses on 1 November 2024](https://developers.facebook.com/docs/whatsapp/pricing/), and non-template messages sent inside an open customer service window are not charged. Since 1 July 2025, pricing is per delivered message and charges apply when a template message is delivered.
+On the WhatsApp Business Platform, Meta made service conversations free for all businesses on 1 November 2024, and since 1 October 2026 [it charges for them again](https://developers.facebook.com/docs/whatsapp/pricing) after the first 1,000 per business phone number each month. Pricing is per delivered message, and template messages are charged when delivered.
 
 The practical shape of that: **answering a customer who messaged you is not what costs money. Starting a conversation is.**
 
@@ -1780,14 +1806,16 @@ And if you are genuinely unsure which one you are, that is a fifteen-minute conv
 
 ---
 
-# SMS or WhatsApp for Delivery Notifications: Which Should You Use?
+# SMS vs WhatsApp Delivery Notifications: Which to Use?
 
 Source: https://plumcut.com/blog/sms-vs-whatsapp-delivery-notifications
 Published: 2026-09-10
 
+For SMS vs WhatsApp delivery notifications in Lebanon and the Gulf, make WhatsApp the default and SMS the fallback, because branded SMS is one way and WhatsApp keeps the reply in the thread.
+
 You are about to send a dispatch notification to a customer in Beirut or Dubai. The parcel is with the courier, the tracking reference exists, and the only question left is which channel carries the message. Most stores answer it on price per message, then discover the real cost three days later, when the customer replies "can you make it Thursday instead" and nobody sees it.
 
-> For a store selling in Lebanon and the Gulf, WhatsApp should be the default channel for delivery updates and SMS should be the fallback, and the reason is the reply rather than the price. Branded notification SMS is sent from an alphanumeric sender name, which is one way by design: the customer cannot answer it, so every question your notification provokes lands somewhere else, or nowhere. On WhatsApp the notification and the answer live in the same thread, and the cost model rewards that. Both channels bill the message you send first. After that they diverge: SMS charges for every message you send, while a customer reply on WhatsApp opens a 24 hour customer service window in which Meta has not charged for service messages since 1 July 2025. Keep SMS for what it is genuinely better at, which is reaching a phone with no WhatsApp, no data, and no need to reply.
+> For a store selling in Lebanon and the Gulf, WhatsApp should be the default channel for delivery updates and SMS should be the fallback, and the reason is the reply rather than the price. Branded notification SMS is sent from an alphanumeric sender name, which is one way by design: the customer cannot answer it, so every question your notification provokes lands somewhere else, or nowhere. On WhatsApp the notification and the answer live in the same thread, and the cost model rewards that. Both channels bill the message you send first. After that they diverge: SMS charges for every message you send, while a customer reply on WhatsApp opens a 24 hour customer service window in which the first 1,000 service messages per number each month are free. Keep SMS for what it is genuinely better at, which is reaching a phone with no WhatsApp, no data, and no need to reply.
 
 ## The comparison that actually decides it
 
@@ -1811,7 +1839,7 @@ Both channels charge you to start the conversation. The published numbers below 
 
 **SMS.** Twilio's public rate card lists outbound SMS to the United Arab Emirates at 0.1092 dollars per message across Etisalat, du and other carriers, with Saudi Arabia listed lower, around 0.087. There is also a failed message processing fee of 0.001 dollars on messages that end in a failed status, which is small until a bad list makes it not small. On top of the per message price sits the sender ID: from 1 January 2025 the UAE regulator applied new fees for international alphanumeric sender IDs, and Twilio passes these on as a one time setup fee of 225 dollars per international sender ID and 115 dollars a month to keep it. That is a fixed cost you pay whether you send ten messages or ten thousand.
 
-**WhatsApp.** Meta bills per message, by template category and by the recipient's country calling code, and the current rate cards took effect on 1 July 2026, with further pricing updates announced for 1 August and 1 October 2026. Delivery updates fall in the utility category. Two rules do most of the work on your bill: since 1 July 2025 Meta does not charge for utility templates delivered in response to a user, and service messages sent inside the 24 hour customer service window a customer opens are not charged either. We went through the full picture in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
+**WhatsApp.** Meta bills per message, by template category and by the recipient's country calling code, and the current rate cards took effect on 1 July 2026, with further pricing updates announced for 1 August and 1 October 2026. Delivery updates fall in the utility category. Two rules do most of the work on your bill, per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026: utility templates are charged from the first send, even in response to a user, and service messages sent inside the 24 hour customer service window a customer opens are free for the first 1,000 per business phone number each month and then charged at the market's service rate. We went through the full picture in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 
 Put those together and the comparison stops being about unit price. A dispatch notification that gets a reply costs you one paid message on WhatsApp and the entire back and forth on SMS, on a channel where the back and forth cannot happen in the first place. A dispatch notification that gets no reply costs roughly the same on both, and you should read the two current rate cards for your own markets rather than trust a ratio from an article.
 
@@ -1827,7 +1855,7 @@ WhatsApp is policy and product. You need a WhatsApp Business account and a numbe
 
 Every logistics operation has a happy path that either channel handles. The channel is chosen by the bad path.
 
-A delivery attempt fails. The driver marks it, your system sees it, and now something has to happen within hours or the parcel goes back and, on cash on delivery, the sale goes with it. The message you need to send is not a notification, it is a question: is tomorrow morning better, or should we hold it at the branch. On SMS from a sender name, that question has no return path, so it becomes a phone call somebody has to make. On WhatsApp it is a message with two buttons, and the answer arrives in the same thread, inside a window where your follow up costs nothing.
+A delivery attempt fails. The driver marks it, your system sees it, and now something has to happen within hours or the parcel goes back and, on cash on delivery, the sale goes with it. The message you need to send is not a notification, it is a question: is tomorrow morning better, or should we hold it at the branch. On SMS from a sender name, that question has no return path, so it becomes a phone call somebody has to make. On WhatsApp it is a message with two buttons, and the answer arrives in the same thread, inside a window where your follow up is a service message, free for the first 1,000 each month.
 
 That is the whole argument compressed into one event. We covered the operational side of that loop, including why courier status data is the weak link, in [automating delivery updates and the courier loop](/blog/automate-logistics-delivery-updates), and the customer facing half in [can AI answer where is my order on WhatsApp](/blog/where-is-my-order-whatsapp).
 
@@ -1857,10 +1885,12 @@ What plum handles is the case above, where the update and the conversation are t
 
 ---
 
-# Manual Order Entry vs Automated Order Capture in Delivery Software
+# Manual Order Entry vs Automated Order Capture
 
 Source: https://plumcut.com/blog/manual-order-entry-vs-automated-capture
 Published: 2026-09-09
+
+Manual order entry vs automated order capture comes down to volume: retyping suits low volume and negotiated orders, while automated capture wins when the same order shape repeats all day.
 
 Someone on your team is reading a WhatsApp message and typing what it says into a delivery dashboard. The order was already agreed in the chat. The typing adds no information, it only moves the order from one system into another, and it is where addresses get mangled, phone numbers lose a digit and the delivery window quietly changes. If your fleet or delivery software is good and your team is still doing this all day, the software is not the problem.
 
@@ -1943,10 +1973,12 @@ Count it before you change it. For three days, log every order that gets typed i
 
 ---
 
-# How to Connect WhatsApp Orders to Your Fleet Management Software
+# How to Connect WhatsApp Orders to Fleet Software
 
 Source: https://plumcut.com/blog/connect-whatsapp-orders-fleet-software
 Published: 2026-09-09
+
+To connect WhatsApp orders to fleet software, you need four pieces: a WhatsApp Business API number, order extraction from the chat, validation, and a call to the platform's create job API.
 
 You sell or run software that dispatches drivers. It routes, it assigns, it captures proof of delivery, and it does all of that well. Then an order arrives on WhatsApp and a human opens the dashboard and types it in. The gap is not in your software. It is between the conversation where the order happens and the system where the order lives, and it is the same gap in almost every fleet and delivery platform we have looked at.
 
@@ -2027,6 +2059,8 @@ Then, separately, write down the validation rules your best order-entry person a
 Source: https://plumcut.com/blog/what-to-automate-first-ecommerce
 Published: 2026-09-08
 
+The first thing to automate in an ecommerce business is the frequent question with one correct answer, followed by order status and stock lookups, then the notifications you send first.
+
 Everybody selling automation tells you to automate. Almost nobody tells you what to automate first, which is the only part that decides whether you get anything back. Start in the wrong place and you spend two months wiring up a workflow that fires eleven times a month, while the question you answer forty times a day is still being typed out by hand.
 
 > Automate in order of volume multiplied by answerability. First the questions that arrive constantly and have exactly one correct answer, because they need no data connection and no approval. Second the questions that arrive constantly but need a lookup, such as order status and stock, because they need your store connected but the answer is still deterministic. Third the messages you send first, such as dispatch notifications and confirmations, because they need customer opt in and an approved template under Meta's rules and therefore cost money and carry policy risk. Fourth the internal handovers, the retyping of an order into a second system. Leave until last, or forever, anything involving a refund decision, a complaint, a price negotiation or a mistake you made. The rule underneath the whole sequence is simple: automate the things that are frequent and have one right answer, and keep a person on the things that are rare and have a judgment in them.
@@ -2056,11 +2090,11 @@ Each stage is a prerequisite for the next in practice, not just in theory. There
 
 ## Stage 1: the answers you already have, written down
 
-This is the stage everyone skips because it feels too small. It is the stage with the best return, because it requires no integration, no template approval and no per message fee.
+This is the stage everyone skips because it feels too small. It is the stage with the best return, because it requires no integration, no template approval and, for most stores, little or no message fee.
 
 Your opening hours. Which areas you deliver to and how long it takes. Whether the fabric runs small. What happens if it does not fit. Whether you take cards, transfers or cash on delivery. Each of these has exactly one correct answer, that answer changes rarely, and somebody on your team types it several times a day.
 
-Under Meta's per message pricing, which has applied to all businesses since 1 July 2025, a customer messaging you opens a 24 hour customer service window, and service messages sent inside that window are not charged. So the entire first stage of automating your store costs nothing in message fees. You are converting your own written policy into instant replies.
+Under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, a customer messaging you opens a 24 hour customer service window, and service messages sent inside it are free for the first 1,000 per business phone number each month and then charged at the market's service rate. So the first stage of automating your store costs little or nothing in message fees. You are converting your own written policy into instant replies.
 
 The work here is not technical. It is writing the answers down properly, in the words you actually want a customer to read, and deciding what happens when the question is close to but not quite one of them.
 
@@ -2118,10 +2152,12 @@ When you do want it built and run rather than configured by you, [plumcut](/solu
 
 ---
 
-# Does Automating Your Store's Conversations Actually Make Money?
+# Does AI Chat Automation Increase Sales?
 
 Source: https://plumcut.com/blog/does-conversation-automation-increase-sales
 Published: 2026-09-08
+
+AI chat automation increases sales in three places only: answering buying questions while the customer is still deciding, covering the hours your team is offline, and following up unfinished orders.
 
 Every vendor page you have opened claims a number. Forty percent more sales. Three times the recovery rate. Twelve hours saved a week. None of them tell you the store size, the category, the baseline, the period, or whether anything else changed that quarter. You are right to distrust all of it, including anything we might be tempted to claim.
 
@@ -2139,11 +2175,11 @@ The one external figure worth carrying into it is not an automation claim at all
 
 | Mechanism | What changes | How you would measure it | What it costs |
 | --- | --- | --- | --- |
-| Response speed | A buying question answered in seconds rather than hours, while the customer is still deciding | Conversion rate of conversations answered under five minutes, against those answered later | Nothing per message. Replies inside the 24 hour window a customer opened are free |
-| Hours you do not work | Evenings, weekends and holidays stop being dead time | Share of orders originating from conversations outside working hours | Also free, for the same reason |
+| Response speed | A buying question answered in seconds rather than hours, while the customer is still deciding | Conversion rate of conversations answered under five minutes, against those answered later | Little per message. Replies inside the 24 hour window a customer opened are free for the first 1,000 per number each month |
+| Hours you do not work | Evenings, weekends and holidays stop being dead time | Share of orders originating from conversations outside working hours | Also cheap, for the same reason |
 | Systematic follow up | Unfinished orders get one deliberate follow up instead of none | Recovered orders, against a holdout group that gets none | Paid. Cart reminders are marketing templates under Meta's categorization and need opt in |
 
-Notice which two are free. The first two mechanisms cost nothing per message, because under per message pricing, in force for all businesses since 1 July 2025, Meta does not charge for service messages, which are the replies you send inside the customer service window a customer's own message opens. The mechanism most vendors lead with, outbound follow up, is the only one you pay for and the only one with policy risk attached.
+Notice which two are cheap. The first two mechanisms cost little per message, because under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, service messages, the replies you send inside the customer service window a customer's own message opens, are free for the first 1,000 per business phone number each month and then charged at the market's service rate. The mechanism most vendors lead with, outbound follow up, is the only one you pay for and the only one with policy risk attached.
 
 That inversion is the most useful thing in this article. The cheap mechanisms are the ones nobody sells you, because you cannot build a pricing page around answering faster.
 
@@ -2176,13 +2212,13 @@ Run the same arithmetic with your numbers. If it needs conversion to double, wal
 
 Three things belong in the cost column.
 
-**Message fees.** Per message pricing has applied to all businesses since 1 July 2025. Service messages and utility messages sent in response to a user are not charged. Templates you send first are charged at market specific rates, and Meta revised its rate cards effective 1 July 2026 with volume tiers that lower utility and authentication rates as volume rises. Check the current card for your customers' markets. We covered the full cost picture in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
+**Message fees.** Per message pricing has applied to all businesses since 1 July 2025. Since 1 October 2026, service messages are free for the first 1,000 per business phone number each month and then charged, and utility templates are charged even in response to a user. Templates are charged at market specific rates, and Meta revised its [rate cards](https://developers.facebook.com/docs/whatsapp/pricing) effective 1 October 2026 with volume tiers that lower utility and authentication rates as volume rises. Check the current card for your customers' markets. We covered the full cost picture in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 
 **The tool or the service.** Whatever you pay monthly, plus setup.
 
 **Your own time.** The one everybody omits. If a platform needs a person to maintain flows, that person's time is a real cost, and for a team of two it is the largest cost in the list.
 
-There is also a free entry point worth knowing about. If a customer messages you through a click to WhatsApp ad or a Facebook Page call to action button and you respond within 24 hours, a free entry point conversation opens when your message is delivered and lasts 72 hours, during which you can send any type of message at no charge. If you already run ads, that is a structurally cheaper acquisition path than broadcasting to a list.
+There is also a free entry point worth knowing about. If a customer messages you through a click to WhatsApp ad on the WhatsApp Android or iOS app and you reply within the customer service window, your reply opens a free entry point window that, per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing), can stay open for up to 7 days. During it, marketing, utility, authentication and service messages are not charged, though Meta Business Agent messages still are. If you already run ads, that is a structurally cheaper acquisition path than broadcasting to a list.
 
 ## Measure it so the answer is real
 
@@ -2213,14 +2249,16 @@ Be willing to reach this conclusion.
 4. Look at your last month of conversations and count how many got their first reply after an hour, and how many arrived outside working hours. That is your realistic upside, before anyone sells you anything.
 5. If you proceed, design the holdout before you launch, not after.
 
-If that arithmetic clears for your store, [plumcut](/solutions) is the option we recommend, and it is ours, so read that recommendation with the disclosure attached. Two things in the model above favour it specifically. The mechanisms that pay are the free ones, speed and hours covered, and those are only realised if the thing actually answers well at 11pm in the language the customer used, which is what plum is built to do in Arabic and English on your own number. And the largest hidden cost in the list is your own time maintaining flows, which is the cost a done for you service removes: we build it, run it and keep tuning it, so the line item is the invoice rather than the invoice plus your operations lead's evenings. See [pricing](/pricing) to put a real number into the model, or [how it works](/how-it-works).
+If that arithmetic clears for your store, [plumcut](/solutions) is the option we recommend, and it is ours, so read that recommendation with the disclosure attached. Two things in the model above favour it specifically. The mechanisms that pay are the cheap ones, speed and hours covered, and those are only realised if the thing actually answers well at 11pm in the language the customer used, which is what plum is built to do in Arabic and English on your own number. And the largest hidden cost in the list is your own time maintaining flows, which is the cost a done for you service removes: we build it, run it and keep tuning it, so the line item is the invoice rather than the invoice plus your operations lead's evenings. See [pricing](/pricing) to put a real number into the model, or [how it works](/how-it-works).
 
 ---
 
-# Automating Delivery Updates and the Courier Loop
+# Automate Delivery Updates for Online Store Orders
 
 Source: https://plumcut.com/blog/automate-logistics-delivery-updates
 Published: 2026-09-08
+
+Automate delivery updates for online store orders around four events: confirmed, dispatched, attempted, and delivered or failed, with the most care on failed cash on delivery attempts.
 
 A parcel leaves your table and stops being yours. It becomes a row in a courier's system, updated by a driver on a phone, in a status vocabulary you did not choose. Meanwhile the customer is asking you, not the courier, where it is. You are accountable for information you do not control, which is the actual shape of the logistics problem for a store in this region.
 
@@ -2228,7 +2266,7 @@ A parcel leaves your table and stops being yours. It becomes a row in a courier'
 
 ## This is the other half of "where is my order"
 
-We already covered the customer facing side of this in [can AI answer where is my order on WhatsApp](/blog/where-is-my-order-whatsapp). That article is about answering the question well when a customer asks it: matching them to their order, replying inside the free window, and handling split shipments.
+We already covered the customer facing side of this in [can AI answer where is my order on WhatsApp](/blog/where-is-my-order-whatsapp). That article is about answering the question well when a customer asks it: matching them to their order, replying inside the customer service window, and handling split shipments.
 
 This one is about the supply side of that answer. Where the status comes from, why it is often wrong or late, what to do when the courier says one thing and reality says another, and how to run the loop so that fewer customers need to ask at all. If you only read one, read that one first. This is what you need once it is working and you are still losing afternoons to chasing.
 
@@ -2236,7 +2274,7 @@ This one is about the supply side of that answer. Where the status comes from, w
 
 | Event | Who owns the data | Who needs to know | Message rules |
 | --- | --- | --- | --- |
-| Order confirmed | Your store | Customer, fulfilment | Utility template if you send it first, free if it replies inside an open window |
+| Order confirmed | Your store | Customer, fulfilment | Utility template, charged whether or not a window is open |
 | Dispatched, with tracking reference | Your store, once the courier reference is attached | Customer | Utility template, triggered by a user action, so it must be approved in advance |
 | Out for delivery | Courier | Customer, and only if the courier data is timely enough to be useful | Utility template, and only worth sending if it is accurate |
 | Delivered or failed | Courier | Customer, fulfilment, finance if cash on delivery | The failed case is the one that needs a human path |
@@ -2291,11 +2329,11 @@ That fourth step is the one that changes the business rather than the day. Faile
 
 ## What this costs
 
-Under Meta's per message pricing, applying to all businesses since 1 July 2025, replies inside the 24 hour customer service window a customer opened are not charged, and utility messages sent in response to a user are also not charged. What you pay for is messaging first: a dispatch notification or a delivery confirmation sent when no window is open is a utility template, billed at the rate for that customer's market.
+Under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, replies inside the 24 hour customer service window a customer opened are free for the first 1,000 per business phone number each month and then charged at the market's service rate, and utility templates are charged from the first send, even in response to a user. A dispatch notification or a delivery confirmation is a utility template, billed at the rate for that customer's market.
 
 Rates are market specific and Meta revised its rate cards effective 1 July 2026, with utility and authentication volume tiers that unlock lower rates as you send more, so check the current rate card for your customers' countries rather than a figure in any article, including this one.
 
-The arithmetic that matters is simple. One dispatch notification per order, paid, against the inbound tracking questions it prevents, which would have been answered free but not for free in your team's time. For most stores in this region the notification wins, and it wins by more the busier you are.
+The arithmetic that matters is simple. One dispatch notification per order, paid, against the inbound tracking questions it prevents, which would have cost little in Meta fees but a lot in your team's time. For most stores in this region the notification wins, and it wins by more the busier you are.
 
 ## What to do this week
 
@@ -2311,10 +2349,12 @@ When you do want the loop run rather than assembled, [plumcut](/solutions) is th
 
 ---
 
-# Automating the Back Office of a Small Commerce Team
+# How to Automate Internal Operations for Small Commerce Teams
 
 Source: https://plumcut.com/blog/automate-internal-operations-commerce
 Published: 2026-09-08
+
+To automate internal operations in a small commerce team, start with four jobs: the order handover, repeat staff questions, simple approvals and the weekly report.
 
 The conversation ends and the real work starts. Somebody copies the address out of the chat into the courier portal. Somebody messages the packer to say this one is urgent. Somebody answers, for the fourth time this week, which supplier the cream ones come from. Somebody spends Sunday evening counting last week's orders into a spreadsheet nobody reads. None of it is visible to a customer and all of it is your team's actual day.
 
@@ -2401,9 +2441,11 @@ Where it does become a purchase is when the internal side has to connect to the 
 Source: https://plumcut.com/blog/automate-customer-service-without-losing-customers
 Published: 2026-09-08
 
+To automate customer service without losing customers, design the handover first: automate only questions with one right answer, and keep the route to a person visible at all times.
+
 The fear is specific and it is reasonable. Your customers message you because you answer, personally, and often after hours. You are about to put something between you and them. Every automated support experience you have personally suffered through has been worse than talking to a person, and you are about to inflict one on the people who pay you.
 
-> Automated customer service loses customers at the handover, not at the answer. Customers tolerate a fast machine answer to a factual question; they do not tolerate being trapped with one when their question has feeling in it. So design the exit first and the answers second. Three rules carry most of the outcome. Automate only the questions that have exactly one correct answer, and refuse the rest openly rather than guessing. Make the route to a person visible in the conversation at all times, which is also Meta's written requirement: businesses may use automation when responding inside the 24 hour customer service window, but must provide prompt, clear and direct escalation paths. And make the handover carry context, so the customer never repeats themselves to the human. Speed is the part customers actually notice, and a reply sent inside the 24 hour window a customer opened is free under Meta's per message pricing, so answering fast is both the better experience and the cheaper one.
+> Automated customer service loses customers at the handover, not at the answer. Customers tolerate a fast machine answer to a factual question; they do not tolerate being trapped with one when their question has feeling in it. So design the exit first and the answers second. Three rules carry most of the outcome. Automate only the questions that have exactly one correct answer, and refuse the rest openly rather than guessing. Make the route to a person visible in the conversation at all times, which is also Meta's written requirement: businesses may use automation when responding inside the 24 hour customer service window, but must provide prompt, clear and direct escalation paths. And make the handover carry context, so the customer never repeats themselves to the human. Speed is the part customers actually notice, and a reply sent inside the 24 hour window a customer opened is free for the first 1,000 per number each month under Meta's pricing, so answering fast is both the better experience and the cheaper one.
 
 ## Meta requires an escape hatch, so build it first
 
@@ -2442,9 +2484,9 @@ The second one is the most expensive and the least discussed. A vague reply anno
 
 The dividing line is not difficulty. It is whether the correct response depends on who this particular customer is and what you are prepared to do for them. That is a commercial judgment about a relationship, and handing it to a machine is what actually costs you the relationship, not automation in general.
 
-## Speed is the part they notice, and it is free
+## Speed is the part they notice, and it costs little
 
-Under per message pricing, which has applied to all businesses since 1 July 2025, Meta does not charge for service messages, which are the replies you send inside the customer service window that a customer's own message opens. Utility messages sent in response to a user are also not charged.
+Under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026, service messages, the replies you send inside the customer service window that a customer's own message opens, are free for the first 1,000 per business phone number each month and then charged at the market's service rate. Utility templates are charged from the first send, even in response to a user.
 
 This produces a genuinely convenient alignment. The experience customers rate highest, an answer that arrives while they are still in the app, is the one that costs you nothing. The experience they rate worst, a reply the next morning that has to be sent as a paid template because the window has closed, is the one you pay for.
 
@@ -2489,9 +2531,11 @@ If you want this built and run rather than assembled by you, [plumcut](/solution
 Source: https://plumcut.com/blog/where-is-my-order-whatsapp
 Published: 2026-09-06
 
+AI can answer where is my order on WhatsApp in 2026 when your store sends tracking events and the chat can be matched to the order by phone number or order number.
+
 Roughly the same message arrives every day, in a dozen spellings. "Where is my order." "Any update on my parcel." "Wein el order?" It is the highest volume question in commerce, it carries no new information, and somebody on your team is typing the answer by hand while a customer with money in their hand waits behind it in the queue.
 
-> Order status is the one customer question that automates cleanly, because the answer already exists inside your store and only needs fetching. Three things have to be true. Your store has to emit the event: Shopify fires `fulfillments/create`, `fulfillments/update` and `orders/fulfilled` webhooks carrying the tracking number, so the status is available the moment it changes. The message has to be matched to the right customer, which means the phone number on the order and the number in the chat agree, or the customer gives you an order number to look up. And the reply has to fit Meta's rules. A reply sent inside the 24 hour customer service window needs no template and costs nothing. A status update you send first is a utility template that must be approved in advance, and since 1 July 2025 utility templates sent inside an open window are free. Answer fast and the answer is usually free.
+> Order status is the one customer question that automates cleanly, because the answer already exists inside your store and only needs fetching. Three things have to be true. Your store has to emit the event: Shopify fires `fulfillments/create`, `fulfillments/update` and `orders/fulfilled` webhooks carrying the tracking number, so the status is available the moment it changes. The message has to be matched to the right customer, which means the phone number on the order and the number in the chat agree, or the customer gives you an order number to look up. And the reply has to fit Meta's rules. A reply sent inside the 24 hour customer service window needs no template, and since 1 October 2026 the first 1,000 such replies per business phone number each month are free. A status update you send first is a utility template that must be approved in advance, and it is charged at the utility rate whether or not a window is open. Answer fast and the answer is usually cheap.
 
 ## "Where is my order" is three questions wearing one coat
 
@@ -2522,10 +2566,10 @@ This is where most order status projects get their budget wrong, in both directi
 
 Meta bills per message delivered, not per conversation, since 1 July 2025. Two rules matter more than the rate card:
 
-- **Service messages are free.** When a customer messages you, a 24 hour customer service window opens. Replies inside that window are not templates and Meta does not charge for them. A customer asking "where is my order" has just opened that window themselves.
-- **Utility templates sent inside an open customer service window are free too**, as of 1 July 2025. Sent outside a window, they are charged at the utility rate for the recipient's country.
+- **Service messages are free up to a limit.** When a customer messages you, a 24 hour customer service window opens. Replies inside that window are not templates, and since 1 October 2026 [Meta](https://developers.facebook.com/docs/whatsapp/pricing) charges for them only after the first 1,000 per business phone number each month. A customer asking "where is my order" has just opened that window themselves.
+- **Utility templates are charged from the first send**, inside or outside an open customer service window, at the utility rate for the recipient's country, since 1 October 2026.
 
-So a reactive answer costs nothing. A proactive shipping notification, the one you send at three in the afternoon when the courier scans the parcel, costs the utility rate, because no window is open. That is still usually the better trade, since the notification you send prevents the question you would otherwise answer, but price it deliberately rather than by accident.
+So a reactive answer costs nothing until you pass 1,000 service replies in a month. A proactive shipping notification, the one you send at three in the afternoon when the courier scans the parcel, costs the utility rate, because no window is open. That is still usually the better trade, since the notification you send prevents the question you would otherwise answer, but price it deliberately rather than by accident.
 
 Rates move, and they move regionally. Meta's 1 August 2026 pricing update raised utility and authentication rates in several markets including Kuwait, Morocco and Oman, and a further update to service and utility pricing is scheduled for 1 October 2026. Check the [current rate card](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing) for your markets before you model anything, and read our breakdown of [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost) for the four line items nobody warns you about.
 
@@ -2536,7 +2580,7 @@ For a store shipping 600 orders a month, the arithmetic below is an illustration
 | Approach | Messages Meta bills | What the customer experiences |
 | --- | --- | --- |
 | Answer only when asked | Zero, all replies fall inside the window | Fast answers, but every customer still has to ask |
-| Notify on dispatch, then answer | One utility template per order | Most people never ask, the rest get a free reply |
+| Notify on dispatch, then answer | One utility template per order | Most people never ask, the rest get a reply inside the service window |
 | Notify on dispatch, out for delivery, and delivered | Up to three utility templates per order | Fewer questions again, and a real risk of feeling like spam |
 
 The middle row is where most commerce brands land. The third row earns its keep for high value or fragile goods and irritates everybody else.
@@ -2562,10 +2606,12 @@ Answering "where is my order" is not a chatbot problem, it is a data plumbing pr
 
 ---
 
-# What the WhatsApp Business API Really Costs in 2026
+# WhatsApp Business API Pricing 2026 for Lebanon and GCC
 
 Source: https://plumcut.com/blog/whatsapp-business-api-cost
-Published: 2026-09-06  ·  Updated: 2026-09-11
+Published: 2026-09-06  ·  Updated: 2026-10-11
+
+WhatsApp Business API pricing in 2026 for Lebanon and the GCC is per delivered message: marketing costs 0.0392 dollars in Lebanon and 0.0576 in Saudi Arabia and the UAE, as of 1 October 2026.
 
 A WhatsApp quote can combine messaging charges, a software subscription and implementation work. Comparing only the price of a message leaves out much of what your team will pay or maintain.
 
@@ -2575,49 +2621,58 @@ A WhatsApp quote can combine messaging charges, a software subscription and impl
 
 Meta's [current pricing page](https://whatsappbusiness.com/products/platform-pricing/) describes delivered-message charges by category and recipient market. Its pricing structure replaced conversation billing in July 2025. Use the current rate card when preparing a budget; a historical rate in a blog is not a quote.
 
-Service messages inside the 24 hour customer service window have no Meta charge. Utility templates inside an open window are also free under the current rules. A qualifying entry from an ad or Facebook Page button can open a separate 72 hour free window, subject to eligibility conditions. Utility and authentication volume tiers offer discounts rather than making all those messages free.
+Service messages, the replies you send inside the 24 hour customer service window, are charged again since 1 October 2026, after a free tier of 1,000 per business phone number each month. Utility templates sent inside an open window, free since July 2025, are charged again from the same date. A customer who messages you from a click to WhatsApp ad on the WhatsApp Android or iOS app opens a free entry point window from your first reply inside the customer service window, which per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing) can stay open for up to 7 days. Inside it, marketing, utility, authentication and service messages are not charged, though Meta Business Agent messages still are. Utility and authentication volume tiers offer discounts rather than making all those messages free.
 
-The official pricing page and linked documentation are the source for these rules, checked on 7 September 2026.
+The official [pricing documentation](https://developers.facebook.com/docs/whatsapp/pricing) is the source for these rules, checked on 11 October 2026.
 
-## Which market your customers are billed under
+## WhatsApp Business API rates by country in MENA
 
 This is the part most cost guides skip, and it decides your bill. Meta charges by
 the recipient's country calling code, not by where your business is registered. A
 Beirut brand selling into Riyadh pays the Saudi rate, not a Lebanese one.
 
-More importantly, not every market has its own rate. Meta's rate card lists some
-countries individually and folds the rest into regional buckets. In the Middle
-East the split runs like this, per Meta's
-[pricing documentation](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing),
-checked on 11 September 2026:
+More importantly, not every market has its own rate. Meta's rate card names 39
+countries individually and folds the rest into 8 regional buckets. Lebanon has
+no rate of its own: it is priced under Meta's **"Rest of Middle East"** region,
+which since 1 October 2026 covers four markets, Bahrain, Jordan, Lebanon and
+Yemen. Kuwait, Oman and Iraq left that region on the same date and now carry
+their own rates.
 
-| Market | How Meta prices it |
-| --- | --- |
-| Saudi Arabia | Standalone market with its own rate |
-| United Arab Emirates | Standalone market with its own rate |
-| Egypt | Standalone market with its own rate |
-| Qatar | Standalone market with its own rate |
-| Israel | Standalone market with its own rate |
-| Turkey | Standalone market with its own rate |
-| Lebanon | Priced under "Rest of Middle East" |
-| Jordan | Priced under "Rest of Middle East" |
-| Kuwait | Priced under "Rest of Middle East" |
-| Bahrain | Priced under "Rest of Middle East" |
-| Oman | Priced under "Rest of Middle East" |
-| Iraq | Priced under "Rest of Middle East" |
-| Yemen | Priced under "Rest of Middle East" |
+These are Meta's list rates in US dollars per delivered message, from the
+[official rate card](https://developers.facebook.com/docs/whatsapp/pricing),
+as of 1 October 2026, checked on 11 October 2026:
+
+| Market | How Meta prices it | Marketing | Utility | Authentication | Service, after 1,000 free a month |
+| --- | --- | --- | --- | --- | --- |
+| Lebanon | Rest of Middle East | 0.0392 | 0.0091 | 0.0091 | 0.0091 |
+| Bahrain | Rest of Middle East | 0.0392 | 0.0091 | 0.0091 | 0.0091 |
+| Jordan | Rest of Middle East | 0.0392 | 0.0091 | 0.0091 | 0.0091 |
+| Saudi Arabia | Own rate | 0.0576 | 0.0107 | 0.0107 | 0.0107 |
+| United Arab Emirates | Own rate | 0.0576 | 0.0157 | 0.0157 | 0.0157 |
+| Kuwait | Own rate since 1 October 2026 | 0.0792 | 0.0440 | 0.0440 | 0.0440 |
+| Qatar | Own rate | 0.0341 | 0.0120 | 0.0120 | 0.0120 |
+| Oman | Own rate since 1 October 2026 | 0.0341 | 0.0247 | 0.0247 | 0.0247 |
+| Egypt | Own rate | 0.0644 | 0.0036 | 0.0036 | 0.0036 |
+| Iraq | Own rate since 1 October 2026 | 0.0341 | 0.0079 | 0.0079 | 0.0079 |
+
+Utility and authentication figures are list rates before volume tier discounts.
+Service messages are free for the first 1,000 each month per business phone
+number, then charged at the rate shown. Saudi Arabia, the UAE, Kuwait, Oman,
+Egypt and Iraq also have a separate authentication-international rate, not shown
+here. The same rate card raised marketing rates in Saudi Arabia, the UAE and
+Rest of Middle East on 1 October 2026, so a budget built on older figures is
+already low.
 
 Two practical consequences. First, if you sell across the Gulf and the Levant,
 your blended cost per message depends on your customer mix, so a single headline
 rate tells you very little. Model it per market against your actual order
 distribution. Second, a "Rest of Middle East" bucket moves as a unit: a change to
-that regional rate changes Lebanon, Jordan and Kuwait together, and it will not
+that regional rate changes Lebanon, Jordan and Bahrain together, and it will not
 appear in a vendor blog post about Saudi pricing.
 
-We are not reproducing per-message figures here. Meta revises the rate card on a
-schedule, local-currency billing has been rolling out through 2026, and a number
-copied into an article ages badly. Pull the current rate card for the specific
-markets in the table above, on the day you build the budget.
+Meta revises the rate card on a published schedule, so treat this table as a
+dated snapshot. Before you sign a budget, open the current rate card for your
+own markets and check that the figures still match.
 
 
 ## What a provider or platform charges
@@ -2674,9 +2729,11 @@ Then compare the operating approaches in our [WhatsApp tools guide](/blog/best-w
 Source: https://plumcut.com/blog/whatsapp-ai-shopify-lebanon-gulf
 Published: 2026-09-06
 
+WhatsApp AI for Shopify stores in Lebanon and the Gulf connects your catalogue, stock and orders to the chat, so it can answer, sell and track orders in Arabic, English or Arabizi.
+
 A Shopify store in Beirut, Dubai or Riyadh usually has a checkout that works perfectly and a WhatsApp number doing most of the actual selling. That is not a failure of the store. It is how the region buys, and the stores that win are the ones that stop fighting it.
 
-> WhatsApp AI for a MENA Shopify store means connecting a language model to your Shopify catalogue, inventory and orders, so it can answer product questions, check real stock, recommend and sell, and return order status in Arabic, English or Arabizi, inside the 24 hour window where replies are free. It matters more here than in Europe or the US because Gulf and Levantine shoppers routinely start and finish a purchase in chat rather than at the checkout, and because cash on delivery keeps a human in the loop. The work is mostly not technical: it is cleaning the catalogue, writing down undocumented policies, and building a clean handover to a person. Expect two to four weeks.
+> WhatsApp AI for a MENA Shopify store means connecting a language model to your Shopify catalogue, inventory and orders, so it can answer product questions, check real stock, recommend and sell, and return order status in Arabic, English or Arabizi, inside the 24 hour window where the first 1,000 replies per number each month are free. It matters more here than in Europe or the US because Gulf and Levantine shoppers routinely start and finish a purchase in chat rather than at the checkout, and because cash on delivery keeps a human in the loop. The work is mostly not technical: it is cleaning the catalogue, writing down undocumented policies, and building a clean handover to a person. Expect two to four weeks.
 
 ## Why the checkout is not where the sale happens
 
@@ -2746,6 +2803,8 @@ That sorted list is the specification, and it is the same thing we start from wh
 Source: https://plumcut.com/blog/whatsapp-abandoned-cart-rules
 Published: 2026-09-06
 
+Yes, you can send abandoned cart messages on WhatsApp, as long as the customer opted in and the message uses a template approved in Meta's marketing category.
+
 Someone filled a cart, got as far as the delivery step, and vanished. You have their number from a previous order. Sending them a nudge on WhatsApp feels obvious, and it is one of the fastest ways to get your number blocked if you do it wrong.
 
 > You can send abandoned cart messages on WhatsApp, but only to people who opted in, and only through a template Meta has approved as **marketing**. Meta lists cart abandonment reminders under Marketing in its own template categorization docs, alongside promotions and retargeting, so any advice to file them as Utility to get a cheaper rate is simply wrong. Utility means following up on a user action, like an order or delivery update. Opt in is required before you message anyone at all, it does not have to be WhatsApp specific, but it must name your business. Having someone's number from a past purchase is not opt in, and neither is a pre-ticked box. Get the consent, submit the template as marketing, and pay the marketing rate.
@@ -2787,9 +2846,9 @@ Marketing is the most expensive category, and Meta bills per message delivered r
 
 There is a legitimate way to spend less, and it is not misclassification.
 
-**The 24 hour customer service window.** When a customer messages you, a window opens for 24 hours during which service replies cost nothing. A customer who abandons a cart and then messages you a question is already inside that window. Answering them well, immediately, costs nothing and converts better than any template you could have sent.
+**The 24 hour customer service window.** When a customer messages you, a window opens for 24 hours during which you can reply without a template. Since 1 October 2026 those service replies are free for the first 1,000 per business phone number each month and then charged at the market's service rate, per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing). A customer who abandons a cart and then messages you a question is already inside that window. Answering them well, immediately, costs at most the service rate and converts better than any template you could have sent.
 
-**Free entry points.** Someone arriving from a click to WhatsApp ad opens a 72 hour window where messages are not charged. If you run paid social, routing that traffic into WhatsApp changes the arithmetic of cart recovery entirely, because the recovery conversation happens inside the free window rather than as a paid template.
+**Free entry points.** When someone messages you from a click to WhatsApp ad on the WhatsApp Android or iOS app, your first reply inside the customer service window opens a free entry point window that, per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing), can stay open for up to 7 days. Inside it, marketing, utility, authentication and service messages are not charged, though Meta Business Agent messages still are. If you run paid social, routing that traffic into WhatsApp changes the arithmetic of cart recovery entirely, because the recovery conversation happens inside the free window rather than as a paid template.
 
 The pattern is the same in both cases. **Conversations you are invited into are cheap. Conversations you start are expensive.** Build for the first.
 
@@ -2817,10 +2876,12 @@ Then count how many carts you abandon in a month and multiply by your average ba
 
 ---
 
-# The Best WhatsApp Automation Tools in 2026, Honestly Compared
+# Best WhatsApp Automation Tools in 2026, Honestly Compared
 
 Source: https://plumcut.com/blog/best-whatsapp-automation-tools
 Published: 2026-09-06  ·  Updated: 2026-09-11
+
+The best WhatsApp automation tool in 2026 depends on who will configure and maintain it, and this guide compares Twilio, 360dialog, Gupshup, Wati, Interakt, respond.io, SleekFlow, Zoko and plumcut.
 
 Choosing WhatsApp automation involves two decisions: what the software can do, and who will configure and maintain it. A team inbox, flow builder and AI conversation feature can exist in the same product. Treating them as mutually exclusive categories makes a comparison misleading.
 
@@ -2972,6 +3033,8 @@ If your team wants to operate the tool directly, investigate a configurable plat
 Source: https://plumcut.com/blog/ai-customer-service-arabic
 Published: 2026-09-06
 
+AI customer service works in Arabic in 2026 only if it handles dialect, Arabizi and code switching, and keeps a separate set of approved Arabic WhatsApp templates.
+
 A customer in Jeddah asks how much delivery costs, typed in Arabic script, and gets back a polite paragraph of Modern Standard Arabic that reads like a government circular. Another writes "3andkon delivery la Beirut?" in Latin letters and gets nothing useful at all. If you sell across the Gulf and the Levant, this is the daily reality of Arabic customer service, and it is the part most automation demos quietly skip.
 
 > Arabic AI customer service works, but not the way English does, and the difference is not translation quality. Arabic customers do not write in one language. They write in Modern Standard Arabic, in their own regional dialect, in Latin-script Arabizi, and in code-switched Arabic and English, often inside a single message. A system that only handles Modern Standard Arabic will answer formal questions correctly and miss most real ones. On WhatsApp there is a second, separate problem: Meta requires you to assign a language code when you create a message template, and Meta does not translate template strings or variables for you. You supply every language yourself. So Arabic support is really two jobs, understanding messy input in the conversation, and maintaining a parallel set of approved Arabic templates for anything you send first. Businesses that do only the first half still sound foreign the moment they initiate.
@@ -3032,7 +3095,7 @@ Two other things matter regionally and are easy to forget.
 
 Meta charges per message delivered on a rate that depends on the template category and the country calling code of the recipient. A single Arabic campaign that spans Saudi Arabia, the UAE and Lebanon is spanning several different rate cards, so budget by market rather than by campaign. We break the pricing model down in [what the WhatsApp Business API really costs](/blog/whatsapp-business-api-cost).
 
-And the free part of the channel is language-agnostic. When a customer messages you, a 24 hour customer service window opens, and inside it you can reply without a template at all. That is where dialect handling earns its money, and where a fast, natural Arabic reply converts. Everything outside that window is a template you had to get approved in advance.
+And the cheapest part of the channel is language-agnostic. When a customer messages you, a 24 hour customer service window opens, and inside it you can reply without a template at all, with the first 1,000 service replies per business phone number each month free under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026. That is where dialect handling earns its money, and where a fast, natural Arabic reply converts. Everything outside that window is a template you had to get approved in advance.
 
 ## What to do this week
 
@@ -3049,6 +3112,8 @@ Arabic support is not a feature you switch on. It is a test set, a second templa
 
 Source: https://plumcut.com/blog/how-to-automate-whatsapp-for-your-business
 Published: 2026-09-05  ·  Updated: 2026-09-07
+
+To automate WhatsApp for your business, pick one of three levels: the free Business app's greetings and saved replies, an API platform with store connections, or a managed service.
 
 Most brands do not have a WhatsApp problem. They have a first reply problem. The messages arrive, someone answers them eventually, and by then the customer has bought elsewhere. Automation is how you close that gap, and there are exactly three levels of it worth knowing.
 
@@ -3088,7 +3153,7 @@ A conversation record and useful reporting can exist in either a platform or a c
 
 ## What it actually costs
 
-Meta moved from conversation pricing to per-message pricing on 1 July 2025. Rates and free messaging conditions depend on category and market. Service replies inside an open 24 hour customer service window are free of Meta messaging charges. Provider or software fees are separate. The planning ranges below are illustrative, not vendor commitments:
+Meta moved from conversation pricing to per-message pricing on 1 July 2025. Rates and free messaging conditions depend on category and market. Since 1 October 2026, service replies inside an open 24 hour customer service window are free for the first 1,000 per business phone number each month and then charged at the market's service rate, per [Meta's pricing page](https://developers.facebook.com/docs/whatsapp/pricing). Provider or software fees are separate. The planning ranges below are illustrative, not vendor commitments:
 
 | Level | Setup effort | Meta cost | Tooling cost |
 | --- | --- | --- | --- |

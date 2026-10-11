@@ -1,7 +1,7 @@
 ---
-title: How to Connect WhatsApp Orders to Your Fleet Management Software
+title: How to Connect WhatsApp Orders to Fleet Software
 slug: connect-whatsapp-orders-fleet-software
-description: "What it takes for an order placed in a WhatsApp conversation to appear in a fleet dashboard by itself, and how logistics vendors can offer it."
+description: How to connect WhatsApp orders to fleet management software so an order placed in a chat appears in the dispatch dashboard by itself, and how vendors can offer it.
 type: direct
 date: 2026-09-09
 related: [manual-order-entry-vs-automated-capture, automate-logistics-delivery-updates, where-is-my-order-whatsapp]
@@ -27,8 +27,10 @@ faq:
   - q: Does the customer have to leave WhatsApp at any point?
     a: No, that is the point of doing it this way. The order is captured in the thread, the order number is returned into the same thread, and status changes arrive there too. Sending the customer to a portal or a form reintroduces exactly the step that made people reply in the chat in the first place.
   - q: How are order notifications billed on WhatsApp?
-    a: A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are not charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.
+    a: A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are free for the first 1,000 per business phone number each month, then charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.
 ---
+
+To connect WhatsApp orders to fleet software, you need four pieces: a WhatsApp Business API number, order extraction from the chat, validation, and a call to the platform's create job API.
 
 You sell or run software that dispatches drivers. It routes, it assigns, it captures proof of delivery, and it does all of that well. Then an order arrives on WhatsApp and a human opens the dashboard and types it in. The gap is not in your software. It is between the conversation where the order happens and the system where the order lives, and it is the same gap in almost every fleet and delivery platform we have looked at.
 

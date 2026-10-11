@@ -1,6 +1,6 @@
 ---
-title: How to Upsell and Cross-Sell Inside a Customer Conversation
-description: Every upsell tool fires on a page where nobody is talking. The four moments in a conversation worth an offer, what to say at each, and where helpful turns pushy.
+title: How to Upsell Inside a Customer Conversation
+description: "How to upsell inside a customer conversation: the four moments worth an offer, what to say at each, and where a helpful suggestion turns pushy."
 date: 2026-09-13
 slug: upsell-cross-sell-in-conversation
 type: general
@@ -22,12 +22,14 @@ faq:
   - q: How many upsell offers is too many?
     a: Shopify's own developer guidance for post-purchase offers is to display a maximum of three consecutive offers. In a live conversation the practical limit is lower, usually one, because a conversation has a person in it and a declined offer repeated is experienced as pressure rather than as a second chance. The rule that holds in both places is that a declined offer ends the sequence.
   - q: Does it cost money to upsell a customer on WhatsApp?
-    a: It depends on when you send it. An offer made inside a live conversation the customer started falls in the 24 hour customer service window, where non-template service messages are not charged. Reaching back out later, for example a cart reminder or a reorder prompt after the window has closed, is a marketing message that needs opt-in and an approved marketing template, and those are charged per delivered message. The offer during a live conversation is the free one, and it is also the one that converts best.
+    a: It depends on when you send it. An offer made inside a live conversation the customer started falls in the 24 hour customer service window, where non-template service messages are free for the first 1,000 per business phone number each month since 1 October 2026, then charged at the service rate. Reaching back out later, for example a cart reminder or a reorder prompt after the window has closed, is a marketing message that needs opt-in and an approved marketing template, and those are charged per delivered message. The offer during a live conversation is the cheap one, and it is also the one that converts best.
   - q: Can AI upsell without annoying customers?
     a: Yes, on three conditions. It only offers something that genuinely relates to what the customer said they want, it offers once and accepts a no, and it never places an offer in front of an unanswered question or a complaint. The failure mode is not automation, it is offering the same thing to everyone regardless of what they asked for. A conversation contains the customer's stated need in their own words, which is more than a product page ever knows.
   - q: Where do most upsell tools place the offer?
     a: On a page. Product page widgets, cart drawers, checkout extensions and post-purchase pages between order confirmation and the thank you page. Apps such as Rebuy, LimeSpot, ReConvert, Selleasy and Aftersell all operate in those surfaces. That works for storefront traffic and it covers none of the customers who skipped the storefront and asked you directly in a message, which in many regional retail businesses is a large share of the buyers.
 ---
+
+To upsell inside a customer conversation, make one offer at one of four moments: after a stated need, after the order is confirmed, when an objection appears, or after delivery.
 
 Most retail upselling happens on a page where nobody is talking. A widget under the product image, a cart drawer, an offer wedged between order confirmation and the thank you page. It works well enough. But if a real share of your orders starts with someone messaging you to ask a question, then the place your customer actually said what they want is a conversation, and almost nothing on the market sells there.
 
@@ -64,9 +66,9 @@ Three limits, and two of them are other people's rules rather than our opinion.
 
 **Three consecutive offers is the documented ceiling, and a conversation should stay well under it.** Shopify's own developer guidance for [post-purchase product offers](https://shopify.dev/docs/apps/build/checkout/product-offers/ux-for-post-purchase-product-offers) is to display a maximum of three consecutive upsell offers and to tailor them to the customer's actual behaviour. That is guidance for a page, where the customer is clicking rather than talking. In a live conversation there is a person on the other side and the practical limit is one.
 
-**Reaching back out later is a different thing with different rules.** An offer inside a live conversation the customer started sits in the 24 hour customer service window, and non-template service messages there are not charged. Messaging someone after that window closes, a cart reminder or a reorder prompt, is a marketing message on the WhatsApp Business Platform. It needs opt-in and an approved marketing template, and it is charged per delivered message. We went through exactly where that line sits in [the rules on WhatsApp cart reminders](/blog/whatsapp-abandoned-cart-rules).
+**Reaching back out later is a different thing with different rules.** An offer inside a live conversation the customer started sits in the 24 hour customer service window, and non-template service messages there are free for the first 1,000 per business phone number each month and then charged at the market's service rate, under [Meta's pricing](https://developers.facebook.com/docs/whatsapp/pricing) since 1 October 2026. Messaging someone after that window closes, a cart reminder or a reorder prompt, is a marketing message on the WhatsApp Business Platform. It needs opt-in and an approved marketing template, and it is charged per delivered message. We went through exactly where that line sits in [the rules on WhatsApp cart reminders](/blog/whatsapp-abandoned-cart-rules).
 
-The cost consequence is worth sitting with. The offer made during a live conversation is the free one and the one that converts best. The one you pay for is the one you send to someone who already left.
+The cost consequence is worth sitting with. The offer made during a live conversation is the cheap one and the one that converts best. The one you pay for is the one you send to someone who already left.
 
 ## The tools, and the surface each one sells on
 

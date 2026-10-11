@@ -1,7 +1,7 @@
 ---
-title: Automating the Back Office of a Small Commerce Team
+title: How to Automate Internal Operations for Small Commerce Teams
 slug: automate-internal-operations-commerce
-description: Order handovers, staff questions, approvals and the weekly report. The internal half of store automation, and which parts are worth wiring up first.
+description: "How to automate internal operations for a small commerce team: order handovers, staff questions, approvals and the weekly report, and what to wire up first."
 type: direct
 date: 2026-09-08
 related: [how-to-automate-whatsapp-for-your-business, where-is-my-order-whatsapp, best-whatsapp-automation-tools]
@@ -28,6 +28,8 @@ faq:
   - q: Why does internal automation fail in small teams?
     a: "Usually because the process was never agreed. If two people perform the same handover differently, automating it encodes the disagreement instead of resolving it. The other common cause is silent failure: a webhook stops firing and nobody notices for a week, which is worse than a manual step somebody owns."
 ---
+
+To automate internal operations in a small commerce team, start with four jobs: the order handover, repeat staff questions, simple approvals and the weekly report.
 
 The conversation ends and the real work starts. Somebody copies the address out of the chat into the courier portal. Somebody messages the packer to say this one is urgent. Somebody answers, for the fourth time this week, which supplier the cream ones come from. Somebody spends Sunday evening counting last week's orders into a spreadsheet nobody reads. None of it is visible to a customer and all of it is your team's actual day.
 

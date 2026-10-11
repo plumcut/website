@@ -34,7 +34,7 @@
     },
     {
       "question": "Are messages from a Click to WhatsApp ad free?",
-      "answer": "Under Meta's WhatsApp Business Platform pricing, if a customer messages you through a Click to WhatsApp ad and you reply within 24 hours, a free entry point window opens for 72 hours, during which any type of message, including templates, can be sent at no charge. Outside that window, replies inside the 24 hour customer service window are free, while marketing templates you send first are charged per delivered message.",
+      "answer": "Under Meta's WhatsApp Business Platform pricing, if a customer messages you through a Click to WhatsApp ad on the WhatsApp Android or iOS app and you reply within the 24 hour customer service window, your first reply opens a free entry point window that can stay open for up to 7 days, during which marketing, utility, authentication and service messages, templates included, are not charged. Meta Business Agent messages are still charged inside it. Outside that window, replies inside the 24 hour customer service window are free for the first 1,000 per business phone number each month and then charged, while marketing templates you send first are charged per delivered message.",
       "source": "https://plumcut.com/blog/upsell-groceries-whatsapp"
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "question": "Are WhatsApp replies to customers free?",
-      "answer": "Mostly yes. Since 1 July 2025 Meta charges per template message, and its pricing documentation says all non-template messages are free, which covers ordinary replies inside the customer service window. Utility templates sent inside an open customer service window are also free. Marketing, authentication and utility templates sent outside that window are charged, and the rate depends on the recipient's country calling code.",
+      "answer": "Up to a limit. Since 1 October 2026 Meta charges for ordinary replies inside the customer service window after the first 1,000 per business phone number each month. Marketing, utility and authentication templates are charged from the first send, inside or outside that window, and the rate depends on the recipient's country calling code.",
       "source": "https://plumcut.com/blog/ai-customer-service-hidden-costs"
     },
     {
@@ -179,7 +179,7 @@
     },
     {
       "question": "Does Meta's own business agent replace these tools?",
-      "answer": "It replaces the answering layer for many businesses. Meta said in June 2026 that more than a million businesses were already using a Business Agent on WhatsApp and Messenger, free to activate, with paid options signalled later. It does not replace the work of building connectors to your systems, deciding what the agent may change, or keeping it working. Eligibility is also limited by country and by vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and one phone number cannot run two competing messaging products at once.",
+      "answer": "It replaces the answering layer for many businesses. Meta said in June 2026 that more than a million businesses were already using a Business Agent on WhatsApp and Messenger, free to activate, with replies billed since 1 August 2026 at 2 US dollars per million tokens, about 4 to 5 cents per message. It does not replace the work of building connectors to your systems, deciding what the agent may change, or keeping it working. Eligibility is also limited by country and by vertical, with finance, government, health, alcohol, gambling, over the counter drugs and matrimony excluded, and one phone number cannot run two competing messaging products at once.",
       "source": "https://plumcut.com/blog/whatsapp-ai-that-takes-action-mena"
     },
     {
@@ -218,8 +218,8 @@
       "source": "https://plumcut.com/blog/automation-beyond-customer-service"
     },
     {
-      "question": "Is Meta's free business agent enough on its own?",
-      "answer": "It is enough to answer. Meta said in June 2026 that more than a million businesses were already using a Business Agent on WhatsApp and Messenger, and it is free to activate, with paid subscription options signalled for later. Its developer documentation describes custom connectors to external APIs so an agent can check an order or book an appointment. Someone still has to build those connectors against your systems, decide what the agent may change, and keep it working when your API changes. Eligibility is also restricted by vertical and country, and one phone number cannot run two competing messaging products at once.",
+      "question": "Is Meta's business agent enough on its own?",
+      "answer": "It is enough to answer. Meta said in June 2026 that more than a million businesses were already using a Business Agent on WhatsApp and Messenger, and it is free to activate, but since 1 August 2026 its replies are billed at 2 US dollars per million tokens, about 4 to 5 cents per message. Its developer documentation describes custom connectors to external APIs so an agent can check an order or book an appointment. Someone still has to build those connectors against your systems, decide what the agent may change, and keep it working when your API changes. Eligibility is also restricted by vertical and country, and one phone number cannot run two competing messaging products at once.",
       "source": "https://plumcut.com/blog/automation-beyond-customer-service"
     },
     {
@@ -244,7 +244,7 @@
     },
     {
       "question": "Does it cost money to upsell a customer on WhatsApp?",
-      "answer": "It depends on when you send it. An offer made inside a live conversation the customer started falls in the 24 hour customer service window, where non-template service messages are not charged. Reaching back out later, for example a cart reminder or a reorder prompt after the window has closed, is a marketing message that needs opt-in and an approved marketing template, and those are charged per delivered message. The offer during a live conversation is the free one, and it is also the one that converts best.",
+      "answer": "It depends on when you send it. An offer made inside a live conversation the customer started falls in the 24 hour customer service window, where non-template service messages are free for the first 1,000 per business phone number each month since 1 October 2026, then charged at the service rate. Reaching back out later, for example a cart reminder or a reorder prompt after the window has closed, is a marketing message that needs opt-in and an approved marketing template, and those are charged per delivered message. The offer during a live conversation is the cheap one, and it is also the one that converts best.",
       "source": "https://plumcut.com/blog/upsell-cross-sell-in-conversation"
     },
     {
@@ -319,7 +319,7 @@
     },
     {
       "question": "Does it cost more to reply to customers on WhatsApp once you automate?",
-      "answer": "Not for replies. Meta made service conversations free on 1 November 2024, and non-template messages sent inside an open customer service window are not charged. Since 1 July 2025 the platform charges per delivered template message, which covers messages you start, not answers you send back inside the window.",
+      "answer": "Only a little for replies. Meta made service conversations free on 1 November 2024, but since 1 October 2026 it charges for non-template service replies inside an open customer service window after the first 1,000 per business phone number each month. Template messages are charged per delivered message.",
       "source": "https://plumcut.com/blog/when-ready-for-ai-customer-service"
     },
     {
@@ -334,7 +334,7 @@
     },
     {
       "question": "Is WhatsApp cheaper than SMS for delivery notifications?",
-      "answer": "Usually, but not because the unit price is lower. Both charge you for the message you send first. The difference is everything after it. SMS bills every message including the ones you send to answer a question, while on WhatsApp a customer's reply opens a 24 hour customer service window, and since 1 July 2025 Meta does not charge for service messages inside that window or for utility templates sent in response to a user. If your dispatch notification produces conversations, WhatsApp bills one message per order and SMS bills the whole exchange. If it produces nothing but silence, the two are close and you should compare the current rate cards for your market.",
+      "answer": "Usually, but not because the unit price is lower. Both charge you for the message you send first. The difference is everything after it. SMS bills every message including the ones you send to answer a question, while on WhatsApp a customer's reply opens a 24 hour customer service window, and since 1 October 2026 service messages inside it are free for the first 1,000 per business phone number each month, then charged at the service rate. If your dispatch notification produces conversations, WhatsApp bills the notification and usually little else, while SMS bills the whole exchange. If it produces nothing but silence, the two are close and you should compare the current rate cards for your market.",
       "source": "https://plumcut.com/blog/sms-vs-whatsapp-delivery-notifications"
     },
     {
@@ -414,12 +414,12 @@
     },
     {
       "question": "How are order notifications billed on WhatsApp?",
-      "answer": "A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are not charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.",
+      "answer": "A message you send first, outside an open customer service window, is a template message billed at the rate for that customer's market, while replies inside the 24 hour window the customer opened are free for the first 1,000 per business phone number each month, then charged. Rates are market specific and Meta has revised its rate card, so check the current card rather than a figure quoted in an article. We covered the detail in our piece on what the WhatsApp Business API really costs.",
       "source": "https://plumcut.com/blog/connect-whatsapp-orders-fleet-software"
     },
     {
       "question": "What should a small online store automate first?",
-      "answer": "The repeated questions that have exactly one correct answer: opening hours, delivery zones and times, sizing guidance, returns policy and payment methods. They need no integration, no approved template and no per message fee, because a reply sent inside the 24 hour customer service window a customer opens is not charged. Writing those answers down properly is also the specification for every later stage.",
+      "answer": "The repeated questions that have exactly one correct answer: opening hours, delivery zones and times, sizing guidance, returns policy and payment methods. They need no integration, no approved template and little in message fees, because replies sent inside the 24 hour customer service window a customer opens are free for the first 1,000 per business phone number each month. Writing those answers down properly is also the specification for every later stage.",
       "source": "https://plumcut.com/blog/what-to-automate-first-ecommerce"
     },
     {
@@ -464,7 +464,7 @@
     },
     {
       "question": "Which parts of conversation automation cost money?",
-      "answer": "Only the messages you send first. Under per message pricing, in force since 1 July 2025, service messages and utility messages sent in response to a user are not charged, so faster replies inside the 24 hour customer service window cost nothing per message. Cart reminders and other outbound follow up are marketing templates, which need opt in and are billed at the marketing rate for that market.",
+      "answer": "Only the messages you send first. Since 1 October 2026, service messages inside the 24 hour customer service window are free for the first 1,000 per business phone number each month and then charged at the service rate, so faster replies cost little or nothing per message. Cart reminders and other outbound follow up are marketing templates, which need opt in and are billed at the marketing rate for that market.",
       "source": "https://plumcut.com/blog/does-conversation-automation-increase-sales"
     },
     {
@@ -499,7 +499,7 @@
     },
     {
       "question": "Do delivery notifications cost money?",
-      "answer": "A notification you send first, when no customer service window is open, is a utility template and is billed at the rate for that customer's market. Replies inside the 24 hour window a customer opened are not charged, and neither are utility messages sent in response to a user. Meta revised its rate cards effective 1 July 2026 and rates are market specific, so check the current card rather than a quoted figure.",
+      "answer": "A notification you send first, when no customer service window is open, is a utility template and is billed at the rate for that customer's market. Since 1 October 2026, replies inside the 24 hour window a customer opened are free for the first 1,000 per business phone number each month, then charged, and utility templates are charged even when sent in response to a user. Meta revised its rate cards effective 1 July 2026 and rates are market specific, so check the current card rather than a quoted figure.",
       "source": "https://plumcut.com/blog/automate-logistics-delivery-updates"
     },
     {
@@ -549,7 +549,7 @@
     },
     {
       "question": "Does automating support cost money per message?",
-      "answer": "Not for replies to customers. Under per message pricing, in force for all businesses since 1 July 2025, Meta does not charge for service messages, which are the replies you send inside the 24 hour customer service window that a customer's message opens. What costs money is messaging a customer first outside that window, which requires an approved template.",
+      "answer": "Only a little for replies to customers. Service messages are the replies you send inside the 24 hour customer service window that a customer's message opens, and since 1 October 2026 Meta charges for them only after the first 1,000 per business phone number each month. What costs money is messaging a customer first outside that window, which requires an approved template.",
       "source": "https://plumcut.com/blog/automate-customer-service-without-losing-customers"
     },
     {
@@ -569,12 +569,12 @@
     },
     {
       "question": "Does answering \"where is my order\" on WhatsApp cost anything?",
-      "answer": "No, not when you are replying. A customer message opens a 24 hour customer service window, and Meta does not charge for service messages sent inside it. What costs money is messaging first, for example a dispatch notification sent when no window is open, which is billed as a utility template at the rate for that customer's country.",
+      "answer": "Not much when you are replying. A customer message opens a 24 hour customer service window, and since 1 October 2026 Meta charges for service messages sent inside it only after the first 1,000 per business phone number each month. What costs money is messaging first, for example a dispatch notification sent when no window is open, which is billed as a utility template at the rate for that customer's country.",
       "source": "https://plumcut.com/blog/where-is-my-order-whatsapp"
     },
     {
       "question": "Can I send tracking updates before the customer asks?",
-      "answer": "Yes, with an approved utility template and the customer's opt in. Sent outside an open customer service window it is charged at the utility rate. Sent inside one it has been free since 1 July 2025. Most brands find that one dispatch notification per order pays for itself by removing the question entirely.",
+      "answer": "Yes, with an approved utility template and the customer's opt in. Sent outside an open customer service window it is charged at the utility rate. Sent inside one it is also charged at the utility rate, since 1 October 2026. Most brands find that one dispatch notification per order pays for itself by removing the question entirely.",
       "source": "https://plumcut.com/blog/where-is-my-order-whatsapp"
     },
     {
@@ -589,7 +589,7 @@
     },
     {
       "question": "How quickly does an order status reply need to arrive?",
-      "answer": "Fast enough to land while the customer is still in the app, which in practice means seconds rather than minutes. Speed is also what keeps the reply free, since it happens inside the customer service window the customer just opened. A reply that arrives the next morning costs you the same as no reply.",
+      "answer": "Fast enough to land while the customer is still in the app, which in practice means seconds rather than minutes. Speed also keeps the reply cheap, since it happens inside the customer service window the customer just opened, where the first 1,000 service replies per number each month are free. A reply that arrives the next morning costs you the same as no reply.",
       "source": "https://plumcut.com/blog/where-is-my-order-whatsapp"
     },
     {
@@ -599,7 +599,7 @@
     },
     {
       "question": "What is the 24 hour customer service window?",
-      "answer": "A customer message opens or resets a 24 hour service window. Service replies inside it have no Meta messaging charge. Utility templates sent during an open window are also free under Meta's current rules. Other categories and provider charges need to be assessed separately.",
+      "answer": "A customer message opens or resets a 24 hour customer service window, and inside it a business can reply without a template. Since 1 October 2026 Meta charges for those service replies again, after a free tier of 1,000 service messages per business phone number each month, and utility templates sent inside an open window are charged too. Provider charges need to be assessed separately.",
       "source": "https://plumcut.com/blog/whatsapp-business-api-cost"
     },
     {
@@ -609,7 +609,7 @@
     },
     {
       "question": "Does Lebanon have its own WhatsApp message rate?",
-      "answer": "No. Meta's rate card prices Lebanon under the \"Rest of Middle East\" grouping, together with Jordan, Kuwait, Bahrain, Oman, Iraq and Yemen. Saudi Arabia, the United Arab Emirates, Egypt and Qatar are each priced as standalone markets. Because Meta charges by the recipient's country calling code rather than your business location, a Lebanese brand selling into Saudi Arabia is billed at the Saudi rate.",
+      "answer": "No. As of 1 October 2026, Meta's rate card prices Lebanon under the \"Rest of Middle East\" region, together with Bahrain, Jordan and Yemen, at 0.0392 US dollars per marketing message and 0.0091 per utility or authentication message. Saudi Arabia, the United Arab Emirates, Kuwait, Qatar, Oman, Egypt and Iraq are each priced as standalone markets. Because Meta charges by the recipient's country calling code rather than your business location, a Lebanese brand selling into Saudi Arabia is billed at the Saudi rate.",
       "source": "https://plumcut.com/blog/whatsapp-business-api-cost"
     },
     {
@@ -664,7 +664,7 @@
     },
     {
       "question": "Is there a cheaper way to recover carts on WhatsApp?",
-      "answer": "Yes, and it is not misclassifying templates. Replies inside the 24 hour customer service window are free, and a customer arriving from a click to WhatsApp ad opens a 72 hour free window. Conversations you are invited into cost nothing; conversations you start cost the marketing rate. Design for the first.",
+      "answer": "Yes, and it is not misclassifying templates. Since 1 October 2026, replies inside the 24 hour customer service window are free for the first 1,000 per business phone number each month, then charged at the service rate, and a customer arriving from a click to WhatsApp ad on the WhatsApp Android or iOS app can open a free entry point window that can stay open for up to 7 days from your first reply, though Meta Business Agent messages are still charged inside it. Conversations you are invited into cost little or nothing; conversations you start cost the marketing rate. Design for the first.",
       "source": "https://plumcut.com/blog/whatsapp-abandoned-cart-rules"
     },
     {
@@ -724,7 +724,7 @@
     },
     {
       "question": "Can I automate WhatsApp for free?",
-      "answer": "Partly. The free WhatsApp Business app offers greetings, away messages and saved replies for a person to use. More integrated automation can use the Cloud API. Meta charges for eligible delivered template messages, with specified free messaging conditions; your software or provider may charge separately.",
+      "answer": "Partly. The free WhatsApp Business app offers greetings, away messages and saved replies for a person to use. More integrated automation can use the Cloud API. Meta charges for delivered template messages and, since 1 October 2026, for service replies beyond 1,000 free per business phone number each month; your software or provider may charge separately.",
       "source": "https://plumcut.com/blog/how-to-automate-whatsapp-for-your-business"
     },
     {
