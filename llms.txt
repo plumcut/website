@@ -12,6 +12,8 @@
 ## Field notes
 - [Field notes](https://plumcut.com/blog/): Practical guides on WhatsApp automation, AI that sells, and customer insight you own.
 <!-- BLOG:LIST:START -->
+- [WhatsApp Conversation Analysis: What Your Chats Reveal](https://plumcut.com/blog/whatsapp-conversation-analysis): WhatsApp conversation analysis turns chat history into customer research: what people ask, what you do not sell, why they do not buy, and when they message.
+- [AI Chatbot Wrong Answers: Who Catches Them and How Fast](https://plumcut.com/blog/ai-chatbot-wrong-answers): AI chatbot wrong answers will happen. The five ways a WhatsApp assistant fails, a silent failure we fixed, and how human takeover should really work.
 - [WhatsApp Ordering for Supermarkets When You Already Have an App](https://plumcut.com/blog/whatsapp-ordering-supermarkets): WhatsApp ordering for supermarkets that already have an app: where the app wins, where WhatsApp wins, and how the two run side by side.
 - [How to Upsell Groceries on WhatsApp](https://plumcut.com/blog/upsell-groceries-whatsapp): How to upsell groceries on WhatsApp: run a Meta ad that opens a chat, turn a recipe or shopping list into a basket, and add only the items that belong in it.
 - [AI Customer Service Cost in 2026: The Hidden Fees](https://plumcut.com/blog/ai-customer-service-hidden-costs): AI customer service costs 10 to 280 dollars a month on the plan, then adds per resolution fees, seats, overages and Meta message charges. 12 vendors checked.
@@ -35,8 +37,6 @@
 - [How to Automate Customer Service Without Losing the Customer](https://plumcut.com/blog/automate-customer-service-without-losing-customers): How to automate customer service without losing customers: design the handover first, meet Meta's escalation requirement, and keep the relationship you have.
 - [Can AI Answer Where Is My Order on WhatsApp in 2026?](https://plumcut.com/blog/where-is-my-order-whatsapp): Where is my order on WhatsApp: what it takes to answer the most common question in commerce automatically, what it costs, and where it breaks.
 - [WhatsApp Business API Pricing 2026 for Lebanon and GCC](https://plumcut.com/blog/whatsapp-business-api-cost): WhatsApp Business API pricing 2026 for Lebanon, Saudi Arabia, the UAE and the GCC: Meta's per message rates by country, plus provider and setup costs.
-- [WhatsApp AI for Shopify Stores in Lebanon and the Gulf](https://plumcut.com/blog/whatsapp-ai-shopify-lebanon-gulf): WhatsApp AI for Shopify stores in Lebanon and the Gulf: why MENA shoppers buy in chat instead of the checkout, what breaks when you automate it, and what works.
-- [Can You Send Abandoned Cart Messages on WhatsApp?](https://plumcut.com/blog/whatsapp-abandoned-cart-rules): Yes, you can send abandoned cart messages on WhatsApp with opt in and an approved marketing template. Filing them as utility is wrong and costly.
 <!-- BLOG:LIST:END -->
 
 ## What plum does
@@ -77,6 +77,52 @@ Answers below are reproduced verbatim from the articles that publish them. The
 full text of every article is at https://plumcut.com/llms-full.txt.
 
 <!-- FAQ:LIST:START -->
+### WhatsApp Conversation Analysis: What Your Chats Reveal
+Source: https://plumcut.com/blog/whatsapp-conversation-analysis
+
+**What can I learn from my customers' WhatsApp conversations?**
+
+A business's WhatsApp history shows the questions customers ask most, grouped by product, the things they ask for that the business does not sell, the objections and reasons people did not buy, their mood and motivation, the hours they message, and the answers staff repeat every day. Each of those maps to a decision about stock, prices, offers, staffing or what to automate first.
+
+**How do I analyse WhatsApp chats for customer insights?**
+
+Export the chats, remove phone numbers, decide what counts as one conversation (for example, a new conversation after 24 hours of silence), clean the different export formats, label which senders are staff and which are customers, then count keyword patterns and also read samples by hand. Classify every conversation against one fixed list of reasons, measure a second time with a different method, and compare the two before trusting any number.
+
+**How do I export a WhatsApp chat for analysis?**
+
+In WhatsApp, open the individual or group chat, open the menu, choose More and then Export chat, and pick Without media or Include media. WhatsApp produces a text file that you can share by email or another app. It cannot be imported back into WhatsApp, and chats with Advanced chat privacy turned on cannot be exported.
+
+**Can a text analysis of WhatsApp chats read voice notes and screenshots?**
+
+No. An analysis that reads only the exported text sees a placeholder where a voice note, photo or screenshot was sent, so any request made inside that media is invisible to it. Voice notes have to be transcribed and images read separately. Until that is done, report the share of conversations that contain media as a known gap rather than ignoring it.
+
+**Is it safe to upload WhatsApp chats to an AI tool for analysis?**
+
+Only after you remove what identifies people. Strip phone numbers and names from the export before it goes into any tool, check whether the tool's provider keeps or trains on uploaded data, and keep the raw export somewhere only you control. Customer messages often contain addresses and order details, so treat the file as personal data.
+
+### AI Chatbot Wrong Answers: Who Catches Them and How Fast
+Source: https://plumcut.com/blog/ai-chatbot-wrong-answers
+
+**What happens when an AI chatbot gives a wrong answer?**
+
+It depends on how the system around the chatbot is built. A well run assistant answers only from the business's own catalogue and policies, says it will check with the team instead of guessing, and lets staff see every conversation live and take it over in the same WhatsApp thread. The damage from a wrong answer is mostly set by how fast someone sees it and corrects it, and whether the customer has to repeat themselves.
+
+**What is a silent failure in an AI chatbot?**
+
+A silent failure is when the customer gets no reply at all, even though the system may have generated one. It is often worse than a wrong answer, because nobody sees an error and the customer simply waits. The fix is monitoring that compares replies generated with replies actually delivered, and alerts someone when they do not match.
+
+**Can a person take over a WhatsApp chatbot conversation?**
+
+Yes, if the system is built for it. A good takeover sets a flag on that one conversation so the assistant stops replying, lets a staff member answer in the same WhatsApp thread on the same business number, and hands the conversation back to the assistant when the person is done. The assistant should re-check that flag right before it sends anything, because a takeover can happen while it is still writing.
+
+**What is the WhatsApp 24 hour customer service window?**
+
+When a customer messages a business on the WhatsApp Business Platform, a 24 hour customer service window opens, and each new message from the customer resets it. Inside the window the business can send free-form replies. Outside it, the business can only send template messages, which generally need Meta's approval first.
+
+**When should an AI chatbot hand a conversation to a person?**
+
+When the customer is angry, asks for a refund, raises a health or legal question, asks the same thing more than once, or asks something the assistant cannot answer from the business's own catalogue and policies. Meta's WhatsApp Business Messaging Policy also requires businesses that automate replies to offer prompt, clear and direct escalation paths to a person.
+
 ### WhatsApp Ordering for Supermarkets When You Already Have an App
 Source: https://plumcut.com/blog/whatsapp-ordering-supermarkets
 

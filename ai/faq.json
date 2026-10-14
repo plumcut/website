@@ -1,7 +1,57 @@
 {
   "source": "https://plumcut.com/blog/",
-  "count": 148,
+  "count": 158,
   "faqs": [
+    {
+      "question": "What can I learn from my customers' WhatsApp conversations?",
+      "answer": "A business's WhatsApp history shows the questions customers ask most, grouped by product, the things they ask for that the business does not sell, the objections and reasons people did not buy, their mood and motivation, the hours they message, and the answers staff repeat every day. Each of those maps to a decision about stock, prices, offers, staffing or what to automate first.",
+      "source": "https://plumcut.com/blog/whatsapp-conversation-analysis"
+    },
+    {
+      "question": "How do I analyse WhatsApp chats for customer insights?",
+      "answer": "Export the chats, remove phone numbers, decide what counts as one conversation (for example, a new conversation after 24 hours of silence), clean the different export formats, label which senders are staff and which are customers, then count keyword patterns and also read samples by hand. Classify every conversation against one fixed list of reasons, measure a second time with a different method, and compare the two before trusting any number.",
+      "source": "https://plumcut.com/blog/whatsapp-conversation-analysis"
+    },
+    {
+      "question": "How do I export a WhatsApp chat for analysis?",
+      "answer": "In WhatsApp, open the individual or group chat, open the menu, choose More and then Export chat, and pick Without media or Include media. WhatsApp produces a text file that you can share by email or another app. It cannot be imported back into WhatsApp, and chats with Advanced chat privacy turned on cannot be exported.",
+      "source": "https://plumcut.com/blog/whatsapp-conversation-analysis"
+    },
+    {
+      "question": "Can a text analysis of WhatsApp chats read voice notes and screenshots?",
+      "answer": "No. An analysis that reads only the exported text sees a placeholder where a voice note, photo or screenshot was sent, so any request made inside that media is invisible to it. Voice notes have to be transcribed and images read separately. Until that is done, report the share of conversations that contain media as a known gap rather than ignoring it.",
+      "source": "https://plumcut.com/blog/whatsapp-conversation-analysis"
+    },
+    {
+      "question": "Is it safe to upload WhatsApp chats to an AI tool for analysis?",
+      "answer": "Only after you remove what identifies people. Strip phone numbers and names from the export before it goes into any tool, check whether the tool's provider keeps or trains on uploaded data, and keep the raw export somewhere only you control. Customer messages often contain addresses and order details, so treat the file as personal data.",
+      "source": "https://plumcut.com/blog/whatsapp-conversation-analysis"
+    },
+    {
+      "question": "What happens when an AI chatbot gives a wrong answer?",
+      "answer": "It depends on how the system around the chatbot is built. A well run assistant answers only from the business's own catalogue and policies, says it will check with the team instead of guessing, and lets staff see every conversation live and take it over in the same WhatsApp thread. The damage from a wrong answer is mostly set by how fast someone sees it and corrects it, and whether the customer has to repeat themselves.",
+      "source": "https://plumcut.com/blog/ai-chatbot-wrong-answers"
+    },
+    {
+      "question": "What is a silent failure in an AI chatbot?",
+      "answer": "A silent failure is when the customer gets no reply at all, even though the system may have generated one. It is often worse than a wrong answer, because nobody sees an error and the customer simply waits. The fix is monitoring that compares replies generated with replies actually delivered, and alerts someone when they do not match.",
+      "source": "https://plumcut.com/blog/ai-chatbot-wrong-answers"
+    },
+    {
+      "question": "Can a person take over a WhatsApp chatbot conversation?",
+      "answer": "Yes, if the system is built for it. A good takeover sets a flag on that one conversation so the assistant stops replying, lets a staff member answer in the same WhatsApp thread on the same business number, and hands the conversation back to the assistant when the person is done. The assistant should re-check that flag right before it sends anything, because a takeover can happen while it is still writing.",
+      "source": "https://plumcut.com/blog/ai-chatbot-wrong-answers"
+    },
+    {
+      "question": "What is the WhatsApp 24 hour customer service window?",
+      "answer": "When a customer messages a business on the WhatsApp Business Platform, a 24 hour customer service window opens, and each new message from the customer resets it. Inside the window the business can send free-form replies. Outside it, the business can only send template messages, which generally need Meta's approval first.",
+      "source": "https://plumcut.com/blog/ai-chatbot-wrong-answers"
+    },
+    {
+      "question": "When should an AI chatbot hand a conversation to a person?",
+      "answer": "When the customer is angry, asks for a refund, raises a health or legal question, asks the same thing more than once, or asks something the assistant cannot answer from the business's own catalogue and policies. Meta's WhatsApp Business Messaging Policy also requires businesses that automate replies to offer prompt, clear and direct escalation paths to a person.",
+      "source": "https://plumcut.com/blog/ai-chatbot-wrong-answers"
+    },
     {
       "question": "Should a supermarket take orders on WhatsApp if it already has an app?",
       "answer": "Yes, as a second channel and not as a replacement. A grocery app is the better tool for a loyal customer browsing aisles and comparing products. WhatsApp is the better tool for customers who will never install the app, for people arriving from a social media ad, for quick reorders and for customers who already know what they want and would rather type a list. Run both, send WhatsApp orders into the same order system as app orders, and measure each channel separately.",
