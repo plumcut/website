@@ -486,6 +486,7 @@ const ORGANIZATION = {
     'https://www.wikidata.org/wiki/Q141633318',
     'https://www.crunchbase.com/organization/plumcut',
     'https://techbehemoths.com/company/plumcut',
+    'https://www.youtube.com/@plumcut',
   ],
 };
 
