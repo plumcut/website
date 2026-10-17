@@ -6,7 +6,14 @@
     <atom:link href="https://plumcut.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>Practical guides on WhatsApp automation, AI that sells, and customer insight you own.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2026 09:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Click to WhatsApp Ads: What Happens After the Click</title>
+      <link>https://plumcut.com/blog/click-to-whatsapp-ads-after-the-click</link>
+      <guid isPermaLink="true">https://plumcut.com/blog/click-to-whatsapp-ads-after-the-click</guid>
+      <description>Click to WhatsApp ads not converting? The budget is usually lost in the chat, not the ad. Reply speed, the free entry point window, and what to automate after the click.</description>
+      <pubDate>Sat, 17 Oct 2026 09:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>WhatsApp Conversation Analysis: What Your Chats Reveal</title>
       <link>https://plumcut.com/blog/whatsapp-conversation-analysis</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://plumcut.com/blog/ai-customer-service-arabic</guid>
       <description>AI customer service in Arabic breaks on dialect, Arabizi and code switching. What works for Gulf and Levant brands, and why templates are a separate job.</description>
       <pubDate>Sun, 06 Sep 2026 09:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>How to Automate WhatsApp for Your Business in 2026</title>
-      <link>https://plumcut.com/blog/how-to-automate-whatsapp-for-your-business</link>
-      <guid isPermaLink="true">https://plumcut.com/blog/how-to-automate-whatsapp-for-your-business</guid>
-      <description>How to automate WhatsApp for your business in 2026, from the free Business app to the Cloud API, and how to pick the right level for your team.</description>
-      <pubDate>Sat, 05 Sep 2026 09:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

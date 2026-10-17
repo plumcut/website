@@ -12,6 +12,7 @@
 ## Field notes
 - [Field notes](https://plumcut.com/blog/): Practical guides on WhatsApp automation, AI that sells, and customer insight you own.
 <!-- BLOG:LIST:START -->
+- [Click to WhatsApp Ads: What Happens After the Click](https://plumcut.com/blog/click-to-whatsapp-ads-after-the-click): Click to WhatsApp ads not converting? The budget is usually lost in the chat, not the ad. Reply speed, the free entry point window, and what to automate after the click.
 - [WhatsApp Conversation Analysis: What Your Chats Reveal](https://plumcut.com/blog/whatsapp-conversation-analysis): WhatsApp conversation analysis turns chat history into customer research: what people ask, what you do not sell, why they do not buy, and when they message.
 - [AI Chatbot Wrong Answers: Who Catches Them and How Fast](https://plumcut.com/blog/ai-chatbot-wrong-answers): AI chatbot wrong answers will happen. The five ways a WhatsApp assistant fails, a silent failure we fixed, and how human takeover should really work.
 - [WhatsApp Ordering for Supermarkets When You Already Have an App](https://plumcut.com/blog/whatsapp-ordering-supermarkets): WhatsApp ordering for supermarkets that already have an app: where the app wins, where WhatsApp wins, and how the two run side by side.
@@ -36,7 +37,6 @@
 - [How to Automate Internal Operations for Small Commerce Teams](https://plumcut.com/blog/automate-internal-operations-commerce): How to automate internal operations for a small commerce team: order handovers, staff questions, approvals and the weekly report, and what to wire up first.
 - [How to Automate Customer Service Without Losing the Customer](https://plumcut.com/blog/automate-customer-service-without-losing-customers): How to automate customer service without losing customers: design the handover first, meet Meta's escalation requirement, and keep the relationship you have.
 - [Can AI Answer Where Is My Order on WhatsApp in 2026?](https://plumcut.com/blog/where-is-my-order-whatsapp): Where is my order on WhatsApp: what it takes to answer the most common question in commerce automatically, what it costs, and where it breaks.
-- [WhatsApp Business API Pricing 2026 for Lebanon and GCC](https://plumcut.com/blog/whatsapp-business-api-cost): WhatsApp Business API pricing 2026 for Lebanon, Saudi Arabia, the UAE and the GCC: Meta's per message rates by country, plus provider and setup costs.
 <!-- BLOG:LIST:END -->
 
 ## What plum does
