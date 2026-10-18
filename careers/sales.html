@@ -1184,12 +1184,8 @@ Careers: Sales Representative
 
             <div class="careers-form-card" id="apply">
               <h3>Apply for this role</h3>
-              <p class="lede">All fields are required. Your CV must be a PDF of 5MB or less.</p>
-              <form id="careers-form" action="https://formsubmit.co/info@plumcut.com" method="POST" enctype="multipart/form-data" novalidate>
-                <input type="hidden" name="_subject" value="New application: Sales Representative" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" id="careers-next" value="https://plumcut.com/careers/sales/thank-you" />
+              <p class="lede">All fields are required. Your CV must be a PDF of 4MB or less.</p>
+              <form id="careers-form" action="/api/apply" method="POST" enctype="multipart/form-data" novalidate>
                 <div class="careers-honey" aria-hidden="true">
                   <label for="careers-honey">Leave this empty</label>
                   <input type="text" name="_honey" id="careers-honey" tabindex="-1" autocomplete="off" />
@@ -1197,13 +1193,13 @@ Careers: Sales Representative
 
                 <div class="careers-field">
                   <label for="careers-name">Full name <span class="req">*</span></label>
-                  <input type="text" id="careers-name" name="Full name" autocomplete="name" required aria-describedby="careers-name-error" />
+                  <input type="text" id="careers-name" name="name" autocomplete="name" required aria-describedby="careers-name-error" />
                   <p class="careers-error" id="careers-name-error" role="alert"></p>
                 </div>
 
                 <div class="careers-field">
                   <label for="careers-phone">Phone number <span class="req">*</span></label>
-                  <input type="tel" id="careers-phone" name="Phone number" autocomplete="tel" inputmode="tel" placeholder="+961 70 123 456" required aria-describedby="careers-phone-error" />
+                  <input type="tel" id="careers-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+961 70 123 456" required aria-describedby="careers-phone-error" />
                   <p class="careers-error" id="careers-phone-error" role="alert"></p>
                 </div>
 
@@ -1216,11 +1212,11 @@ Careers: Sales Representative
                 <div class="careers-field">
                   <label for="careers-cv">CV (PDF) <span class="req">*</span></label>
                   <div class="careers-file">
-                    <input type="file" id="careers-cv" name="attachment" accept="application/pdf,.pdf" required aria-describedby="careers-cv-hint careers-cv-error" />
+                    <input type="file" id="careers-cv" name="cv" accept="application/pdf,.pdf" required aria-describedby="careers-cv-hint careers-cv-error" />
                     <label for="careers-cv" class="pick" style="margin: 0;">Choose file</label>
                     <span class="name" id="careers-cv-name">No file chosen</span>
                   </div>
-                  <p class="careers-hint" id="careers-cv-hint">PDF only, max 5MB.</p>
+                  <p class="careers-hint" id="careers-cv-hint">PDF only, max 4MB.</p>
                   <p class="careers-error" id="careers-cv-error" role="alert"></p>
                 </div>
 
@@ -1236,10 +1232,7 @@ Careers: Sales Representative
         (function () {
           var form = document.getElementById('careers-form');
           if (!form) return;
-          // Redirect back to whichever domain served the page (Vercel preview or production).
-          document.getElementById('careers-next').value = window.location.origin + '/careers/sales/thank-you';
-
-          var MAX = 5 * 1024 * 1024;
+          var MAX = 4 * 1024 * 1024;
           var f = {
             name: document.getElementById('careers-name'),
             phone: document.getElementById('careers-phone'),
@@ -1266,7 +1259,7 @@ Careers: Sales Representative
               var file = el.files && el.files[0];
               if (!file) msg = 'Please attach your CV as a PDF.';
               else if (!/\.pdf$/i.test(file.name) || (file.type && file.type !== 'application/pdf')) msg = 'Your CV must be a PDF file.';
-              else if (file.size > MAX) msg = 'Your CV is ' + (file.size / 1048576).toFixed(1) + 'MB. Please upload a PDF of 5MB or less.';
+              else if (file.size > MAX) msg = 'Your CV is over 4MB. Please upload a PDF of 4MB or less.';
             }
             var wrap = el.closest('.careers-field');
             document.getElementById('careers-' + key + '-error').textContent = msg;
@@ -1286,27 +1279,69 @@ Careers: Sales Representative
             });
           });
 
+          // Status line under the button. Built from text nodes so a server
+          // message can never be read as HTML. Errors always offer email as a way out.
+          function showError(msg) {
+            status.textContent = msg.replace(/[.s]+$/, '') + ', or email your CV to ';
+            var a = document.createElement('a');
+            a.href = 'mailto:info@plumcut.com?subject=' + encodeURIComponent('Application: Sales Representative');
+            a.textContent = 'info@plumcut.com';
+            a.style.color = '#ffffff';
+            a.style.textDecoration = 'underline';
+            status.appendChild(a);
+            status.appendChild(document.createTextNode('.'));
+          }
+
+          function busy(on) {
+            submit.disabled = on;
+            submit.setAttribute('aria-busy', on ? 'true' : 'false');
+            submit.textContent = on ? 'Sending...' : 'Send application';
+          }
+
           form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (submit.disabled) return;
             var firstBad = null;
             Object.keys(f).forEach(function (key) {
               if (!check(key) && !firstBad) firstBad = f[key];
             });
             if (firstBad) {
-              e.preventDefault();
               status.textContent = 'Please fix the highlighted fields and try again.';
               firstBad.focus();
               return;
             }
             status.textContent = '';
-            submit.disabled = true;
-            submit.textContent = 'Sending...';
+            busy(true);
+            fetch('/api/apply', { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+              .then(function (res) {
+                return res.json().catch(function () { return {}; }).then(function (data) { return { res: res, data: data }; });
+              })
+              .then(function (r) {
+                if (r.res.ok && r.data.ok) {
+                  window.location.assign('/careers/sales/thank-you');
+                  return;
+                }
+                busy(false);
+                var msg = r.data.error || 'Something went wrong sending your application. Please try again';
+                if (r.data.field && f[r.data.field]) {
+                  var key = r.data.field;
+                  document.getElementById('careers-' + key + '-error').textContent = msg;
+                  f[key].closest('.careers-field').classList.add('has-error');
+                  f[key].setAttribute('aria-invalid', 'true');
+                  f[key].focus();
+                  showError('Please fix the highlighted field and try again');
+                } else {
+                  showError(msg);
+                }
+              })
+              .catch(function () {
+                busy(false);
+                showError('We could not reach our server. Please check your connection and try again');
+              });
           });
 
           // Re-enable the button if the visitor comes back with the browser's back button.
-          window.addEventListener('pageshow', function () {
-            submit.disabled = false;
-            submit.textContent = 'Send application';
-          });
+          window.addEventListener('pageshow', function () { busy(false); });
         })();
       </script>
     </main>

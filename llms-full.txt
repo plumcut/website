@@ -658,14 +658,14 @@ You get onboarded and start selling.
 
 #### Apply for this role
 
-All fields are required. Your CV must be a PDF of 5MB or less.
+All fields are required. Your CV must be a PDF of 4MB or less.
 Full name *
 Phone number *
 Email *
 CV (PDF) *
 Choose file
 No file chosen
-PDF only, max 5MB.
+PDF only, max 4MB.
 Send application
 
 ---
