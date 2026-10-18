@@ -2,17 +2,18 @@
 //
 // It takes a careers application (multipart/form-data: name, phone, email,
 // cv, plus the _honey honeypot), validates it, and emails it with the CV
-// attached over SMTP with STARTTLS. Standard library only.
+// attached through Microsoft Graph sendMail, authenticating app-only with
+// client credentials. Standard library only.
 //
-// Env: SMTP_HOST (default smtp.office365.com), SMTP_PORT (587), SMTP_USER,
-// SMTP_PASS, MAIL_TO (info@plumcut.com).
+// Env: MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET, MAIL_FROM (default
+// info@plumcut.com), MAIL_TO (default info@plumcut.com).
 //
-// Logs carry outcomes only. Never log the CV, a name, an email or a phone.
+// Logs carry outcomes only. Never log the CV, a name, an email or a phone,
+// and never a Graph response body, which can echo addresses back.
 package handler
 
 import (
 	"bytes"
-	"crypto/tls"
 	"encoding/base64"
 	"encoding/json"
 	"errors"
@@ -24,7 +25,7 @@ import (
 	"net"
 	"net/http"
 	"net/mail"
-	"net/smtp"
+	"net/url"
 	"os"
 	"regexp"
 	"strings"
@@ -33,22 +34,30 @@ import (
 )
 
 const (
-	maxCV      = 4 << 20          // 4MB, under Vercel's 4.5MB request body limit
+	// Graph's single-request sendMail caps the whole request at about 4MB and
+	// base64 grows the file by a third, so 3,000,000 bytes (not 3MiB, which
+	// encodes to exactly 4MiB) leaves room for the rest of the message.
+	maxCV      = 3_000_000
 	maxBody    = maxCV + 256<<10  // CV plus room for the text fields and multipart framing
 	rateLimit  = 5                // submissions per IP per window
 	rateWindow = 10 * time.Minute //
-	smtpWait   = 8 * time.Second  // dial timeout; Vercel functions have a short budget
+	tokenSkew  = 5 * time.Minute  // refresh the token this long before it expires
 	subject    = "New application: Sales Representative"
 	fallback   = "Something went wrong sending your application. Please try again"
+	tooBigMsg  = "Your CV is over 3MB. Please upload a PDF of 3MB or less."
 )
 
 var (
 	phoneRe = regexp.MustCompile(`^\+?[0-9\s().-]+$`)
 	digitRe = regexp.MustCompile(`[0-9]`)
 
-	// tlsConfig is a variable so tests can trust a local server's certificate.
-	tlsConfig = func(host string) *tls.Config { return &tls.Config{ServerName: host, MinVersion: tls.VersionTLS12} }
-	now       = time.Now
+	// Endpoints and clock are variables so tests can point them at fakes.
+	tokenURL = func(tenant string) string {
+		return "https://login.microsoftonline.com/" + url.PathEscape(tenant) + "/oauth2/v2.0/token"
+	}
+	graphBase  = "https://graph.microsoft.com/v1.0"
+	httpClient = &http.Client{Timeout: 15 * time.Second}
+	now        = time.Now
 )
 
 /* ------------------------------------------------------------ rate limit */
@@ -112,7 +121,7 @@ type fieldError struct{ Field, Msg string }
 func (e *fieldError) Error() string { return e.Msg }
 
 // clean trims a text field and drops control characters, so nothing an
-// applicant types can break out of an email header.
+// applicant types can break a subject line or the plain-text body layout.
 func clean(s string) string {
 	return strings.TrimSpace(strings.Map(func(r rune) rune {
 		if r < 0x20 || r == 0x7f {
@@ -144,7 +153,7 @@ func validate(name, phone, email string, file multipart.File, hdr *multipart.Fil
 		return nil, &fieldError{"cv", "Please attach your CV as a PDF."}
 	}
 	if hdr.Size > maxCV {
-		return nil, &fieldError{"cv", "Your CV is over 4MB. Please upload a PDF of 4MB or less."}
+		return nil, &fieldError{"cv", tooBigMsg}
 	}
 	ct, _, _ := mime.ParseMediaType(hdr.Header.Get("Content-Type"))
 	if ct != "application/pdf" && ct != "application/x-pdf" {
@@ -155,7 +164,7 @@ func validate(name, phone, email string, file multipart.File, hdr *multipart.Fil
 		return nil, &fieldError{"cv", "We could not read your CV. Please try again."}
 	}
 	if len(data) > maxCV {
-		return nil, &fieldError{"cv", "Your CV is over 4MB. Please upload a PDF of 4MB or less."}
+		return nil, &fieldError{"cv", tooBigMsg}
 	}
 	if !bytes.HasPrefix(data, []byte("%PDF")) {
 		return nil, &fieldError{"cv", "Your CV must be a PDF file."}
@@ -182,9 +191,9 @@ func safeFilename(s string) string {
 	return s
 }
 
-/* ------------------------------------------------------------------ mail */
+/* ----------------------------------------------------------------- graph */
 
-type config struct{ Host, Port, User, Pass, To string }
+type config struct{ Tenant, ClientID, Secret, From, To string }
 
 func env(k, def string) string {
 	if v := strings.TrimSpace(os.Getenv(k)); v != "" {
@@ -195,127 +204,165 @@ func env(k, def string) string {
 
 func loadConfig() config {
 	return config{
-		Host: env("SMTP_HOST", "smtp.office365.com"),
-		Port: env("SMTP_PORT", "587"),
-		User: env("SMTP_USER", ""),
-		Pass: os.Getenv("SMTP_PASS"),
-		To:   env("MAIL_TO", "info@plumcut.com"),
+		Tenant:   env("MS_TENANT_ID", ""),
+		ClientID: env("MS_CLIENT_ID", ""),
+		Secret:   os.Getenv("MS_CLIENT_SECRET"),
+		From:     env("MAIL_FROM", "info@plumcut.com"),
+		To:       env("MAIL_TO", "info@plumcut.com"),
 	}
 }
 
-func wrap76(s string) string {
-	var b strings.Builder
-	for len(s) > 76 {
-		b.WriteString(s[:76] + "\r\n")
-		s = s[76:]
-	}
-	b.WriteString(s + "\r\n")
-	return b.String()
+// stepError names the step that failed and the HTTP status, nothing else,
+// so it is always safe to log.
+type stepError struct {
+	Step   string
+	Status int
 }
 
-func buildMessage(c config, a *application) []byte {
-	from := c.User
-	if from == "" {
-		from = c.To
+func (e *stepError) Error() string {
+	if e.Status == 0 {
+		return e.Step
 	}
-	boundary := "plumcut-" + fmt.Sprint(now().UnixNano())
-	date := now().UTC()
-	var b bytes.Buffer
-	h := func(k, v string) { fmt.Fprintf(&b, "%s: %s\r\n", k, v) }
-	h("From", (&mail.Address{Name: "plumcut careers", Address: from}).String())
-	h("To", c.To)
-	h("Reply-To", (&mail.Address{Name: a.Name, Address: a.Email}).String())
-	h("Subject", mime.QEncoding.Encode("utf-8", subject+" - "+a.Name))
-	h("Date", date.Format(time.RFC1123Z))
-	h("MIME-Version", "1.0")
-	h("Content-Type", `multipart/mixed; boundary="`+boundary+`"`)
-	b.WriteString("\r\n")
-
-	body := "New application for Sales Representative (Commission-Based, Remote).\r\n\r\n" +
-		"Name:  " + a.Name + "\r\n" +
-		"Phone: " + a.Phone + "\r\n" +
-		"Email: " + a.Email + "\r\n" +
-		"Date:  " + date.Format("2 January 2006, 15:04 MST") + "\r\n\r\n" +
-		"CV attached. Reply to this email to answer the applicant.\r\n"
-	fmt.Fprintf(&b, "--%s\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: base64\r\n\r\n", boundary)
-	b.WriteString(wrap76(base64.StdEncoding.EncodeToString([]byte(body))))
-
-	fname := mime.QEncoding.Encode("utf-8", a.CVName)
-	fmt.Fprintf(&b, "--%s\r\nContent-Type: application/pdf; name=\"%s\"\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"%s\"\r\n\r\n", boundary, fname, fname)
-	b.WriteString(wrap76(base64.StdEncoding.EncodeToString(a.CV)))
-	fmt.Fprintf(&b, "--%s--\r\n", boundary)
-	return b.Bytes()
+	return fmt.Sprintf("%s status %d", e.Step, e.Status)
 }
 
-// loginAuth is SMTP AUTH LOGIN, which Office 365 offers and net/smtp lacks.
-type loginAuth struct{ user, pass string }
+// The app-only token is cached per instance until shortly before it expires.
+var token = struct {
+	sync.Mutex
+	key    string // tenant + client, so a config change never reuses a token
+	value  string
+	expiry time.Time
+}{}
 
-func (l loginAuth) Start(s *smtp.ServerInfo) (string, []byte, error) {
-	if !s.TLS {
-		return "", nil, errors.New("refusing AUTH LOGIN without TLS")
-	}
-	return "LOGIN", nil, nil
+func dropToken() {
+	token.Lock()
+	token.value = ""
+	token.Unlock()
 }
 
-func (l loginAuth) Next(from []byte, more bool) ([]byte, error) {
-	if !more {
-		return nil, nil
+func getToken(c config) (string, error) {
+	token.Lock()
+	defer token.Unlock()
+	key := c.Tenant + "|" + c.ClientID
+	if token.value != "" && token.key == key && now().Before(token.expiry) {
+		return token.value, nil
 	}
-	switch strings.ToLower(strings.TrimSpace(string(from))) {
-	case "username:":
-		return []byte(l.user), nil
-	case "password:":
-		return []byte(l.pass), nil
+	form := url.Values{
+		"grant_type":    {"client_credentials"},
+		"client_id":     {c.ClientID},
+		"client_secret": {c.Secret},
+		"scope":         {"https://graph.microsoft.com/.default"},
 	}
-	return nil, errors.New("unexpected AUTH LOGIN challenge")
+	res, err := httpClient.PostForm(tokenURL(c.Tenant), form)
+	if err != nil {
+		return "", &stepError{Step: "token request"}
+	}
+	defer res.Body.Close()
+	if res.StatusCode != http.StatusOK {
+		io.Copy(io.Discard, io.LimitReader(res.Body, 64<<10))
+		return "", &stepError{Step: "token", Status: res.StatusCode}
+	}
+	var out struct {
+		AccessToken string `json:"access_token"`
+		ExpiresIn   int64  `json:"expires_in"`
+	}
+	if err := json.NewDecoder(io.LimitReader(res.Body, 64<<10)).Decode(&out); err != nil || out.AccessToken == "" {
+		return "", &stepError{Step: "token decode", Status: res.StatusCode}
+	}
+	token.key, token.value = key, out.AccessToken
+	token.expiry = now().Add(time.Duration(out.ExpiresIn)*time.Second - tokenSkew)
+	return token.value, nil
+}
+
+type emailAddress struct {
+	Name    string `json:"name,omitempty"`
+	Address string `json:"address"`
+}
+
+type recipient struct {
+	EmailAddress emailAddress `json:"emailAddress"`
+}
+
+type attachment struct {
+	ODataType    string `json:"@odata.type"`
+	Name         string `json:"name"`
+	ContentType  string `json:"contentType"`
+	ContentBytes string `json:"contentBytes"`
+}
+
+type message struct {
+	Subject      string       `json:"subject"`
+	Body         messageBody  `json:"body"`
+	ToRecipients []recipient  `json:"toRecipients"`
+	ReplyTo      []recipient  `json:"replyTo"`
+	Attachments  []attachment `json:"attachments"`
+}
+
+type messageBody struct {
+	ContentType string `json:"contentType"`
+	Content     string `json:"content"`
+}
+
+type sendMailRequest struct {
+	Message         message `json:"message"`
+	SaveToSentItems bool    `json:"saveToSentItems"`
+}
+
+func buildRequest(c config, a *application) sendMailRequest {
+	body := "New application for Sales Representative (Commission-Based, Remote).\n\n" +
+		"Name:  " + a.Name + "\n" +
+		"Phone: " + a.Phone + "\n" +
+		"Email: " + a.Email + "\n" +
+		"Date:  " + now().UTC().Format("2 January 2006, 15:04 MST") + "\n\n" +
+		"CV attached. Reply to this email to answer the applicant.\n"
+	return sendMailRequest{
+		Message: message{
+			Subject:      subject + " - " + a.Name,
+			Body:         messageBody{ContentType: "Text", Content: body},
+			ToRecipients: []recipient{{emailAddress{Address: c.To}}},
+			ReplyTo:      []recipient{{emailAddress{Name: a.Name, Address: a.Email}}},
+			Attachments: []attachment{{
+				ODataType:    "#microsoft.graph.fileAttachment",
+				Name:         a.CVName,
+				ContentType:  "application/pdf",
+				ContentBytes: base64.StdEncoding.EncodeToString(a.CV),
+			}},
+		},
+		SaveToSentItems: false,
+	}
 }
 
 func send(c config, a *application) error {
-	if c.User == "" || c.Pass == "" {
-		return errors.New("SMTP_USER or SMTP_PASS not set")
+	if c.Tenant == "" || c.ClientID == "" || c.Secret == "" {
+		return &stepError{Step: "config (MS_TENANT_ID, MS_CLIENT_ID or MS_CLIENT_SECRET not set)"}
 	}
-	conn, err := net.DialTimeout("tcp", net.JoinHostPort(c.Host, c.Port), smtpWait)
+	tok, err := getToken(c)
 	if err != nil {
-		return fmt.Errorf("dial: %w", err)
+		return err
 	}
-	_ = conn.SetDeadline(now().Add(25 * time.Second))
-	cl, err := smtp.NewClient(conn, c.Host)
+	payload, err := json.Marshal(buildRequest(c, a))
 	if err != nil {
-		conn.Close()
-		return fmt.Errorf("greeting: %w", err)
+		return &stepError{Step: "encode"}
 	}
-	defer cl.Close()
-	if ok, _ := cl.Extension("STARTTLS"); !ok {
-		return errors.New("server does not offer STARTTLS")
-	}
-	if err := cl.StartTLS(tlsConfig(c.Host)); err != nil {
-		return fmt.Errorf("starttls: %w", err)
-	}
-	var auth smtp.Auth = loginAuth{c.User, c.Pass}
-	if _, mechs := cl.Extension("AUTH"); strings.Contains(" "+strings.ToUpper(mechs)+" ", " PLAIN ") {
-		auth = smtp.PlainAuth("", c.User, c.Pass, c.Host)
-	}
-	if err := cl.Auth(auth); err != nil {
-		return fmt.Errorf("auth: %w", err)
-	}
-	from := c.User
-	if err := cl.Mail(from); err != nil {
-		return fmt.Errorf("mail from: %w", err)
-	}
-	if err := cl.Rcpt(c.To); err != nil {
-		return fmt.Errorf("rcpt: %w", err)
-	}
-	w, err := cl.Data()
+	req, err := http.NewRequest(http.MethodPost, graphBase+"/users/"+url.PathEscape(c.From)+"/sendMail", bytes.NewReader(payload))
 	if err != nil {
-		return fmt.Errorf("data: %w", err)
+		return &stepError{Step: "sendMail request"}
 	}
-	if _, err := w.Write(buildMessage(c, a)); err != nil {
-		return fmt.Errorf("write: %w", err)
+	req.Header.Set("Authorization", "Bearer "+tok)
+	req.Header.Set("Content-Type", "application/json")
+	res, err := httpClient.Do(req)
+	if err != nil {
+		return &stepError{Step: "sendMail request"}
 	}
-	if err := w.Close(); err != nil {
-		return fmt.Errorf("data close: %w", err)
+	defer res.Body.Close()
+	io.Copy(io.Discard, io.LimitReader(res.Body, 64<<10))
+	if res.StatusCode == http.StatusUnauthorized {
+		dropToken() // the next request fetches a fresh token
 	}
-	return cl.Quit()
+	if res.StatusCode != http.StatusAccepted {
+		return &stepError{Step: "sendMail", Status: res.StatusCode}
+	}
+	return nil
 }
 
 /* --------------------------------------------------------------- handler */
@@ -353,7 +400,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		var tooBig *http.MaxBytesError
 		if errors.As(err, &tooBig) {
 			log.Print("apply: rejected: body too large")
-			reply(w, http.StatusRequestEntityTooLarge, "cv", "Your CV is over 4MB. Please upload a PDF of 4MB or less.")
+			reply(w, http.StatusRequestEntityTooLarge, "cv", tooBigMsg)
 			return
 		}
 		log.Print("apply: rejected: bad form")
@@ -384,12 +431,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := sendMail(loadConfig(), a); err != nil {
-		// SMTP errors can echo addresses back, so log only the stage.
-		stage := err.Error()
-		if i := strings.Index(stage, ":"); i > 0 {
-			stage = stage[:i]
-		}
-		log.Printf("apply: smtp error at %s", stage)
+		// Only stepErrors reach here and they carry no PII by construction.
+		log.Printf("apply: graph error at %v", err)
 		reply(w, http.StatusBadGateway, "", fallback)
 		return
 	}

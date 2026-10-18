@@ -1184,7 +1184,7 @@ Careers: Sales Representative
 
             <div class="careers-form-card" id="apply">
               <h3>Apply for this role</h3>
-              <p class="lede">All fields are required. Your CV must be a PDF of 4MB or less.</p>
+              <p class="lede">All fields are required. Your CV must be a PDF of 3MB or less.</p>
               <form id="careers-form" action="/api/apply" method="POST" enctype="multipart/form-data" novalidate>
                 <div class="careers-honey" aria-hidden="true">
                   <label for="careers-honey">Leave this empty</label>
@@ -1216,7 +1216,7 @@ Careers: Sales Representative
                     <label for="careers-cv" class="pick" style="margin: 0;">Choose file</label>
                     <span class="name" id="careers-cv-name">No file chosen</span>
                   </div>
-                  <p class="careers-hint" id="careers-cv-hint">PDF only, max 4MB.</p>
+                  <p class="careers-hint" id="careers-cv-hint">PDF only, max 3MB.</p>
                   <p class="careers-error" id="careers-cv-error" role="alert"></p>
                 </div>
 
@@ -1232,7 +1232,7 @@ Careers: Sales Representative
         (function () {
           var form = document.getElementById('careers-form');
           if (!form) return;
-          var MAX = 4 * 1024 * 1024;
+          var MAX = 3000000; // matches the server: Graph sendMail caps the whole request near 4MB
           var f = {
             name: document.getElementById('careers-name'),
             phone: document.getElementById('careers-phone'),
@@ -1259,7 +1259,7 @@ Careers: Sales Representative
               var file = el.files && el.files[0];
               if (!file) msg = 'Please attach your CV as a PDF.';
               else if (!/\.pdf$/i.test(file.name) || (file.type && file.type !== 'application/pdf')) msg = 'Your CV must be a PDF file.';
-              else if (file.size > MAX) msg = 'Your CV is over 4MB. Please upload a PDF of 4MB or less.';
+              else if (file.size > MAX) msg = 'Your CV is over 3MB. Please upload a PDF of 3MB or less.';
             }
             var wrap = el.closest('.careers-field');
             document.getElementById('careers-' + key + '-error').textContent = msg;
