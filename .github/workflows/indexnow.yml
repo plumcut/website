@@ -6,6 +6,7 @@ on:
       - 'blog/**'
       - '*.html'
       - 'sitemap.xml'
+      - 'careers/**'
   workflow_dispatch:
 permissions:
   contents: read

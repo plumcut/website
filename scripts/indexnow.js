@@ -37,6 +37,13 @@ function urlForFile(file) {
   if (m) return `${SITE}/blog/${m[1]}`;
   m = file.match(/^blog\/posts\/\d{4}-\d{2}-\d{2}-([a-z0-9]+(?:-[a-z0-9]+)*)\.md$/);
   if (m) return `${SITE}/blog/${m[1]}`;
+  // Careers pages live in a folder; only the ones in the sitemap are pinged,
+  // so the noindex thank-you page never is.
+  m = file.match(/^careers\/([a-z0-9]+(?:[-/][a-z0-9]+)*)\.html$/);
+  if (m) {
+    const url = `${SITE}/careers/${m[1]}`;
+    return sitemapUrls().includes(url) ? url : null;
+  }
   return null;
 }
 
