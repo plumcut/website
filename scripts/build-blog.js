@@ -1088,6 +1088,7 @@ const CORE_PAGES = [
   ['/pricing', 'pricing.html'],
   ['/about', 'about.html'],
   ['/privacy', 'privacy.html'],
+  ['/careers/sales', 'careers/sales.html'],
 ];
 
 function git(args) {

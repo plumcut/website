@@ -40,6 +40,40 @@
         { "key": "Content-Disposition", "value": "inline; filename=\"plumcut.vcf\"" },
         { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
+    },
+    {
+      "source": "/careers/sales",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'sha256-/63yHQFv93JNH5NCPNNy9jFBv08F56vHlv6aKpDazNg=' 'sha256-5LvUwJKsi9VR1PGi3w7nd3PRuMXx65BORkPdu5ynMkI=' 'sha256-EZqY03CbZW17CW7+Q5lJDtJ3Ps3hzbng8gbIOTY74+8=' 'sha256-HMS6wnpl0vOZM3JvjEVhSJPekt5JgTRthJAhjfzhMKA=' 'sha256-PDws0Nrpa0KjL6ggwWnkXBr7sZTAvA/7y8d4vRIj7is=' 'sha256-WiqiVwvuQtbq1jpNKtErUuKsrb9UMmb6Eo2Wn49yDkI=' 'sha256-beGE6HYylnT7ACUTUT96GPuds28RU0Mn9eT4gcfbFz0=' 'sha256-uuOHwilOI9GxIVZtiJhMmIf+wNtRNnGu3v7NTOQjdfE=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; font-src 'self' data:; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000" }
+      ]
+    },
+    {
+      "source": "/careers/sales/thank-you",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'sha256-/63yHQFv93JNH5NCPNNy9jFBv08F56vHlv6aKpDazNg=' 'sha256-5LvUwJKsi9VR1PGi3w7nd3PRuMXx65BORkPdu5ynMkI=' 'sha256-EZqY03CbZW17CW7+Q5lJDtJ3Ps3hzbng8gbIOTY74+8=' 'sha256-HMS6wnpl0vOZM3JvjEVhSJPekt5JgTRthJAhjfzhMKA=' 'sha256-PDws0Nrpa0KjL6ggwWnkXBr7sZTAvA/7y8d4vRIj7is=' 'sha256-WiqiVwvuQtbq1jpNKtErUuKsrb9UMmb6Eo2Wn49yDkI=' 'sha256-beGE6HYylnT7ACUTUT96GPuds28RU0Mn9eT4gcfbFz0=' 'sha256-uuOHwilOI9GxIVZtiJhMmIf+wNtRNnGu3v7NTOQjdfE=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; font-src 'self' data:; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000" }
+      ]
+    },
+    {
+      "source": "/api/apply",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'none'; frame-ancestors 'none'" },
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000" }
+      ]
     }
   ]
 }
