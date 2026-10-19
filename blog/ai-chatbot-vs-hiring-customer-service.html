@@ -1042,6 +1042,12 @@ Head links
         display: block;
         width: clamp(120px, 35vw, 180px);
         height: auto;
+        /* The source video and its poster carry a grey column in their last
+           pixel column, which reads as a thin line beside the plum. Clipping
+           1px off the right hides it; the video is always scaled down, so 1px
+           covers more than one source column at every width, and what it
+           removes is the white margin. clip-path does not affect layout. */
+        clip-path: inset(0 1px 0 0);
         margin: 0 auto;
       }
 
@@ -1216,7 +1222,7 @@ Head links
         .blog-cta { border-radius: 20px; }
       }
     </style>
-<meta name="plumcut-content-version" content="7b42c08e6f9bd62758560c92e7e332671b3702938e695a979bf2a7c51b6dc746">
+<meta name="plumcut-content-version" content="fe806ec1719be5e5e02f614f368fa283e52267a0acf9b65b81dc07654b874ffc">
 </head>
   <body class="bg-white dark:bg-background-5 is-loading">
     <script>

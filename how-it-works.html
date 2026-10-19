@@ -993,6 +993,12 @@ Head links
         display: block;
         width: clamp(120px, 35vw, 180px);
         height: auto;
+        /* The source video and its poster carry a grey column in their last
+           pixel column, which reads as a thin line beside the plum. Clipping
+           1px off the right hides it; the video is always scaled down, so 1px
+           covers more than one source column at every width, and what it
+           removes is the white margin. clip-path does not affect layout. */
+        clip-path: inset(0 1px 0 0);
         margin: 0 auto;
       }
 
